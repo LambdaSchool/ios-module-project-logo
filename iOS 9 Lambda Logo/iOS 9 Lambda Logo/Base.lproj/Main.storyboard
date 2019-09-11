@@ -18,20 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-A7-vqK" customClass="FirstView" customModule="iOS_9_Lambda_Logo" customModuleProvider="target">
-                                <rect key="frame" x="32" y="44" width="350" height="380"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="380" id="9TW-ZZ-95q"/>
-                                    <constraint firstAttribute="width" constant="350" id="LxM-RL-Btz"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaU-Tj-ZqL" customClass="SecondView" customModule="iOS_9_Lambda_Logo" customModuleProvider="target">
                                 <rect key="frame" x="32" y="482" width="350" height="380"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="380" id="UbR-ix-tJ0"/>
                                     <constraint firstAttribute="width" constant="350" id="xrG-Ei-mB5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-A7-vqK" customClass="FirstView" customModule="iOS_9_Lambda_Logo" customModuleProvider="target">
+                                <rect key="frame" x="32" y="44" width="350" height="380"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="9TW-ZZ-95q"/>
+                                    <constraint firstAttribute="width" constant="350" id="LxM-RL-Btz"/>
                                 </constraints>
                             </view>
                         </subviews>
