@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var firstLambdaView: UIView!
+    @IBOutlet weak var secondLambdaView: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
