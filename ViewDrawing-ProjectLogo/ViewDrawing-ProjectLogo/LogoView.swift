@@ -8,17 +8,7 @@
 
 import UIKit
 
-struct Line {
-    let width: CGFloat
-    let length: CGFloat
-    let color: UIColor
-}
-
-
-
-
-@IBDesignable
-class LogoView: UIView {
+@IBDesignable class LogoView: UIView {
     
     // MARK: - Properties
     
@@ -30,8 +20,6 @@ class LogoView: UIView {
     private var blue = UIColor.blue.cgColor
     private var lineWidth: CGFloat = 7.0
     private let borderWidth: CGFloat = 4.0
-    
-    // MARK: - View Lifecycle
     
     // Gets used when creating the view programmatically
     override init(frame: CGRect) {
@@ -63,39 +51,77 @@ class LogoView: UIView {
             context.setLineWidth(borderWidth)
             context.strokePath()
             
-            context.move(to: CGPoint(x: 40, y: 125))
-            context.addLine(to: CGPoint(x: 180, y: 50))
-            context.setStrokeColor(orange)
-            context.setLineWidth(lineWidth)
-            context.strokePath()
-            
-            context.move(to: CGPoint(x: 180, y: 195))
-            context.addLine(to: CGPoint(x: 180, y: 50))
-            context.setStrokeColor(green)
-            context.setLineWidth(lineWidth)
-            context.strokePath()
-            
-            context.move(to: CGPoint(x: 180, y: 195))
-            context.addLine(to: CGPoint(x: 40, y: 125))
-            context.setStrokeColor(blue)
-            context.setLineWidth(lineWidth)
-            context.strokePath()
-            
-            context.move(to: CGPoint(x: 95, y: 150))
-            context.addLine(to: CGPoint(x: 95, y: 95))
-            context.setStrokeColor(red)
-            context.setLineWidth(lineWidth)
-            context.strokePath()
-            
-            context.move(to: CGPoint(x: 181, y: 168))
-            context.addLine(to: CGPoint(x: 95, y: 93))
+            // Triangle and lines
+            context.move(to: CGPoint(x: insetCircleRect.midX * 0.30, y: insetCircleRect.midY))
+            context.addLine(to: CGPoint(x: insetCircleRect.midX * 1.45, y: insetCircleRect.midY * 0.40))
             context.setStrokeColor(purple)
             context.setLineWidth(lineWidth)
             context.strokePath()
             
+            context.move(to: CGPoint(x: insetCircleRect.midX * 1.45, y: insetCircleRect.midY * 1.57))
+            context.addLine(to: CGPoint(x: insetCircleRect.midX * 1.45, y: insetCircleRect.midY * 0.4))
+            context.setStrokeColor(purple)
+            context.setLineWidth(lineWidth)
+            context.strokePath()
+            
+            context.move(to: CGPoint(x: insetCircleRect.midX * 1.45, y: insetCircleRect.midY * 1.57))
+            context.addLine(to: CGPoint(x: insetCircleRect.midX * 0.30, y: insetCircleRect.midY))
+            context.setStrokeColor(purple)
+            context.setLineWidth(lineWidth)
+            context.strokePath()
+            
+            context.move(to: CGPoint(x: insetCircleRect.midX * 0.75, y: insetCircleRect.midY * 1.22))
+            context.addLine(to: CGPoint(x: insetCircleRect.midX * 0.75, y: insetCircleRect.midY * 0.75))
+            context.setStrokeColor(purple)
+            context.setLineWidth(lineWidth)
+            context.strokePath()
+            
+            context.move(to: CGPoint(x: insetCircleRect.midX * 1.46, y: insetCircleRect.midY * 1.38))
+            context.addLine(to: CGPoint(x: insetCircleRect.midX * 0.75, y: insetCircleRect.midY * 0.75))
+            context.setStrokeColor(purple)
+            context.setLineWidth(lineWidth)
+            context.strokePath()
         }
-        
     }
-    
-
 }
+
+
+//// purple stroke circle
+//let insetCircleRect = CGRect(x: rect.origin.x + 10,
+//                             y: rect.origin.y + 10 ,
+//                             width: rect.size.width - 20 ,
+//                             height: rect.size.height - 20 )
+//context.addEllipse(in: insetCircleRect)
+//context.setStrokeColor(purple)
+//context.setLineWidth(borderWidth)
+//context.strokePath()
+//
+//context.move(to: CGPoint(x: 40, y: 125))
+//context.addLine(to: CGPoint(x: 180, y: 50))
+//context.setStrokeColor(orange)
+//context.setLineWidth(lineWidth)
+//context.strokePath()
+//
+//context.move(to: CGPoint(x: 180, y: 195))
+//context.addLine(to: CGPoint(x: 180, y: 50))
+//context.setStrokeColor(green)
+//context.setLineWidth(lineWidth)
+//context.strokePath()
+//
+//context.move(to: CGPoint(x: 180, y: 195))
+//context.addLine(to: CGPoint(x: 40, y: 125))
+//context.setStrokeColor(blue)
+//context.setLineWidth(lineWidth)
+//context.strokePath()
+//
+//context.move(to: CGPoint(x: 95, y: 150))
+//context.addLine(to: CGPoint(x: 95, y: 95))
+//context.setStrokeColor(red)
+//context.setLineWidth(lineWidth)
+//context.strokePath()
+//
+//context.move(to: CGPoint(x: 181, y: 168))
+//context.addLine(to: CGPoint(x: 95, y: 93))
+//context.setStrokeColor(purple)
+//context.setLineWidth(lineWidth)
+//context.strokePath()
