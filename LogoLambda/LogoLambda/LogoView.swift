@@ -13,6 +13,7 @@ class LogoView: UIView {
 
     let lambdaColor = UIColor.white
     let shieldColor = UIColor.red
+    let greekLetterColor = UIColor.white
     
     
     
@@ -45,7 +46,25 @@ class LogoView: UIView {
             context.setFillColor(shieldColor.cgColor)
             context.fillPath()
             
-            let mBLpoint
+            let mBLPoint = CGPoint(x: logoCenter.x, y: logoCenter.y + 0)
+            let rIBPoint = CGPoint(x: logoCenter.x + 40, y: logoCenter.y + 55)
+            let rOBPoint = CGPoint(x: logoCenter.x + 70, y: logoCenter.y + 55)
+            let rTPoint = CGPoint(x: logoCenter.x + 12, y: logoCenter.y - 35)
+            let lIBPoint = CGPoint(x: logoCenter.x - 40, y: logoCenter.y + 55)
+            let lOBPoint = CGPoint(x: logoCenter.x - 70, y: logoCenter.y + 55)
+            let lTPoint = CGPoint(x: logoCenter.x - 12, y: logoCenter.y - 35)
+            
+            context.move(to: mBLPoint)
+            context.addLine(to: rIBPoint)
+            context.addLine(to: rOBPoint)
+            context.addLine(to: rTPoint)
+            context.addLine(to: lTPoint)
+            context.addLine(to: lOBPoint)
+            context.addLine(to: lIBPoint)
+            context.closePath()
+            
+            context.setFillColor(greekLetterColor.cgColor)
+            context.fillPath()
             
         }
         
