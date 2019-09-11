@@ -12,7 +12,7 @@
 		8432D72E232988F300540D2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8432D72C232988F300540D2D /* Main.storyboard */; };
 		8432D730232988F500540D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8432D72F232988F500540D2D /* Assets.xcassets */; };
 		8432D733232988F500540D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8432D731232988F500540D2D /* LaunchScreen.storyboard */; };
-		8432D73B2329891E00540D2D /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D73A2329891E00540D2D /* LogoView.swift */; };
+		8432D73D232990EA00540D2D /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D73C232990EA00540D2D /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		8432D72F232988F500540D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8432D732232988F500540D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8432D734232988F500540D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8432D73A2329891E00540D2D /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		8432D73C232990EA00540D2D /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +58,11 @@
 			children = (
 				8432D728232988F200540D2D /* AppDelegate.swift */,
 				8432D72A232988F300540D2D /* ViewController.swift */,
+				8432D73C232990EA00540D2D /* LogoView.swift */,
 				8432D72C232988F300540D2D /* Main.storyboard */,
 				8432D72F232988F500540D2D /* Assets.xcassets */,
 				8432D731232988F500540D2D /* LaunchScreen.storyboard */,
 				8432D734232988F500540D2D /* Info.plist */,
-				8432D73A2329891E00540D2D /* LogoView.swift */,
 			);
 			path = LogoLambda;
 			sourceTree = "<group>";
@@ -139,7 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8432D72B232988F300540D2D /* ViewController.swift in Sources */,
-				8432D73B2329891E00540D2D /* LogoView.swift in Sources */,
+				8432D73D232990EA00540D2D /* LogoView.swift in Sources */,
 				8432D729232988F200540D2D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
