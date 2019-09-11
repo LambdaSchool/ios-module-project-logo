@@ -29,9 +29,9 @@ class LogoView: UIView {
             
             
             let topShieldPoint = CGPoint(x: logoCenter.x - 125, y: logoCenter.y - 125)
-            let bottomLeftShieldPoint = CGPoint(x: logoCenter.x - 125, y: logoCenter.y + 100)
-            let middleShieldPoint = CGPoint(x: logoCenter.x, y: logoCenter.y + 200)
-            let bottomRightShieldPoint = CGPoint(x: logoCenter.x + 125, y: logoCenter.y + 100)
+            let bottomLeftShieldPoint = CGPoint(x: logoCenter.x - 125, y: logoCenter.y + 75)
+            let middleShieldPoint = CGPoint(x: logoCenter.x, y: logoCenter.y + 175)
+            let bottomRightShieldPoint = CGPoint(x: logoCenter.x + 125, y: logoCenter.y + 75)
             let topRightShieldPoint = CGPoint(x: logoCenter.x + 125, y: logoCenter.y - 125)
             
             
@@ -44,6 +44,8 @@ class LogoView: UIView {
             
             context.setFillColor(shieldColor.cgColor)
             context.fillPath()
+            
+            let mBLpoint
             
         }
         
