@@ -18,10 +18,11 @@ class LogoView: UIView {
     
     override func draw(_ rect: CGRect) {
         let center = CGPoint(x: rect.width/2, y: rect.height/2)
-        var circleSize: CGFloat
-        if rect.size.width > rect.size.height { circleSize = rect.size.height * 0.5 }
-        else { circleSize = rect.size.width * 0.5 }
-        let baseRect = CGRect(x: rect.width/2 - circleSize/2, y: rect.height/2 - circleSize/2, width: circleSize, height: circleSize)
+        let circleScale = 0.9
+        var circleDiameter: CGFloat
+        if rect.size.width > rect.size.height { circleDiameter = rect.size.height * CGFloat(circleScale) }
+        else { circleDiameter = rect.size.width * CGFloat(circleScale) }
+        let baseRect = CGRect(x: rect.width/2 - circleDiameter/2, y: rect.height/2 - circleDiameter/2, width: circleDiameter, height: circleDiameter)
         let lineWidth = baseRect.size.width * 0.02
         
         if let context = UIGraphicsGetCurrentContext() {
@@ -40,6 +41,25 @@ class LogoView: UIView {
             context.addEllipse(in: secondaryRect)
             context.setFillColor(foregroundCircleColor.cgColor)
             context.fillPath()
+            
+            context.addArc(center: CGPoint(x: center.x, y: center.y), radius: secondaryRect.size.height/2, startAngle: 0, endAngle: CGFloat.pi + CGFloat.pi / 2, clockwise: true)
+            context.setFillColor(UIColor.white.cgColor)
+            
+            context.fillPath()
+            
+            context.addArc(center: CGPoint(x: center.x, y: center.y), radius: secondaryRect.size.height/2, startAngle: CGFloat.pi, endAngle: CGFloat.pi / 2, clockwise: true)
+            
+            context.fillPath()
+            
+            context.move(to: CGPoint(x: rect.width/2, y: secondaryRect.origin.y)) // top for right white triangle line
+            context.addLine(to: CGPoint(x: secondaryRect.origin.x + secondaryRect.size.width, y: rect.height/2))
+            context.setStrokeColor(UIColor.white.cgColor)
+            context.strokePath()
+            
+            context.move(to: CGPoint(x: rect.width/2, y: secondaryRect.origin.y + secondaryRect.size.height)) // bottom for left white triangle line
+            context.addLine(to: CGPoint(x: secondaryRect.origin.x, y: rect.height/2))
+            context.setStrokeColor(UIColor.white.cgColor)
+            context.strokePath()
             
             context.addEllipse(in: secondaryRect)
             context.setStrokeColor(strokeColor.cgColor)
@@ -90,6 +110,7 @@ class LogoView: UIView {
             context.setFillColor(UIColor.white.cgColor)
             
             context.fillPath()
+            
         }
     }
 
