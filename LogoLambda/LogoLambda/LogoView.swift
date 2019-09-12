@@ -12,7 +12,7 @@ import UIKit
 class LogoView: UIView {
 
     let lambdaColor = UIColor.white
-    let shieldColor = UIColor.red
+    let shieldColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
     let greekLetterColor = UIColor.white
     
     
@@ -35,7 +35,7 @@ class LogoView: UIView {
             let bottomRightShieldPoint = CGPoint(x: logoCenter.x + 125, y: logoCenter.y + 75)
             let topRightShieldPoint = CGPoint(x: logoCenter.x + 125, y: logoCenter.y - 125)
             
-            
+           
             context.move(to: topShieldPoint)
             context.addLine(to: bottomLeftShieldPoint)
             context.addLine(to: middleShieldPoint)
