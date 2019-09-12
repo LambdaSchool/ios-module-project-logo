@@ -15,33 +15,15 @@ import UIKit
         
         if let context = UIGraphicsGetCurrentContext() {
             
-//            let topPoint = CGPoint(x: rect.size.width / 6, y: rect.size.height / 10)
-//            let bottomPoint = CGPoint(x: rect.size.width / 5, y: rect.size.height
-//             * 0.75)
-//            let rightPoint = CGPoint(x: rect.size.width * 0.6, y: rect.size.height / 2)
-//
-//            // Create the path
-//
-//            context.move(to: topPoint)
-//            context.addLine(to: bottomPoint)
-//            context.addLine(to: rightPoint)
-//            context.addLine(to: topPoint)
-//
-//            // Configuring the path
-//
-//            context.setFillColor(UIColor.blue.cgColor)
-//            context.fillPath()
             
-            
-            
-            let point1 = CGPoint(x: 150, y: 300)
-            let point2 = CGPoint(x: 250, y: 300)
-            let point3 = CGPoint(x: 250, y: 400)
-            let point4 = CGPoint(x: 150, y: 400)
+            let point1 = CGPoint(x: rect.size.width / (rect.size.width / 150), y: rect.size.height / (rect.size.height / 300))
+            let point2 = CGPoint(x: rect.size.width / (rect.size.width / 250), y: rect.size.height / (rect.size.height / 300))
+            let point3 = CGPoint(x: rect.size.width / (rect.size.width / 250), y: rect.size.height / (rect.size.height / 400))
+            let point4 = CGPoint(x: rect.size.width / (rect.size.width / 150), y: rect.size.height / (rect.size.height / 400))
            
-            
-            // print(rect.size.width / 100)
+            // Pattern so I don't have to calculate the proportions by hand
             // rect.size.width / (rect.size.width / 100 )
+            // rect.size.height / (rect.size.height / 100)
             
             context.move(to:point1)
             context.addLine(to: point2)
@@ -56,7 +38,7 @@ import UIKit
             // Triangle
             
             let trianglePoint1 = CGPoint(x: point3.x, y: point3.y)
-            let trianglePoint2 = CGPoint(x: 200, y: point1.y + 200)
+            let trianglePoint2 = CGPoint(x: (point1.x + point2.x) / 2, y: point3.y + rect.size.height / (rect.size.height / 50))
             let trianglePoint3 = CGPoint(x: point4.x, y: point4.y)
             
             context.move(to: trianglePoint1)
@@ -68,6 +50,53 @@ import UIKit
             context.fillPath()
             
             
+            // Left Rhombus Letters
+            let leftRhombusPoint1 = CGPoint(x: rect.size.width / (rect.size.width / 190 ), y: rect.size.height / (rect.size.height / 350))
+            let leftRhombusPoint2 = CGPoint(x: rect.size.width / (rect.size.width / 200 ), y: rect.size.height / (rect.size.height / 350))
+            let leftRhombusPoint3 = CGPoint(x: rect.size.width / (rect.size.width / 180 ), y: rect.size.height / (rect.size.height / 380))
+            let leftRhombusPoint4 = CGPoint(x: rect.size.width / (rect.size.width / 170 ), y: rect.size.height / (rect.size.height / 380))
+            
+            context.move(to:leftRhombusPoint1)
+            context.addLine(to: leftRhombusPoint2)
+            context.addLine(to: leftRhombusPoint3)
+            context.addLine(to: leftRhombusPoint4)
+            context.addLine(to: leftRhombusPoint1)
+            
+            context.setFillColor(UIColor.green.cgColor)
+            context.fillPath()
+            
+            
+            // Right Rhombus Letters
+            let rightRhombusPoint1 = CGPoint(x: rect.size.width / (rect.size.width / 200 ), y: rect.size.height / (rect.size.height / 350))
+            let rightRhombusPoint2 = CGPoint(x: rect.size.width / (rect.size.width / 210 ), y: rect.size.height / (rect.size.height / 350))
+            let rightRhombusPoint3 = CGPoint(x: rect.size.width / (rect.size.width / 230 ), y: rect.size.height / (rect.size.height / 380))
+            let rightRhombus4 = CGPoint(x: rect.size.width / (rect.size.width / 220 ), y: rect.size.height / (rect.size.height / 380))
+            
+            context.move(to:rightRhombusPoint1)
+            context.addLine(to: rightRhombusPoint1)
+            context.addLine(to: rightRhombusPoint2)
+            context.addLine(to: rightRhombusPoint3)
+            context.addLine(to: rightRhombus4)
+            
+            context.setFillColor(UIColor.green.cgColor)
+            context.fillPath()
+            
+            // Final Trapezoid
+            
+            let trapezoidPoint1 = CGPoint(x: leftRhombusPoint1.x, y: leftRhombusPoint1.y)
+            let trapezoidPoint2 = CGPoint(x: rightRhombusPoint2.x , y: rightRhombusPoint2.y)
+            let trapezoidPoint3 = CGPoint(x: rect.size.width / (rect.size.width / 203 ), y: rect.size.height / (rect.size.height / 340))
+            let trapezoidPoint4 = CGPoint(x: rect.size.width / (rect.size.width / 195 ), y: rect.size.height / (rect.size.height / 340))
+            
+            context.move(to:trapezoidPoint1)
+            context.addLine(to: trapezoidPoint2)
+            context.addLine(to: trapezoidPoint3)
+            context.addLine(to: trapezoidPoint4)
+            context.addLine(to: trapezoidPoint1)
+            
+            context.setFillColor(UIColor.yellow.cgColor)
+            context.fillPath()
+
         }
     }
 }
