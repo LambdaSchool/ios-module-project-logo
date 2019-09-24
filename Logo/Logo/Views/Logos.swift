@@ -76,24 +76,33 @@ import Foundation
             // add points that serve as anchors
             
             let bottomLeft = CGPoint(x: symbolRect.minX, y: symbolRect.maxY)
+            let leftAnchor = CGPoint(x: symbolRect.minX + 20, y: symbolRect.maxY)
+            let middleAnchor = CGPoint(x: symbolRect.midX, y: symbolRect.midY - 20)
+            let rightAnchor = CGPoint(x: symbolRect.maxX - 20, y: symbolRect.maxY)
             let bottomRight = CGPoint(x: symbolRect.maxX, y: symbolRect.maxY)
-            let topMiddle = CGPoint(x: symbolRect.midX, y: symbolRect.minY)
+            let middleRight = CGPoint(x: symbolRect.midX + 10, y: symbolRect.minY)
+            let middleLeft = CGPoint(x: symbolRect.midX - 10, y: symbolRect.minY)
+            
+            
             
             
             // create lambda symbol
             
-            context.move(to: bottomLeft)
-            context.addLine(to: topMiddle)
-            context.setStrokeColor(UIColor.white.cgColor)
-            context.setLineWidth(10.0)
-            context.strokePath()
             
-            context.move(to: topMiddle)
+            
+          
+            context.move(to: bottomLeft)
+            context.addLine(to: leftAnchor)
+            context.addLine(to: middleAnchor)
+            context.addLine(to: rightAnchor)
             context.addLine(to: bottomRight)
-            context.setStrokeColor(UIColor.white.cgColor)
-            context.setLineWidth(10.0)
-            context.strokePath()
-     
+            context.addLine(to: middleRight)
+            context.addLine(to: middleLeft)
+            context.addLine(to: bottomLeft)
+
+            context.setFillColor(UIColor.white.cgColor)
+            context.fillPath()
+            
         }
     }
 }
