@@ -20,6 +20,7 @@ class LogoView: UIView {
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext() {
             
+            // background red square and bottom red triangle
             context.addRect(CGRect(x: rect.origin.x, y: rect.origin.y, width: rect.size.width, height: rect.size.height * 0.7))
             context.move(to: CGPoint(x: rect.origin.x, y: rect.size.height * 0.7))
             context.addLine(to: CGPoint(x: rect.size.width / 2, y: rect.size.height))
@@ -30,23 +31,25 @@ class LogoView: UIView {
             context.setFillColor(logoBgColor.cgColor)
             context.fillPath()
             
+            // inside white triangle with square top
             context.move(to: CGPoint(x: rect.size.width * 0.2, y: rect.size.height * 0.6))
             context.addLine(to: CGPoint(x: rect.size.width / 2 - 14, y: rect.size.height / 6))
             context.addLine(to: CGPoint(x: rect.size.width / 2 + 14, y: rect.size.height / 6))
             context.addLine(to: CGPoint(x: rect.size.width * 0.8, y: rect.size.height * 0.6))
-            
+
             context.closePath()
-            
+
             context.setLineWidth(lineWidth)
             context.setFillColor(lineColor.cgColor)
             context.fillPath()
             
+            // inside red triangle to form the lambda
             context.move(to: CGPoint(x: rect.size.width * 0.3, y: rect.size.height * 0.6))
             context.addLine(to: CGPoint(x: rect.size.width / 2, y: rect.size.height / 4))
             context.addLine(to: CGPoint(x: rect.size.width * 0.7, y: rect.size.height * 0.6))
-            
+
             context.closePath()
-            
+
             context.setLineWidth(lineWidth)
             context.setFillColor(logoBgColor.cgColor)
             context.fillPath()
