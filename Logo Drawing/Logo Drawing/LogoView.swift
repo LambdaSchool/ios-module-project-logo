@@ -49,7 +49,7 @@ class LogoView: UIView {
             context.addLine(to: CGPoint(x: self.center.x, y: self.center.y - (logoRectHeight/9)))
             context.addLine(to: CGPoint(x: self.center.x + (logoRectWidth/4), y: self.center.y + 100))
             context.setStrokeColor(UIColor.white.cgColor)
-            context.setLineWidth(20)
+            context.setLineWidth(30)
             context.strokePath()
         
         
