@@ -12,8 +12,6 @@ import UIKit
 class LogoView: UIView {
     
     private let logoBgColor = UIColor.red
-    private let borderColor = UIColor.black
-    private let borderWidth: CGFloat = 2.0
     private let lineColor = UIColor.white
     private let lineWidth: CGFloat = 5.0
     
