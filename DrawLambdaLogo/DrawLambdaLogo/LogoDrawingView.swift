@@ -45,6 +45,7 @@ class LogoDrawingView: UIView {
             let bottomRightPoint = CGPoint(x: viewWidth * 0.675, y: viewHeight * 0.6)
             let topRightPoint = CGPoint(x: viewWidth * 0.53, y: viewHeight * 0.35)
 
+            //Draw Lambda symbol detail onto logo
             context.move(to: topLeftPoint)
             context.addLine(to: bottomLeftPoint)
             context.addLine(to: bottomLeftCenterPoint)

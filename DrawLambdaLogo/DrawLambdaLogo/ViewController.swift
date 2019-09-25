@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         configureDrawingView()
     }
 
+    //MARK: - View Configuration Functions
     func configureDrawingView() {
         view.addSubview(drawingView)
         drawingView.translatesAutoresizingMaskIntoConstraints = false
