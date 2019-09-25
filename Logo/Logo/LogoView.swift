@@ -31,8 +31,8 @@ class LogoView: UIView {
             context.fillPath()
             
             context.move(to: CGPoint(x: rect.size.width * 0.2, y: rect.size.height * 0.6))
-            context.addLine(to: CGPoint(x: rect.size.width / 2 - 10, y: rect.size.height / 6))
-            context.addLine(to: CGPoint(x: rect.size.width / 2 + 10, y: rect.size.height / 6))
+            context.addLine(to: CGPoint(x: rect.size.width / 2 - 14, y: rect.size.height / 6))
+            context.addLine(to: CGPoint(x: rect.size.width / 2 + 14, y: rect.size.height / 6))
             context.addLine(to: CGPoint(x: rect.size.width * 0.8, y: rect.size.height * 0.6))
             
             context.closePath()
