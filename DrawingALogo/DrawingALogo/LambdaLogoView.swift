@@ -21,11 +21,6 @@ class LambdaLogoView: UIView {
     private let drop2Color = UIColor.blue
     private let drop3Color = UIColor.green
     
-    private var endPointOne: CGPoint {
-        let secondsAsRadians = Float(Double(seconds.value) / 60.0 * 2.0 * Double.pi - Double.pi / 2)
-        let handLength = CGFloat(frame.size.width / seconds.length)
-        return handEndPoint(with: secondsAsRadians, and: handLength)
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
