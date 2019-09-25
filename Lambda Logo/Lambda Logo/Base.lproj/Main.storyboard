@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jQY-64-8Wk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wQ6-ca-pFr">
+            <objects>
+                <viewController id="jQY-64-8Wk" customClass="ViewController" customModule="Lambda_Logo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yfy-wI-PsB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2s-qt-mnj" userLabel="LogoView" customClass="LogoView" customModule="Lambda_Logo" customModuleProvider="target">
+                                <rect key="frame" x="57" y="44" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9wV-5r-EVz"/>
+                                    <constraint firstAttribute="height" constant="300" id="gwt-Gj-F6s"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P2s-qt-mnj" firstAttribute="centerX" secondItem="yfy-wI-PsB" secondAttribute="centerX" id="0nB-6l-3he"/>
+                            <constraint firstItem="P2s-qt-mnj" firstAttribute="top" secondItem="gMr-74-E9N" secondAttribute="top" id="HRh-tW-Tk8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gMr-74-E9N"/>
+                    </view>
+                    <connections>
+                        <outlet property="logoView" destination="P2s-qt-mnj" id="cCT-Hh-9bN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBG-PX-sSV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="104"/>
+        </scene>
+    </scenes>
+</document>
