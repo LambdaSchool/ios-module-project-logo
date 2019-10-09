@@ -22,20 +22,12 @@
                                     <constraint firstAttribute="width" secondItem="IRh-zf-TND" secondAttribute="height" multiplier="1:1" id="aTE-La-G9D"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K34-jG-v3F">
-                                <rect key="frame" x="187.5" y="64" width="39" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="IRh-zf-TND" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AsK-48-mRf"/>
                             <constraint firstItem="IRh-zf-TND" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Gd1-Bi-Ber"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IRh-zf-TND" secondAttribute="trailing" constant="20" id="Vim-wE-gYf"/>
-                            <constraint firstItem="K34-jG-v3F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="prA-5n-5Ki"/>
-                            <constraint firstItem="K34-jG-v3F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wtn-5S-EXk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

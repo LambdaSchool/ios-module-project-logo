@@ -21,21 +21,6 @@ class LogoView: UIView {
         
         if let context = UIGraphicsGetCurrentContext() {
             
-//            //Testing out filling custom shapes
-//            context.move(to: CGPoint(x: rect.midX, y: rect.midY))
-//            context.addLine(to: CGPoint(x: rect.midX + rect.maxX / 4, y: rect.midY + rect.maxY / 4))
-//            context.addLine(to: CGPoint(x: rect.midX, y: rect.midY + rect.maxY / 4))
-//            context.addLine(to: CGPoint(x: rect.midX, y: rect.midY))
-//
-//            context.setStrokeColor(UIColor.red.cgColor)
-//            context.setFillColor(UIColor.red.cgColor)
-//            context.setLineWidth(5)
-//            //context.strokePath()
-//            context.fillPath()
-            
-            //context.move(to: proportionalPoint(x: 0.53, y: 0.86))
-            //context.addLine(to: proportionalPoint(x: 0.66, y: 0.56))
-            
             let startingPoint = proportionalPoint(x: 0.53, y: 0.86)
             
             var points: [CGPoint] = [
@@ -47,9 +32,12 @@ class LogoView: UIView {
             for point in points {
                 context.addLine(to: point)
             }
+            
+            context.addCurve(to: proportionalPoint(x: 0.00, y: 0.17),
+                             control1: proportionalPoint(x: 0.71, y: 0.29),
+                             control2: proportionalPoint(x: 0.32, y: 0.39))
 
             points = [
-                proportionalPoint(x: 0.00, y: 0.17),
                 proportionalPoint(x: 0.27, y: 0.46),
                 proportionalPoint(x: 0.18, y: 0.63),
                 proportionalPoint(x: 0.41, y: 0.58)
@@ -59,10 +47,7 @@ class LogoView: UIView {
                 context.addLine(to: point)
             }
             context.addLine(to: startingPoint)
-            
-            //context.setStrokeColor(UIColor.red.cgColor)
-            //context.setLineWidth(5)
-            //context.strokePath()
+
             context.setFillColor(UIColor.red.cgColor)
             context.fillPath()
             
