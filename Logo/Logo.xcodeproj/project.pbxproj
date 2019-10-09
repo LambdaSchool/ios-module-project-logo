@@ -12,6 +12,8 @@
 		FAFDE1F8234EA3E40075AE10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFDE1F6234EA3E40075AE10 /* Main.storyboard */; };
 		FAFDE1FA234EA3E50075AE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFDE1F9234EA3E50075AE10 /* Assets.xcassets */; };
 		FAFDE1FD234EA3E50075AE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFDE1FB234EA3E50075AE10 /* LaunchScreen.storyboard */; };
+		FAFDE207234EA4510075AE10 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFDE206234EA4510075AE10 /* LogoView.swift */; };
+		FAFDE209234EA4600075AE10 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFDE208234EA4600075AE10 /* LogoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FAFDE1F9234EA3E50075AE10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAFDE1FC234EA3E50075AE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAFDE1FE234EA3E50075AE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFDE206234EA4510075AE10 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		FAFDE208234EA4600075AE10 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,8 @@
 		FAFDE1E4234EA3E40075AE10 = {
 			isa = PBXGroup;
 			children = (
+				FAFDE205234EA4410075AE10 /* Views */,
+				FAFDE204234EA4360075AE10 /* ViewController */,
 				FAFDE1EF234EA3E40075AE10 /* Logo */,
 				FAFDE1EE234EA3E40075AE10 /* Products */,
 			);
@@ -62,6 +68,22 @@
 				FAFDE1FE234EA3E50075AE10 /* Info.plist */,
 			);
 			path = Logo;
+			sourceTree = "<group>";
+		};
+		FAFDE204234EA4360075AE10 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAFDE208234EA4600075AE10 /* LogoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FAFDE205234EA4410075AE10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAFDE206234EA4510075AE10 /* LogoView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAFDE1F1234EA3E40075AE10 /* AppDelegate.swift in Sources */,
+				FAFDE207234EA4510075AE10 /* LogoView.swift in Sources */,
 				FAFDE1F3234EA3E40075AE10 /* SceneDelegate.swift in Sources */,
+				FAFDE209234EA4600075AE10 /* LogoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
