@@ -9,13 +9,45 @@
 import UIKit
 
 class LogoView: UIView {
-
-    /*
+    
+    //MARK: Properties
+    
+    
+    
+    
+    
+    //MARK: Drawing function
+    
     // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
+    // the draw func is the reciever. I'ts recieving
     override func draw(_ rect: CGRect) {
-        // Drawing code
+       
+        if let context = UIGraphicsGetCurrentContext() {
+            
+            let smallRect = CGRect(x: rect.origin.x, y: rect.origin.y, width: 50, height: 100)
+            
+            context.addRect(smallRect)
+            context.setFillColor(UIColor.red.cgColor)
+            context.fillPath()
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
-    */
-
 }
