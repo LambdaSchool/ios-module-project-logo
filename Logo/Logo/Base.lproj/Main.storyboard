@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRh-zf-TND" customClass="LogoView" customModule="Logo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="261" width="374" height="374"/>
+                                <rect key="frame" x="20" y="237.5" width="374" height="421"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="IRh-zf-TND" secondAttribute="height" multiplier="1:1" id="aTE-La-G9D"/>
+                                    <constraint firstAttribute="width" secondItem="IRh-zf-TND" secondAttribute="height" multiplier="537:605" id="aTE-La-G9D"/>
                                 </constraints>
                             </view>
                         </subviews>
