@@ -55,34 +55,83 @@ class LogoView: UIView {
             
             let point16 = CGPoint(x: rect.size.width * 0.35, y: rect.size.height * 0.14)
             
+//            let line = CAShapeLayer()
+//            let linePath = UIBezierPath()
+//
+//
+//
+//            linePath.move(to: point1)
+//            linePath.addLine(to: point2)
+//
+//
+//            linePath.addLine(to: point3)
+//            linePath.addLine(to: point4)
+//            linePath.addLine(to: point5)
+//            linePath.addLine(to: point6)
+//            linePath.addLine(to: point7)
+//            linePath.addLine(to: point8)
+//            linePath.addLine(to: point9)
+//            linePath.addLine(to: point10)
+//            linePath.addLine(to: point11)
+//            linePath.addLine(to: point12)
+//            linePath.addLine(to: point13)
+//            linePath.addLine(to: point14)
+//            linePath.addLine(to: point15)
+//            linePath.addLine(to: point16)
+//
+//            var dis = (point2.x - point1.x / 3.0)
+//            linePath.addCurve(to: point1, controlPoint1: CGPoint(x: point1.x + dis, y: point1.y + dis), controlPoint2: CGPoint(x: point2.x - dis, y: point2.y - dis))
+//
+//            line.path = linePath.cgPath
+//            line.strokeColor = UIColor.black.cgColor
+//            line.lineWidth = 5.0
+//
+//            context.strokePath()
+//            self.layer.addSublayer(line)
             
             context.move(to: point1)
+
             context.addLine(to: point2)
+
             context.addLine(to: point3)
+
             context.addLine(to: point4)
+
             context.addLine(to: point5)
+
             context.addLine(to: point6)
+
             context.addLine(to: point7)
+
             context.addLine(to: point8)
+
             context.addLine(to: point9)
+
             context.addLine(to: point10)
+
             context.addLine(to: point11)
+
             context.addLine(to: point12)
+
             context.addLine(to: point13)
+
             context.addLine(to: point14)
+
             context.addLine(to: point15)
+
             context.addLine(to: point16)
+
             context.closePath()
-            
+
             context.setFillColor(UIColor.black.cgColor)
             context.fillPath()
             
             let radius: CGFloat = 52
                        
             let centerRec = CGRect(x: center.x - radius,
-                                               y: center.y - radius,
-                                               width: radius * 2,
-                                               height: radius * 2)
+                                   y: center.y - radius,
+                                   width: radius * 2,
+                                   height: radius * 2)
                        
             context.addEllipse(in: centerRec)
             context.setFillColor(UIColor.red.cgColor)
