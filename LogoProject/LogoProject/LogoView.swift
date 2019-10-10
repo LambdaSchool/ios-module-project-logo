@@ -21,9 +21,11 @@ class LogoView: UIView {
             
             let center = CGPoint(x: rect.size.width / 2.0,
                                  y: rect.size.height / 2.0)
+            
+            let offset: CGFloat = 5
   
          
-            let point1 = CGPoint(x: rect.size.width * 0.5, y: rect.size.height - rect.size.height)
+            let point1 = CGPoint(x: rect.size.width * 0.5, y: (rect.size.height - rect.size.height) + offset)
             
             let point2 = CGPoint(x: rect.size.width * 0.65, y: rect.size.height * 0.14)
             
@@ -31,7 +33,7 @@ class LogoView: UIView {
             
             let point4 = CGPoint(x: rect.size.width * 0.87, y: rect.size.height * 0.37)
             
-            let point5 = CGPoint(x: rect.size.width, y: rect.size.height * 0.5)
+            let point5 = CGPoint(x: rect.size.width - offset, y: rect.size.height * 0.5)
             
             let point6 = CGPoint(x: rect.size.width * 0.87, y: rect.size.height * 0.63)
             
@@ -39,7 +41,7 @@ class LogoView: UIView {
             
             let point8 = CGPoint(x: rect.size.width * 0.65, y: rect.size.height * 0.86)
             
-            let point9 = CGPoint(x: rect.size.width * 0.5, y: rect.size.height)
+            let point9 = CGPoint(x: rect.size.width * 0.5, y: rect.size.height - offset)
             
             let point10 = CGPoint(x: rect.size.width * 0.35, y: rect.size.height * 0.86)
             
@@ -47,7 +49,7 @@ class LogoView: UIView {
             
             let point12 = CGPoint(x: rect.size.width * 0.13, y: rect.size.height * 0.63)
             
-            let point13 = CGPoint(x: rect.size.width * 0, y: rect.size.height * 0.5)
+            let point13 = CGPoint(x: (rect.size.width * 0) + offset, y: rect.size.height * 0.5)
             
             let point14 = CGPoint(x: rect.size.width * 0.13, y: rect.size.height * 0.37)
             
@@ -122,9 +124,32 @@ class LogoView: UIView {
             context.addLine(to: point16)
 
             context.closePath()
-
-            context.setFillColor(UIColor.black.cgColor)
-            context.fillPath()
+// attempt
+//            let rad: CGFloat = 2
+//
+//            context.addArc(tangent1End: point1, tangent2End: point2, radius: rad)
+//            context.addArc(tangent1End: point2, tangent2End: point3, radius: rad)
+//            context.addArc(tangent1End: point3, tangent2End: point4, radius: rad)
+//            context.addArc(tangent1End: point4, tangent2End: point5, radius: rad)
+//            context.addArc(tangent1End: point5, tangent2End: point6, radius: rad)
+//            context.addArc(tangent1End: point6, tangent2End: point7, radius: rad)
+//            context.addArc(tangent1End: point7, tangent2End: point8, radius: rad)
+//            context.addArc(tangent1End: point8, tangent2End: point9, radius: rad)
+//            context.addArc(tangent1End: point9, tangent2End: point10, radius: rad)
+//            context.addArc(tangent1End: point10, tangent2End: point11, radius: rad)
+//            context.addArc(tangent1End: point11, tangent2End: point12, radius: rad)
+//            context.addArc(tangent1End: point12, tangent2End: point13, radius: rad)
+//            context.addArc(tangent1End: point13, tangent2End: point14, radius: rad)
+//            context.addArc(tangent1End: point14, tangent2End: point15, radius: rad)
+//            context.addArc(tangent1End: point15, tangent2End: point16, radius: rad)
+//            context.addArc(tangent1End: point16, tangent2End: point1, radius: rad)
+            
+            
+            
+            context.setStrokeColor(UIColor.black.cgColor)
+            context.setLineWidth(9)
+            
+            context.strokePath()
             
             let radius: CGFloat = 52
                        
