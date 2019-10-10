@@ -77,6 +77,18 @@ class LogoView: UIView {
             context.setFillColor(UIColor.black.cgColor)
             context.fillPath()
             
+            let radius: CGFloat = 52
+                       
+            let centerRec = CGRect(x: center.x - radius,
+                                               y: center.y - radius,
+                                               width: radius * 2,
+                                               height: radius * 2)
+                       
+            context.addEllipse(in: centerRec)
+            context.setFillColor(UIColor.red.cgColor)
+                       
+            context.fillPath()
+            
         }
         
     }
