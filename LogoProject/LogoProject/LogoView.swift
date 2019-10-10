@@ -151,7 +151,7 @@ class LogoView: UIView {
             
             context.strokePath()
             
-            let radius: CGFloat = 52
+            let radius: CGFloat = 90
                        
             let centerRec = CGRect(x: center.x - radius,
                                    y: center.y - radius,
