@@ -13,10 +13,10 @@ class LambdaButton: UIButton {
     
     var animationTimer: CADisplayLink?
     
-    static private let normalMainColor = UIColor(red: 0.73, green: 0.08, blue: 0.20, alpha: 1.00).cgColor
-    static private let normalAccentColor = UIColor.white.cgColor
+    static private let normalMainColor = UIColor(red: 0.73, green: 0.08, blue: 0.20, alpha: 1.00)
+    static private let normalAccentColor = UIColor.white
     
-    static private let highlightMainColor = UIColor(red: 0.93, green: 0.28, blue: 0.40, alpha: 1.00).cgColor
+    static private let highlightMainColor = UIColor(red: 0.93, green: 0.28, blue: 0.40, alpha: 1.00)
     //static private let highlightAccentColor = UIColor.lightGray.cgColor
     
     var mainColor = LambdaButton.normalMainColor
@@ -45,7 +45,7 @@ class LambdaButton: UIButton {
         initializeSubViews()
     }
     
-    func initializeSubViews() {
+    private func initializeSubViews() {
         topCornerRadius *= frame.width
         rectPortionHeight *= frame.height
         cutoffHeight *= frame.height
@@ -75,10 +75,10 @@ class LambdaButton: UIButton {
                 width: totalShape.width,
                 height: rectPortionHeight
             )
-            context.setStrokeColor(mainColor)
+            context.setStrokeColor(mainColor.cgColor)
             context.setLineWidth(1)
             context.addRect(mainRect)
-            context.setFillColor(mainColor)
+            context.setFillColor(mainColor.cgColor)
             context.drawPath(using: .fillStroke)
             
             // draw bottom triangle
@@ -89,8 +89,8 @@ class LambdaButton: UIButton {
             context.drawPath(using: .fillStroke)
             
             // draw main white triangle
-            context.setStrokeColor(accentColor)
-            context.setFillColor(accentColor)
+            context.setStrokeColor(accentColor.cgColor)
+            context.setFillColor(accentColor.cgColor)
             
             let mainTriangleTop = CGPoint(x: center.x, y: mainRect.minY + topToMainTriBottom - mainTriangle.height)
             
@@ -101,8 +101,8 @@ class LambdaButton: UIButton {
             context.drawPath(using: .fill)
             
             // draw inlet triangle
-            context.setStrokeColor(mainColor)
-            context.setFillColor(mainColor)
+            context.setStrokeColor(mainColor.cgColor)
+            context.setFillColor(mainColor.cgColor)
             
             context.beginPath()
             context.move(to: CGPoint(x: center.x - (innerTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
@@ -110,7 +110,7 @@ class LambdaButton: UIButton {
             context.addLine(to: CGPoint(x: center.x, y: mainRect.minY + topToMainTriBottom - innerTriangle.height))
             context.drawPath(using: .fillStroke)
             
-            // draw triangle cutoff
+            // draw triangle top cutoff
             let heightToCutoff = (mainTriangleTop.y - mainRect.minY) + cutoffHeight
             context.beginPath()
             context.addRect(CGRect(x: mainRect.minX, y: mainRect.minY, width: mainRect.width, height: heightToCutoff))
@@ -128,11 +128,11 @@ class LambdaButton: UIButton {
         self.becomeUnhighlighted()
     }
     
-    @objc func timerFired(_ sender: CADisplayLink) {
+    @objc private func timerFired(_ sender: CADisplayLink) {
         setNeedsDisplay()
     }
     
-    func becomeHighlighted() {
+    private func becomeHighlighted() {
         UIView.animate(withDuration: 1) {
             self.mainColor = LambdaButton.highlightMainColor
             self.transform = self.transform.scaledBy(x: self.growRatio, y: self.growRatio)
@@ -140,7 +140,7 @@ class LambdaButton: UIButton {
         }
     }
     
-    func becomeUnhighlighted() {
+    private func becomeUnhighlighted() {
         UIView.animate(withDuration: 1) {
             self.mainColor = LambdaButton.normalMainColor
             self.transform = self.transform.scaledBy(x: 1 / self.growRatio, y: 1 / self.growRatio)
