@@ -17,7 +17,7 @@ class LambdaButton: UIButton {
     static private let normalAccentColor = UIColor.white.cgColor
     
     static private let highlightMainColor = UIColor(red: 0.93, green: 0.28, blue: 0.40, alpha: 1.00).cgColor
-    static private let highlightAccentColor = UIColor.lightGray.cgColor
+    //static private let highlightAccentColor = UIColor.lightGray.cgColor
     
     var mainColor = LambdaButton.normalMainColor
     var accentColor = LambdaButton.normalAccentColor
@@ -117,13 +117,14 @@ class LambdaButton: UIButton {
             context.drawPath(using: .fillStroke)
         }
     }
-    override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-        super.pressesBegan(presses, with: event)
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         self.becomeHighlighted()
     }
     
-    override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-        super.pressesBegan(presses, with: event)
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         self.becomeUnhighlighted()
     }
     
@@ -132,26 +133,18 @@ class LambdaButton: UIButton {
     }
     
     func becomeHighlighted() {
-        let animationBlock = {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1) {
-                self.mainColor = LambdaButton.highlightMainColor
-                self.accentColor = LambdaButton.highlightAccentColor
-                self.transform = self.transform.scaledBy(x: self.growRatio, y: self.growRatio)
-                self.center = self.center
-            }
+        UIView.animate(withDuration: 1) {
+            self.mainColor = LambdaButton.highlightMainColor
+            self.transform = self.transform.scaledBy(x: self.growRatio, y: self.growRatio)
+            self.center = self.center
         }
-        UIView.animateKeyframes(withDuration: 1, delay: 0, options: [], animations: animationBlock)
     }
     
     func becomeUnhighlighted() {
-        let animationBlock = {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1) {
-                self.mainColor = LambdaButton.normalMainColor
-                self.accentColor = LambdaButton.normalAccentColor
-                self.transform = self.transform.scaledBy(x: 1 / self.growRatio, y: 1 / self.growRatio)
-                self.center = self.center
-            }
+        UIView.animate(withDuration: 1) {
+            self.mainColor = LambdaButton.normalMainColor
+            self.transform = self.transform.scaledBy(x: 1 / self.growRatio, y: 1 / self.growRatio)
+            self.center = self.center
         }
-        UIView.animateKeyframes(withDuration: 1, delay: 0, options: [], animations: animationBlock)
     }
 }
