@@ -32,10 +32,7 @@ class LogoView: UIView {
             context.beginPath()
             let roundedRectPath = CGPath(roundedRect: roundRect, cornerWidth: 10.0, cornerHeight: 10.0, transform: nil)
             context.addPath(roundedRectPath)
-//            context.addRect(CGRect(x: rect.origin.x,
-//                                   y: rect.origin.y,
-//                                   width: rect.size.width,
-//                                   height: rect.size.height - heightOffSet))
+
             context.setFillColor(lambdaBgColor.cgColor)
             context.fillPath()
             context.closePath()
@@ -65,14 +62,6 @@ class LogoView: UIView {
             context.setFillColor(lambdaBgColor.cgColor)
             context.fillPath()
             
-            //context.setStrokeColor(UIColor.black.cgColor)
-            context.beginPath()
-            context.move(to: CGPoint(x: squareCenter.x - 10,
-                                     y: (rect.size.height - heightOffSet) + heightOffSet - 10))
-            //context.setLineWidth(10)
-  
-            //context.strokePath()
-            context.closePath()
             
             // Logo lines
             context.beginPath()
