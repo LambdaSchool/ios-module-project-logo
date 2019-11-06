@@ -8,14 +8,82 @@
 
 import UIKit
 
+@IBDesignable
 class LambdaLogo: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    let mainColor = UIColor(red: 0.73, green: 0.08, blue: 0.20, alpha: 1.00).cgColor
+    let accentColor = UIColor.white.cgColor
+    
+    // ratio constants (per pixel of total size)
+    var topCornerRadius: CGFloat = 0.008
+    var rectPortionHeight: CGFloat = 0.38
+    var cutoffHeight: CGFloat = 0.044
+    var totalShape = CGSize(width: 0.476, height: 0.543)
+    var mainTriangle = CGSize(width: 0.276, height: 0.242)
+    var innerTriangle = CGSize(width: 0.14, height: 0.124)
+    var topToMainTriBottom: CGFloat = 0.312
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = UIColor.clear
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        backgroundColor = UIColor.clear
+    }
+    
+    override func draw(_ rect: CGRect) {
+        topCornerRadius *= rect.width
+        rectPortionHeight *= rect.width
+        cutoffHeight *= rect.height
+        totalShape.width *= rect.width
+        totalShape.height *= rect.height
+        mainTriangle.width *= rect.width
+        mainTriangle.height *= rect.height
+        innerTriangle.width *= rect.width
+        innerTriangle.height *= rect.height
+        topToMainTriBottom *= rect.height
+        
+        if let context = UIGraphicsGetCurrentContext() {
+            let center = CGPoint(x: rect.width * 0.5, y: rect.height * 0.5)
+            
+            // draw main rectangle
+            let mainRect = CGRect(
+                x: center.x - (totalShape.width * 0.5),
+                y: center.y - (totalShape.height * 0.5),
+                width: totalShape.width,
+                height: rectPortionHeight
+            )
+            context.setStrokeColor(mainColor)
+            context.setLineWidth(1)
+            context.addRect(mainRect)
+            context.setFillColor(mainColor)
+            context.drawPath(using: .fillStroke)
+            
+            // draw bottom triangle
+            context.beginPath()
+            context.move(to: CGPoint(x: mainRect.minX, y: mainRect.maxY))
+            context.addLine(to: CGPoint(x: center.x, y: mainRect.minY + totalShape.height))
+            context.addLine(to: CGPoint(x: mainRect.maxX, y: mainRect.maxY))
+            context.drawPath(using: .fillStroke)
+            
+            // draw main white triangle
+            context.setStrokeColor(accentColor)
+            context.setFillColor(accentColor)
+            
+            context.beginPath()
+            context.move(to: CGPoint(x: center.x - (mainTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
+            context.addLine(to: CGPoint(x: center.x + (mainTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
+            context.addLine(to: CGPoint(x: center.x, y: mainRect.minY + topToMainTriBottom - mainTriangle.height))
+            context.drawPath(using: .fillStroke)
+            
+            // draw inlet triangle
+            context.setStrokeColor(mainColor)
+            context.setFillColor(mainColor)
+            
+            // draw cutoff triangle
+        }
+    }
 
 }
