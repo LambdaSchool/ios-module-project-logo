@@ -35,7 +35,7 @@ class LambdaLogo: UIView {
     
     override func draw(_ rect: CGRect) {
         topCornerRadius *= rect.width
-        rectPortionHeight *= rect.width
+        rectPortionHeight *= rect.height
         cutoffHeight *= rect.height
         totalShape.width *= rect.width
         totalShape.height *= rect.height
@@ -72,17 +72,29 @@ class LambdaLogo: UIView {
             context.setStrokeColor(accentColor)
             context.setFillColor(accentColor)
             
+            let mainTriangleTop = CGPoint(x: center.x, y: mainRect.minY + topToMainTriBottom - mainTriangle.height)
+            
             context.beginPath()
             context.move(to: CGPoint(x: center.x - (mainTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
             context.addLine(to: CGPoint(x: center.x + (mainTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
-            context.addLine(to: CGPoint(x: center.x, y: mainRect.minY + topToMainTriBottom - mainTriangle.height))
-            context.drawPath(using: .fillStroke)
+            context.addLine(to: mainTriangleTop)
+            context.drawPath(using: .fill)
             
             // draw inlet triangle
             context.setStrokeColor(mainColor)
             context.setFillColor(mainColor)
             
-            // draw cutoff triangle
+            context.beginPath()
+            context.move(to: CGPoint(x: center.x - (innerTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
+            context.addLine(to: CGPoint(x: center.x + (innerTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
+            context.addLine(to: CGPoint(x: center.x, y: mainRect.minY + topToMainTriBottom - innerTriangle.height))
+            context.drawPath(using: .fillStroke)
+            
+            // draw triangle cutoff
+            let heightToCutoff = (mainTriangleTop.y - mainRect.minY) + cutoffHeight
+            context.beginPath()
+            context.addRect(CGRect(x: mainRect.minX, y: mainRect.minY, width: mainRect.width, height: heightToCutoff))
+            context.drawPath(using: .fillStroke)
         }
     }
 
