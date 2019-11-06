@@ -22,21 +22,11 @@
                                     <constraint firstAttribute="width" secondItem="aaC-Le-6rK" secondAttribute="height" multiplier="1:1" id="rlF-bt-U2a"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="665-qp-ho8" customClass="CurvyLambdaLogo" customModule="Logo" customModuleProvider="target">
-                                <rect key="frame" x="60" y="378" width="294" height="294"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="665-qp-ho8" secondAttribute="height" multiplier="1:1" id="qaf-aJ-4el"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="aaC-Le-6rK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="6Cc-Ub-ucT"/>
-                            <constraint firstItem="665-qp-ho8" firstAttribute="trailing" secondItem="aaC-Le-6rK" secondAttribute="trailing" id="7Xp-i9-o3g"/>
-                            <constraint firstItem="665-qp-ho8" firstAttribute="top" secondItem="aaC-Le-6rK" secondAttribute="bottom" constant="20" id="QYb-g2-Jm1"/>
                             <constraint firstItem="aaC-Le-6rK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rn8-hx-8Ic"/>
-                            <constraint firstItem="665-qp-ho8" firstAttribute="leading" secondItem="aaC-Le-6rK" secondAttribute="leading" id="jAf-ih-CLh"/>
                             <constraint firstItem="aaC-Le-6rK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mnG-4s-lg7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
