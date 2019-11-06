@@ -22,15 +22,27 @@
                                     <constraint firstAttribute="width" secondItem="aaC-Le-6rK" secondAttribute="height" multiplier="1:1" id="rlF-bt-U2a"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmw-tu-Hgn" customClass="LambdaButton" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="60" y="366" width="294" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tmw-tu-Hgn" secondAttribute="height" multiplier="1:1" id="P3J-11-TTv"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="aaC-Le-6rK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="6Cc-Ub-ucT"/>
+                            <constraint firstItem="Tmw-tu-Hgn" firstAttribute="leading" secondItem="aaC-Le-6rK" secondAttribute="leading" id="Osg-um-Mqb"/>
+                            <constraint firstItem="Tmw-tu-Hgn" firstAttribute="trailing" secondItem="aaC-Le-6rK" secondAttribute="trailing" id="QvW-Vi-xfh"/>
                             <constraint firstItem="aaC-Le-6rK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rn8-hx-8Ic"/>
                             <constraint firstItem="aaC-Le-6rK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mnG-4s-lg7"/>
+                            <constraint firstItem="Tmw-tu-Hgn" firstAttribute="top" secondItem="aaC-Le-6rK" secondAttribute="bottom" constant="8" id="nvI-cW-tM1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lambdaButton" destination="Tmw-tu-Hgn" id="3CJ-UJ-ZMU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
