@@ -16,12 +16,12 @@ class LambdaLogo: UIView {
     
     // ratio constants (per pixel of total size)
     var topCornerRadius: CGFloat = 0.008
-    var rectPortionHeight: CGFloat = 0.38
-    var cutoffHeight: CGFloat = 0.044
-    var totalShape = CGSize(width: 0.476, height: 0.543)
-    var mainTriangle = CGSize(width: 0.276, height: 0.242)
-    var innerTriangle = CGSize(width: 0.14, height: 0.124)
-    var topToMainTriBottom: CGFloat = 0.312
+    var rectPortionHeight: CGFloat = 0.381
+    var cutoffHeight: CGFloat = 0.043
+    var totalShape = CGSize(width: 0.475, height: 0.543)
+    var mainTriangle = CGSize(width: 0.275, height: 0.241)
+    var innerTriangle = CGSize(width: 0.141, height: 0.123)
+    var topToMainTriBottom: CGFloat = 0.311
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,16 +34,16 @@ class LambdaLogo: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        topCornerRadius *= rect.width
-        rectPortionHeight *= rect.height
-        cutoffHeight *= rect.height
-        totalShape.width *= rect.width
-        totalShape.height *= rect.height
-        mainTriangle.width *= rect.width
-        mainTriangle.height *= rect.height
-        innerTriangle.width *= rect.width
-        innerTriangle.height *= rect.height
-        topToMainTriBottom *= rect.height
+        topCornerRadius *= rect.width * 1.8
+        rectPortionHeight *= rect.height * 1.8
+        cutoffHeight *= rect.height * 1.8
+        totalShape.width *= rect.width * 1.8
+        totalShape.height *= rect.height * 1.8
+        mainTriangle.width *= rect.width * 1.8
+        mainTriangle.height *= rect.height * 1.8
+        innerTriangle.width *= rect.width * 1.8
+        innerTriangle.height *= rect.height * 1.8
+        topToMainTriBottom *= rect.height * 1.8
         
         if let context = UIGraphicsGetCurrentContext() {
             let center = CGPoint(x: rect.width * 0.5, y: rect.height * 0.5)
