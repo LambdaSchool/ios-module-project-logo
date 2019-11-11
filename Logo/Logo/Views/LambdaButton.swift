@@ -66,55 +66,7 @@ class LambdaButton: UIButton {
     
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext() {
-            let center = CGPoint(x: rect.width * 0.5, y: rect.height * 0.5)
-            
-            // draw main rectangle
-            let mainRect = CGRect(
-                x: center.x - (totalShape.width * 0.5),
-                y: center.y - (totalShape.height * 0.5),
-                width: totalShape.width,
-                height: rectPortionHeight
-            )
-            context.setStrokeColor(mainColor.cgColor)
-            context.setLineWidth(1)
-            context.addRect(mainRect)
-            context.setFillColor(mainColor.cgColor)
-            context.drawPath(using: .fillStroke)
-            
-            // draw bottom triangle
-            context.beginPath()
-            context.move(to: CGPoint(x: mainRect.minX, y: mainRect.maxY))
-            context.addLine(to: CGPoint(x: center.x, y: mainRect.minY + totalShape.height))
-            context.addLine(to: CGPoint(x: mainRect.maxX, y: mainRect.maxY))
-            context.drawPath(using: .fillStroke)
-            
-            // draw main white triangle
-            context.setStrokeColor(accentColor.cgColor)
-            context.setFillColor(accentColor.cgColor)
-            
-            let mainTriangleTop = CGPoint(x: center.x, y: mainRect.minY + topToMainTriBottom - mainTriangle.height)
-            
-            context.beginPath()
-            context.move(to: CGPoint(x: center.x - (mainTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
-            context.addLine(to: CGPoint(x: center.x + (mainTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
-            context.addLine(to: mainTriangleTop)
-            context.drawPath(using: .fill)
-            
-            // draw inlet triangle
-            context.setStrokeColor(mainColor.cgColor)
-            context.setFillColor(mainColor.cgColor)
-            
-            context.beginPath()
-            context.move(to: CGPoint(x: center.x - (innerTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
-            context.addLine(to: CGPoint(x: center.x + (innerTriangle.width * 0.5), y: mainRect.minY + topToMainTriBottom))
-            context.addLine(to: CGPoint(x: center.x, y: mainRect.minY + topToMainTriBottom - innerTriangle.height))
-            context.drawPath(using: .fillStroke)
-            
-            // draw triangle top cutoff
-            let heightToCutoff = (mainTriangleTop.y - mainRect.minY) + cutoffHeight
-            context.beginPath()
-            context.addRect(CGRect(x: mainRect.minX, y: mainRect.minY, width: mainRect.width, height: heightToCutoff))
-            context.drawPath(using: .fillStroke)
+            context.setFillColor(UIColor.red.cgColor)
         }
     }
     
