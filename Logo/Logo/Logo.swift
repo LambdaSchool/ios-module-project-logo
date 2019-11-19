@@ -22,7 +22,7 @@ class logo: UIView {
 
         //// Oval Drawing
         context.saveGState()
-        context.translateBy(x: 184.5, y: 171.5)
+        context.translateBy(x: 140, y: 171.5)
 
         let ovalRect = CGRect(x: -111.5, y: -100.5, width: 223, height: 201)
         let ovalPath = UIBezierPath()
@@ -39,14 +39,13 @@ class logo: UIView {
 
         context.restoreGState()
 
-
         //// Text Drawing
-        let textRect = CGRect(x: 296, y: 71, width: 535, height: 262)
+        let textRect = CGRect(x: 225, y: 65, width: 535, height: 262)
         let textTextContent = "unfold"
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .center
         let textFontAttributes = [
-            .font: UIFont(name: "AvenirNext-Bold", size: 160)!,
+            .font: UIFont(name: "AvenirNext-Bold", size: 140)!,
             .foregroundColor: UIColor.black,
             .paragraphStyle: textStyle,
         ] as [NSAttributedString.Key: Any]
