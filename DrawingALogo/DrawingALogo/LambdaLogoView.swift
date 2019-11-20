@@ -14,8 +14,6 @@ class LambdaLogoView: UIView {
     
     private let shieldBgColor = UIColor.red
     private let lambdaBgColor = UIColor.white
-    
-    
 
     private let drop1Color = UIColor.red
     private let drop2Color = UIColor.blue
