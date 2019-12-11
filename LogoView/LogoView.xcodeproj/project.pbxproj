@@ -12,6 +12,8 @@
 		6332A9C123A1AF2800004BC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6332A9BF23A1AF2800004BC4 /* Main.storyboard */; };
 		6332A9C323A1AF2900004BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6332A9C223A1AF2900004BC4 /* Assets.xcassets */; };
 		6332A9C623A1AF2900004BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6332A9C423A1AF2900004BC4 /* LaunchScreen.storyboard */; };
+		6332A9D323A1B05400004BC4 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332A9D223A1B05400004BC4 /* LogoViewController.swift */; };
+		6332A9D523A1B0D600004BC4 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332A9D423A1B0D600004BC4 /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		6332A9C223A1AF2900004BC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6332A9C523A1AF2900004BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6332A9C723A1AF2900004BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6332A9D223A1B05400004BC4 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
+		6332A9D423A1B0D600004BC4 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		6332A9CE23A1AFC800004BC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6332A9D223A1B05400004BC4 /* LogoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		6332A9D123A1AFE900004BC4 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				6332A9D423A1B0D600004BC4 /* LogoView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -176,7 +182,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6332A9BA23A1AF2800004BC4 /* AppDelegate.swift in Sources */,
+				6332A9D523A1B0D600004BC4 /* LogoView.swift in Sources */,
 				6332A9BC23A1AF2800004BC4 /* SceneDelegate.swift in Sources */,
+				6332A9D323A1B05400004BC4 /* LogoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
