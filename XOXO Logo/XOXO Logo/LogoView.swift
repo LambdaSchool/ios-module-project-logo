@@ -1,6 +1,6 @@
 //
 //  LogoView.swift
-//  Playstation Logo
+//  XOXO Logo
 //
 //  Created by Tobi Kuyoro on 22/01/2020.
 //  Copyright © 2020 Tobi Kuyoro. All rights reserved.
@@ -13,7 +13,7 @@ struct Logo {
     let color: UIColor
 }
 
-@ IBDesignable class LogoView: UIView {
+@IBDesignable class LogoView: UIView {
     
     // MARK: - Properties
     
@@ -180,4 +180,5 @@ struct Logo {
             
         }
     }
+
 }

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Playstation Logo
+//  XOXO Logo
 //
 //  Created by Tobi Kuyoro on 22/01/2020.
 //  Copyright © 2020 Tobi Kuyoro. All rights reserved.
