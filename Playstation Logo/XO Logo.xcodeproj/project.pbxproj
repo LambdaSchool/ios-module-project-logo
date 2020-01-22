@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C59AEB623D8EFA000DEF44C /* Playstation Logo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playstation Logo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C59AEB623D8EFA000DEF44C /* XO Logo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XO Logo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C59AEB923D8EFA000DEF44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C59AEBB23D8EFA000DEF44C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C59AEC023D8EFA000DEF44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		2C59AEAD23D8EFA000DEF44C = {
 			isa = PBXGroup;
 			children = (
-				2C59AEB823D8EFA000DEF44C /* Playstation Logo */,
+				2C59AEB823D8EFA000DEF44C /* XO Logo */,
 				2C59AEB723D8EFA000DEF44C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		2C59AEB723D8EFA000DEF44C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C59AEB623D8EFA000DEF44C /* Playstation Logo.app */,
+				2C59AEB623D8EFA000DEF44C /* XO Logo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C59AEB823D8EFA000DEF44C /* Playstation Logo */ = {
+		2C59AEB823D8EFA000DEF44C /* XO Logo */ = {
 			isa = PBXGroup;
 			children = (
 				2C59AEB923D8EFA000DEF44C /* AppDelegate.swift */,
@@ -67,15 +67,15 @@
 				2C59AECD23D8F23000DEF44C /* LogoView.swift */,
 				2C59AECF23D8F29400DEF44C /* LogoViewController.swift */,
 			);
-			path = "Playstation Logo";
+			path = "XO Logo";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C59AEB523D8EFA000DEF44C /* Playstation Logo */ = {
+		2C59AEB523D8EFA000DEF44C /* XO Logo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C59AECA23D8EFA200DEF44C /* Build configuration list for PBXNativeTarget "Playstation Logo" */;
+			buildConfigurationList = 2C59AECA23D8EFA200DEF44C /* Build configuration list for PBXNativeTarget "XO Logo" */;
 			buildPhases = (
 				2C59AEB223D8EFA000DEF44C /* Sources */,
 				2C59AEB323D8EFA000DEF44C /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = "Playstation Logo";
+			name = "XO Logo";
 			productName = "Playstation Logo";
-			productReference = 2C59AEB623D8EFA000DEF44C /* Playstation Logo.app */;
+			productReference = 2C59AEB623D8EFA000DEF44C /* XO Logo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2C59AEB123D8EFA000DEF44C /* Build configuration list for PBXProject "Playstation Logo" */;
+			buildConfigurationList = 2C59AEB123D8EFA000DEF44C /* Build configuration list for PBXProject "XO Logo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C59AEB523D8EFA000DEF44C /* Playstation Logo */,
+				2C59AEB523D8EFA000DEF44C /* XO Logo */,
 			);
 		};
 /* End PBXProject section */
@@ -295,8 +295,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tobikuyoro.Playstation-Logo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tobikuyoro.XO-Logo";
+				PRODUCT_NAME = "XO Logo";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,8 +313,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tobikuyoro.Playstation-Logo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tobikuyoro.XO-Logo";
+				PRODUCT_NAME = "XO Logo";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C59AEB123D8EFA000DEF44C /* Build configuration list for PBXProject "Playstation Logo" */ = {
+		2C59AEB123D8EFA000DEF44C /* Build configuration list for PBXProject "XO Logo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C59AEC823D8EFA200DEF44C /* Debug */,
@@ -332,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C59AECA23D8EFA200DEF44C /* Build configuration list for PBXNativeTarget "Playstation Logo" */ = {
+		2C59AECA23D8EFA200DEF44C /* Build configuration list for PBXNativeTarget "XO Logo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C59AECB23D8EFA200DEF44C /* Debug */,
