@@ -14,9 +14,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        configureView()
     }
-
-
+    
+    func configureView() {
+        logo = LogoView()
+        logo.contentMode = .scaleAspectFit
+        logo.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(logo)
+        
+        logo.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.75).isActive = true
+        logo.heightAnchor.constraint(equalTo: logo.widthAnchor).isActive = true
+        logo.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
+        logo.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+    }
 }
 
