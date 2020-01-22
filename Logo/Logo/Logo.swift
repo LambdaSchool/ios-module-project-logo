@@ -22,11 +22,12 @@ class LogoView: UIView {
     
     
     
-    private let squareBgColor = UIColor.red
+    private let squareBgColor = UIColor.white
     private let triangleBgColor = UIColor.red
     private let lambdaBgColor = UIColor.white
     private let shieldRect = UIColor.red
-    private let boarderWidt: CGFloat = 2.0
+    private let boarderWidth2: CGFloat = 3.0
+    private let boarderWidth: CGFloat = 15.0
     private var digitFont: UIFont {
         return UIFont.systemFont(ofSize: 8.0 + frame.size.width / 50.0)
     }
@@ -39,28 +40,57 @@ class LogoView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        backgroundColor = UIColor.red
+        backgroundColor = UIColor.clear
     }
     
     override func draw(_ rect: CGRect) {
         
-        if let path = UIGraphicsGetCurrentContext() {
+        if let context = UIGraphicsGetCurrentContext() {
+        
+            context.addRect(CGRect(x: 35, y: 20, width: 300, height: 400))
+            context.setFillColor(squareBgColor.cgColor)
+            context.setStrokeColor(squareBgColor.cgColor)
+            context.fillPath()
             
-            path.addLine(to: CGPoint(x: 50, y: 0))
-            path.addLine(to: CGPoint(x: 50, y: 200))
-            path.addLine(to: CGPoint(x: 200, y: 200))
-            path.addLine(to: CGPoint(x: 200, y: 0))
-                        path.setFillColor(squareBgColor)
-            path.fillPath()
+           if let lambdaShield =
+            UIGraphicsGetCurrentContext() {
+          
+            lambdaShield.move(to: CGPoint(x: 100, y: 100))
+            lambdaShield.addLine(to: CGPoint(x: 300, y: 100))
+            lambdaShield.addLine(to: CGPoint(x: 300, y: 250))
+            lambdaShield.addLine(to: CGPoint(x: 200, y: 300))
+            lambdaShield.addLine(to: CGPoint(x: 100, y: 250))
+            lambdaShield.addLine(to: CGPoint(x: 100, y: 100))
             
-            //        add lambdashield
+            lambdaShield.closePath()
+            lambdaShield.setFillColor(triangleBgColor.cgColor)
+            lambdaShield.setLineWidth(boarderWidth)
+            lambdaShield.setStrokeColor(triangleBgColor.cgColor)
+            lambdaShield.strokePath()
             
-            //        add triangle
+            
+            if let v = UIGraphicsGetCurrentContext() {
+                lambdaShield.move(to: CGPoint(x: 120, y: 240))
+                lambdaShield.addLine(to: CGPoint(x: 150, y: 240))
+                lambdaShield.addLine(to: CGPoint(x: 200, y: 170))
+                lambdaShield.addLine(to: CGPoint(x: 250, y: 240))
+                lambdaShield.addLine(to: CGPoint(x: 280, y: 240))
+                lambdaShield.addLine(to: CGPoint(x: 225, y: 150))
+                lambdaShield.addLine(to: CGPoint(x: 180, y: 150))
+                lambdaShield.addLine(to: CGPoint(x: 120, y: 240))
+            
+                v.closePath()
+                v.setLineWidth(boarderWidth2)
+                v.setFillColor(triangleBgColor.cgColor)
+                v.fillPath()
+                v.setStrokeColor(triangleBgColor.cgColor)
+                v.strokePath()
+            }
             
             
-            //        add lambda logo
+            }
             
-           setNeedsDisplay()
+
         }
     }
     
