@@ -14,12 +14,12 @@ class LogoView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.blue
+        backgroundColor = UIColor.black
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        backgroundColor = UIColor.blue
+        backgroundColor = UIColor.black
     }
     
     override func draw(_ rect: CGRect) {
@@ -27,41 +27,41 @@ class LogoView: UIView {
         if let canvas = UIGraphicsGetCurrentContext() {
             
             let max: CGFloat = self.bounds.maxX
-            //let rStartEndPointX: CGFloat = 150 // should be self.bounds.maxY / 2 ?
-            let controlX: CGFloat = max / (CGFloat.pi * 2) // maxX or maxY / 6 or pi * 2   300 / (pi*2) = this 50~
-            
+            let controlX: CGFloat = max / (CGFloat.pi * 2)
+            let smallMulti: CGFloat = 0.20
+            let bigMulti: CGFloat = 0.80
             
             // Left half
             canvas.move(to: CGPoint(x: max / 2, y: 0))
             canvas.addCurve(to: CGPoint(x: max / 2, y: max),
-                            control1: CGPoint(x: -controlX, y: controlX),
-                            control2: CGPoint(x: -controlX, y: controlX * 5))
-            canvas.setFillColor(UIColor.red.cgColor) // -50 x
+                            control1: CGPoint(x: -controlX, y: controlX / 2),
+                            control2: CGPoint(x: -controlX, y: controlX * (CGFloat.pi * 2)))
+            canvas.setFillColor(UIColor.orange.cgColor) //
+            canvas.fillPath()
+            
+            // Left half pt2
+            canvas.move(to: CGPoint(x: max / 2, y: 0))
+            canvas.addCurve(to: CGPoint(x: max / 2, y: max),
+                            control1: CGPoint(x: controlX / CGFloat.pi, y: controlX / 2),
+                            control2: CGPoint(x: controlX / CGFloat.pi, y: controlX * (CGFloat.pi * 2)))
+            canvas.setFillColor(UIColor.black.cgColor) //
             canvas.fillPath()
             
             // Right half
-            canvas.move(to: CGPoint(x: max / 2, y: 0))
-            canvas.addCurve(to: CGPoint(x: max / 2, y: max),
-                            control1: CGPoint(x: max + controlX, y: controlX),
-                            control2: CGPoint(x: max + controlX, y: controlX * 5))
-            canvas.setFillColor(UIColor.yellow.cgColor) // -50 x
+            canvas.move(to: CGPoint(x: max / 2, y: max * smallMulti))
+            canvas.addCurve(to: CGPoint(x: max / 2, y: max * bigMulti),
+                            control1: CGPoint(x: (max + controlX)  , y: (controlX / 2) * smallMulti ),
+                            control2: CGPoint(x: (max + controlX) , y: controlX * (CGFloat.pi * 2) ))
+            canvas.setFillColor(UIColor.orange.cgColor)
             canvas.fillPath()
             
-//            // Left half
-//            canvas.move(to: CGPoint(x: rStartEndPointX, y: 0))
-//            canvas.addCurve(to: CGPoint(x: rStartEndPointX, y: 300),
-//                            control1: CGPoint(x: -50, y: 50),
-//                            control2: CGPoint(x: -50, y: 250))
-//            canvas.setFillColor(UIColor.red.cgColor) // -50 x
-//            canvas.fillPath()
-//
-//            // Right half
-//            canvas.move(to: CGPoint(x: rStartEndPointX, y: 0))
-//            canvas.addCurve(to: CGPoint(x: rStartEndPointX, y: 300),
-//                            control1: CGPoint(x: 350, y: 50),
-//                            control2: CGPoint(x: 350, y: 250))
-//            canvas.setFillColor(UIColor.orange.cgColor)
-//            canvas.fillPath()
+            // Right half pt2
+            canvas.move(to: CGPoint(x: max / 2, y: max * 0.15)) // small mul
+            canvas.addCurve(to: CGPoint(x: max / 2, y: max * 0.85), // big mul
+                            control1: CGPoint(x: (max + controlX) - controlX , y: (controlX / 2) * smallMulti ),
+                            control2: CGPoint(x: (max + controlX) - controlX , y: controlX * (CGFloat.pi * 2) ))
+            canvas.setFillColor(UIColor.black.cgColor)
+            canvas.fillPath()
             
         }
     }
