@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Foundation
 
+@IBDesignable
 class ViewController: UIViewController {
 
+    @IBOutlet weak var logoView: LogoView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
-
