@@ -16,10 +16,10 @@ class LogoView: UIView {
     let logoBackgroundColor = UIColor.red
     
     let borderColor = UIColor.white
+    let maskColor = UIColor.red
     let borderWidth: CGFloat = 45.0
-    
-    let letterWidth: CGFloat = 15.0
-    
+    let letterWidth: CGFloat = 20.0
+    let maskWidth: CGFloat = 10.0
     
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext(){
@@ -32,12 +32,25 @@ class LogoView: UIView {
             context.setFillColor(logoBackgroundColor.cgColor)
             context.fillPath()
             //letter Points
-            let letterStartPoint = CGPoint(x: rect.size.width / 3.0,
-            y: rect.size.height / 2.0)
+            let letterStartPoint = CGPoint(x: rect.size.width / 3.6,
+                                           y: rect.size.height / 1.8)
             let letterMidPoint = CGPoint(x: rect.size.width / 2.0,
             y: rect.size.height / 4.0)
-            let letterEndPoint = CGPoint(x: rect.size.width / 1.5,
-            y: rect.size.height / 2.0)
+            let letterEndPoint = CGPoint(x: rect.size.width / 1.4,
+                                         y: rect.size.height / 1.8)
+            
+            //mask points
+            let maskStartPoint = CGPoint(x: rect.size.width / 4.2,
+                                         y: rect.size.height / 1.8)
+                    
+            let maskEndPoint = CGPoint(x: rect.size.width / 1.1,
+                                       y: rect.size.height / 1.8)
+            let topMaskStartPoint = CGPoint(x: rect.size.width / 4.2,
+                                            y: rect.size.height / 5.5)
+                    
+            let topMaskEndPoint = CGPoint(x: rect.size.width / 1.1,
+                                          y: rect.size.height / 5.5)
+            
             //bottom points
             let logoCenterBottom = CGPoint(x: rect.size.width / 2.0,
             y: rect.size.height)
@@ -81,6 +94,23 @@ class LogoView: UIView {
             context.addLine(to: letterMidPoint)
             context.addLine(to: letterEndPoint)
             context.strokePath()
+            
+            //mask path
+            context.beginPath()
+            context.move(to: maskStartPoint)
+            context.setStrokeColor(maskColor.cgColor)
+            context.setLineWidth(maskWidth)
+            context.addLine(to: maskEndPoint )
+            context.strokePath()
+            
+            //top mask path
+            context.beginPath()
+            context.move(to: topMaskStartPoint)
+            context.setStrokeColor(maskColor.cgColor)
+            context.setLineWidth(maskWidth)
+            context.addLine(to: topMaskEndPoint )
+            context.strokePath()
+            
         }
     }
 }
