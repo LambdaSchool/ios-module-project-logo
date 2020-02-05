@@ -18,8 +18,8 @@ class LogoView: UIView {
     let borderColor = UIColor.white
     let maskColor = UIColor.red
     let borderWidth: CGFloat = 45.0
-    let letterWidth: CGFloat = 20.0
-    let maskWidth: CGFloat = 10.0
+    let letterWidth: CGFloat = 23.0
+    let maskWidth: CGFloat = 12.0
     
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext(){
