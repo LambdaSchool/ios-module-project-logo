@@ -8,95 +8,72 @@
 
 import UIKit
 
-//@IBDesignable
+@IBDesignable
 class LogoView: UIView {
     
     // MARK: - Properties
     
-    lazy var lambdaLabel: UILabel = {
-        var label = UILabel()
-        label.font = font
-        label.text = "Λ"
-        label.textAlignment = .center
-        label.center = labelCenter
-        label.textColor = .yellow
-        label.transform = CGAffineTransform(scaleX: 2.0, y: 1.0)
-        return label
-    }()
+    let lambdaLabel = LambdaLabel()
+    
+//    lazy var lambdaLabel: UILabel = {
+//        var label = UILabel()
+//        label.font = font
+//        label.text = "Λ"
+//        label.textAlignment = .center
+//        label.center = labelCenter
+//        label.textColor = .yellow
+//        label.transform = CGAffineTransform(scaleX: 2.0, y: 1.0)
+//        return label
+//    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(lambdaLabel)
+        setUpLambdaLabel()
+//        addSubview(lambdaLabel)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        addSubview(lambdaLabel)
+        setUpLambdaLabel()
+//        addSubview(lambdaLabel)
+    }
+    
+    private func setUpLambdaLabel() {
+        lambdaLabel.font = font
+        lambdaLabel.text = "Λ"
+        lambdaLabel.textAlignment = .center
+        lambdaLabel.center = labelCenter
+        lambdaLabel.textColor = .yellow
+        lambdaLabel.transform = CGAffineTransform(scaleX: 2.0, y: 1.0)
     }
     
     // MARK: - Draw
     
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext() {
+            context.setFillColor(shieldColor.cgColor)
             
-            // Draw Upper Rectangle
+            // Draw Shield: Upper Rectangle
             let roundedRect = CGPath(roundedRect: CGRect(origin: logoOrigin,
                                                          size: CGSize(width: logoWidth, height: upperRectHeight)),
                                      cornerWidth: cornerRadius,
                                      cornerHeight: cornerRadius,
                                      transform: nil)
             context.addPath(roundedRect)
-            context.setFillColor(shieldColor.cgColor)
             context.fillPath()
             
-            // Draw Lower Triangle
-            context.beginPath()
-            context.move(to: CGPoint(x: logoOrigin.x + (cornerRadius / 4.0), y: logoOrigin.y + upperRectHeight - (cornerRadius / 4.0)))
-            context.addLine(to: CGPoint(x: logoOrigin.x + logoWidth - (cornerRadius / CGFloat.pi), y: logoOrigin.y + upperRectHeight - (cornerRadius / CGFloat.pi)))
-            context.addLine(to: CGPoint(x: logoOrigin.x + (logoWidth / 2.0), y: logoOrigin.y + logoHeight))
-            context.closePath()
-            context.setFillColor(shieldColor.cgColor)
-            context.fillPath()
-            
-//            let bottomCircleRect = CGRect(x: clockCenter.x - largeDotRadius,
-//                                          y: clockCenter.y - largeDotRadius,
-//                                          width: 2 * largeDotRadius,
-//                                          height: 2 * largeDotRadius)
-//            context.addEllipse(in: centerCircleRect)
-//            context.setFillColor(hours.color.cgColor)
-//            context.fillPath()
-            
-            context.setStrokeColor(shieldColor.cgColor)
-            context.beginPath()
-            context.move(to: lowerLeftPoint)
-            context.addArc(tangent1End: lowerRightPoint, tangent2End: lowerMiddlePoint, radius: cornerRadius)
-            context.addArc(tangent1End: lowerMiddlePoint, tangent2End: lowerLeftPoint, radius: cornerRadius)
-            context.addArc(tangent1End: lowerLeftPoint, tangent2End: lowerRightPoint, radius: cornerRadius)
-            context.closePath()
-            context.setFillColor(shieldColor.cgColor)
-            context.fillPath()
-            
-            context.setStrokeColor(shieldColor.cgColor)
+            // Draw Shield: Lower Triangle
             let path = CGMutablePath()
-            path.move(to: lowerLeftPoint)
-            path.addArc(tangent1End: lowerRightPoint, tangent2End: lowerMiddlePoint, radius: cornerRadius)
-            path.addArc(tangent1End: lowerMiddlePoint, tangent2End: lowerLeftPoint, radius: cornerRadius)
-            path.addArc(tangent1End: lowerLeftPoint, tangent2End: lowerRightPoint, radius: cornerRadius)
+            path.move(to: lowerLeftPoint.offsetBy(dx: -2*cornerRadius, dy: -2*cornerRadius))
+            path.addArc(tangent1End: lowerRightPoint.offsetBy(dx: 2*cornerRadius, dy: -2*cornerRadius), tangent2End: lowerMiddlePoint, radius: cornerRadius)
+            path.addArc(tangent1End: lowerMiddlePoint, tangent2End: lowerLeftPoint.offsetBy(dx: -2*cornerRadius, dy: -2*cornerRadius), radius: cornerRadius)
+            path.addArc(tangent1End: lowerLeftPoint.offsetBy(dx: -2*cornerRadius, dy: -2*cornerRadius), tangent2End: lowerRightPoint.offsetBy(dx: 2*cornerRadius, dy: -2*cornerRadius), radius: cornerRadius)
             path.closeSubpath()
             context.addPath(path)
-            context.setFillColor(shieldColor.cgColor)
             context.fillPath()
             
             // Draw Lambda
-            
-            
-            
-            
-            
-            //96
-            //170    //181
-            //46
-            //150    //462
+            setUpLambdaLabel()
             
         }
     }
@@ -105,7 +82,7 @@ class LogoView: UIView {
     
     let shieldColor: UIColor = #colorLiteral(red: 0.7294117647, green: 0.07843137255, blue: 0.2039215686, alpha: 1)
     let lambdaColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    let fontName: String = "Arial Bold"
+    let fontName: String = "Arial"
     
 }
 
@@ -114,7 +91,7 @@ class LogoView: UIView {
 extension LogoView {
     private struct SizeRatio {
         static let logoHeightToLogoWidth: CGFloat = 1.15
-        static let upperRectHeightToLogoHeight: CGFloat = 2.0/3.0
+        static let upperRectHeightToLogoHeight: CGFloat = 0.685
         static let cornerRadiusToLogoWidth: CGFloat = 0.02
         static let textHeighttoLogoHeight: CGFloat = 0.36
         static let textCenterYtoLogoHeight: CGFloat = 0.39
@@ -150,10 +127,10 @@ extension LogoView {
         return logoHeight - upperRectHeight
     }
     private var lowerLeftPoint: CGPoint {
-        return CGPoint(x: logoOrigin.x + (logoWidth / 2.0), y: logoOrigin.y + logoHeight)
+        return CGPoint(x: logoOrigin.x, y: logoOrigin.y + upperRectHeight)
     }
     private var lowerRightPoint: CGPoint {
-        return CGPoint(x: logoOrigin.x + (logoWidth / 2.0), y: logoOrigin.y + logoHeight)
+        return CGPoint(x: logoOrigin.x + logoWidth, y: logoOrigin.y + upperRectHeight)
     }
     private var lowerMiddlePoint: CGPoint {
         return CGPoint(x: logoOrigin.x + (logoWidth / 2.0), y: logoOrigin.y + logoHeight)
