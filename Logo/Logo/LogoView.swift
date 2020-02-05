@@ -13,39 +13,7 @@ class LogoView: UIView {
     
     // MARK: - Properties
     
-    let lambdaLabel = LambdaLabel()
-    
-//    lazy var lambdaLabel: UILabel = {
-//        var label = UILabel()
-//        label.font = font
-//        label.text = "Λ"
-//        label.textAlignment = .center
-//        label.center = labelCenter
-//        label.textColor = .yellow
-//        label.transform = CGAffineTransform(scaleX: 2.0, y: 1.0)
-//        return label
-//    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUpLambdaLabel()
-//        addSubview(lambdaLabel)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setUpLambdaLabel()
-//        addSubview(lambdaLabel)
-    }
-    
-    private func setUpLambdaLabel() {
-        lambdaLabel.font = font
-        lambdaLabel.text = "Λ"
-        lambdaLabel.textAlignment = .center
-        lambdaLabel.center = labelCenter
-        lambdaLabel.textColor = .yellow
-        lambdaLabel.transform = CGAffineTransform(scaleX: 2.0, y: 1.0)
-    }
+    private let lambdaLabel = UILabel()
     
     // MARK: - Draw
     
@@ -53,48 +21,65 @@ class LogoView: UIView {
         if let context = UIGraphicsGetCurrentContext() {
             context.setFillColor(shieldColor.cgColor)
             
-            // Draw Shield: Upper Rectangle
-            let roundedRect = CGPath(roundedRect: CGRect(origin: logoOrigin,
+            // Draw Upper Section of Shield
+            let roundedRectPath = CGPath(roundedRect: CGRect(origin: logoOrigin,
                                                          size: CGSize(width: logoWidth, height: upperRectHeight)),
                                      cornerWidth: cornerRadius,
                                      cornerHeight: cornerRadius,
                                      transform: nil)
-            context.addPath(roundedRect)
+            context.addPath(roundedRectPath)
             context.fillPath()
             
-            // Draw Shield: Lower Triangle
-            let path = CGMutablePath()
-            path.move(to: lowerLeftPoint.offsetBy(dx: -2*cornerRadius, dy: -2*cornerRadius))
-            path.addArc(tangent1End: lowerRightPoint.offsetBy(dx: 2*cornerRadius, dy: -2*cornerRadius), tangent2End: lowerMiddlePoint, radius: cornerRadius)
-            path.addArc(tangent1End: lowerMiddlePoint, tangent2End: lowerLeftPoint.offsetBy(dx: -2*cornerRadius, dy: -2*cornerRadius), radius: cornerRadius)
-            path.addArc(tangent1End: lowerLeftPoint.offsetBy(dx: -2*cornerRadius, dy: -2*cornerRadius), tangent2End: lowerRightPoint.offsetBy(dx: 2*cornerRadius, dy: -2*cornerRadius), radius: cornerRadius)
-            path.closeSubpath()
-            context.addPath(path)
+            // Draw Lower Section of Shield
+            let trianglePath = CGMutablePath()
+            trianglePath.move(to: lowerLeftPointWithRoundedCorner)
+            trianglePath.addArc(tangent1End: lowerRightPointWithRoundedCorner,
+                        tangent2End: lowerMiddlePoint,
+                        radius: cornerRadius)
+            trianglePath.addArc(tangent1End: lowerMiddlePoint,
+                        tangent2End: lowerLeftPointWithRoundedCorner,
+                        radius: cornerRadius)
+            trianglePath.addArc(tangent1End: lowerLeftPointWithRoundedCorner,
+                        tangent2End: lowerRightPointWithRoundedCorner,
+                        radius: cornerRadius)
+            trianglePath.closeSubpath()
+            context.addPath(trianglePath)
             context.fillPath()
             
             // Draw Lambda
-            setUpLambdaLabel()
+            configureLambdaLabel()
             
         }
+    }
+    
+    private func configureLambdaLabel() {
+        lambdaLabel.font = font
+        lambdaLabel.text = "Λ"
+        lambdaLabel.textAlignment = .center
+        lambdaLabel.textColor = lambdaTextColor
+        lambdaLabel.transform = CGAffineTransform(scaleX: fontScaleX, y: 1.0)
+        lambdaLabel.sizeToFit()
+        lambdaLabel.center = labelCenter
+        addSubview(lambdaLabel)
     }
     
     // MARK: - CONSTANTS
     
     let shieldColor: UIColor = #colorLiteral(red: 0.7294117647, green: 0.07843137255, blue: 0.2039215686, alpha: 1)
-    let lambdaColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    let fontName: String = "Arial"
-    
+    let lambdaTextColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    let lambdaFontName: String = "Helvetica Bold"
+    let fontScaleX: CGFloat = 1.55
 }
 
-// MARK: - Size Properties
+// MARK: - Logo Layout Properties
 
 extension LogoView {
     private struct SizeRatio {
         static let logoHeightToLogoWidth: CGFloat = 1.15
         static let upperRectHeightToLogoHeight: CGFloat = 0.685
-        static let cornerRadiusToLogoWidth: CGFloat = 0.02
-        static let textHeighttoLogoHeight: CGFloat = 0.36
-        static let textCenterYtoLogoHeight: CGFloat = 0.39
+        static let cornerRadiusToLogoWidth: CGFloat = 0.023
+        static let textHeighttoLogoHeight: CGFloat = 0.52
+        static let textCenterYtoLogoHeight: CGFloat = 0.4
     }
     
     // Corner Radius
@@ -136,6 +121,17 @@ extension LogoView {
         return CGPoint(x: logoOrigin.x + (logoWidth / 2.0), y: logoOrigin.y + logoHeight)
     }
     
+    // Lower Triangle (bottom section of shield): Adjust drawing points for rounded corners
+    private var lowerLeftPointWithRoundedCorner: CGPoint {
+        return lowerLeftPoint.offsetBy(dx: -cornerRadius * 2, dy: -cornerRadius * 2)
+    }
+    private var lowerRightPointWithRoundedCorner: CGPoint {
+        return lowerRightPoint.offsetBy(dx: cornerRadius * 2, dy: -cornerRadius * 2)
+    }
+    private var lowerMiddlePointWithRoundedCorner: CGPoint {
+        return lowerMiddlePoint
+    }
+    
     // Label (for the Lambda character)
     private var labelCenter: CGPoint {
         return CGPoint(x: logoOrigin.x + (logoWidth / 2.0), y: logoOrigin.y + (logoHeight * SizeRatio.textCenterYtoLogoHeight))
@@ -144,7 +140,7 @@ extension LogoView {
         return logoHeight * SizeRatio.textHeighttoLogoHeight
     }
     private var font: UIFont {
-        return UIFont(name: fontName, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize, weight: .heavy)
+        return UIFont(name: lambdaFontName, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize, weight: .heavy)
     }
 }
 

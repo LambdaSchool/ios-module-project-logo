@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63130FB823EA606900A25BC3 /* LambdaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63130FB723EA606900A25BC3 /* LambdaLabel.swift */; };
 		63D3C14D23E805A400A08BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3C14C23E805A400A08BFF /* AppDelegate.swift */; };
 		63D3C14F23E805A400A08BFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3C14E23E805A400A08BFF /* SceneDelegate.swift */; };
 		63D3C15423E805A400A08BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D3C15223E805A400A08BFF /* Main.storyboard */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63130FB723EA606900A25BC3 /* LambdaLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaLabel.swift; sourceTree = "<group>"; };
 		63D3C14923E805A400A08BFF /* Logo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D3C14C23E805A400A08BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63D3C14E23E805A400A08BFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 				63D3C14E23E805A400A08BFF /* SceneDelegate.swift */,
 				63D3C16023E8061500A08BFF /* LogoViewController.swift */,
 				63D3C16223E8064300A08BFF /* LogoView.swift */,
-				63130FB723EA606900A25BC3 /* LambdaLabel.swift */,
 				63D3C15223E805A400A08BFF /* Main.storyboard */,
 				63D3C15523E805A500A08BFF /* Assets.xcassets */,
 				63D3C15723E805A500A08BFF /* LaunchScreen.storyboard */,
@@ -147,7 +144,6 @@
 				63D3C14D23E805A400A08BFF /* AppDelegate.swift in Sources */,
 				63D3C16323E8064300A08BFF /* LogoView.swift in Sources */,
 				63D3C14F23E805A400A08BFF /* SceneDelegate.swift in Sources */,
-				63130FB823EA606900A25BC3 /* LambdaLabel.swift in Sources */,
 				63D3C16123E8061500A08BFF /* LogoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

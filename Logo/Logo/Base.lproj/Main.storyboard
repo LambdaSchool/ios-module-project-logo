@@ -17,23 +17,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Czv-gz-ecq" customClass="LogoView" customModule="Logo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="241" width="414" height="414"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Λ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3G0-H1-bvD" customClass="LambdaLabel" customModule="Logo" customModuleProvider="target">
-                                        <rect key="frame" x="110" y="85" width="194" height="159"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="159" id="TWW-iI-4W4"/>
-                                            <constraint firstAttribute="width" constant="194" id="hZu-VN-FRN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="213"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="3G0-H1-bvD" firstAttribute="centerY" secondItem="Czv-gz-ecq" secondAttribute="centerY" constant="-42.5" id="8bj-y7-KxC"/>
-                                    <constraint firstItem="3G0-H1-bvD" firstAttribute="centerX" secondItem="Czv-gz-ecq" secondAttribute="centerX" id="Qgz-Ck-FAL"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
