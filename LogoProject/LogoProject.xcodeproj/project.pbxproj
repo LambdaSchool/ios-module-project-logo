@@ -13,8 +13,8 @@
 		A6189BD223EA5CCE005DAC04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6189BD023EA5CCE005DAC04 /* Main.storyboard */; };
 		A6189BD423EA5CD8005DAC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6189BD323EA5CD8005DAC04 /* Assets.xcassets */; };
 		A6189BD723EA5CD8005DAC04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6189BD523EA5CD8005DAC04 /* LaunchScreen.storyboard */; };
-		A6189BDF23EA5CF1005DAC04 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6189BDE23EA5CF0005DAC04 /* Target.swift */; };
 		A6189BE123EA5D3A005DAC04 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6189BE023EA5D3A005DAC04 /* LogoView.swift */; };
+		A6189BE323EA5FF8005DAC04 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6189BE223EA5FF8005DAC04 /* Target.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		A6189BD323EA5CD8005DAC04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6189BD623EA5CD8005DAC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6189BD823EA5CD8005DAC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6189BDE23EA5CF0005DAC04 /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		A6189BE023EA5D3A005DAC04 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		A6189BE223EA5FF8005DAC04 /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,8 @@
 		A6189BC923EA5CCE005DAC04 /* LogoProject */ = {
 			isa = PBXGroup;
 			children = (
-				A6189BDE23EA5CF0005DAC04 /* Target.swift */,
+				A6189BE223EA5FF8005DAC04 /* Target.swift */,
+				A6189BE023EA5D3A005DAC04 /* LogoView.swift */,
 				A6189BCA23EA5CCE005DAC04 /* AppDelegate.swift */,
 				A6189BCC23EA5CCE005DAC04 /* SceneDelegate.swift */,
 				A6189BCE23EA5CCE005DAC04 /* ViewController.swift */,
@@ -68,7 +69,6 @@
 				A6189BD323EA5CD8005DAC04 /* Assets.xcassets */,
 				A6189BD523EA5CD8005DAC04 /* LaunchScreen.storyboard */,
 				A6189BD823EA5CD8005DAC04 /* Info.plist */,
-				A6189BE023EA5D3A005DAC04 /* LogoView.swift */,
 			);
 			path = LogoProject;
 			sourceTree = "<group>";
@@ -147,8 +147,8 @@
 				A6189BE123EA5D3A005DAC04 /* LogoView.swift in Sources */,
 				A6189BCF23EA5CCE005DAC04 /* ViewController.swift in Sources */,
 				A6189BCB23EA5CCE005DAC04 /* AppDelegate.swift in Sources */,
-				A6189BDF23EA5CF1005DAC04 /* Target.swift in Sources */,
 				A6189BCD23EA5CCE005DAC04 /* SceneDelegate.swift in Sources */,
+				A6189BE323EA5FF8005DAC04 /* Target.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

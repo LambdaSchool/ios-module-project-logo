@@ -5,7 +5,6 @@
 //  Created by Sal Amer on 5/2/20.
 //  Copyright © 2020  . All rights reserved.
 //
-//
 
 
 
@@ -15,37 +14,37 @@ public class Target : NSObject {
 
     //// Drawing Methods
 
-    @objc dynamic public class func drawTargetLogo(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 240, height: 120), resizing: ResizingBehavior = .aspectFit) {
+    @objc dynamic public class func drawTargetLogo(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 80, height: 93), resizing: ResizingBehavior = .aspectFit) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
         //// Resize to Target Frame
         context.saveGState()
-        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 240, height: 120), target: targetFrame)
+        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 80, height: 93), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 240, y: resizedFrame.height / 120)
+        context.scaleBy(x: resizedFrame.width / 80, y: resizedFrame.height / 93)
 
 
         //// Oval Drawing
-        let ovalPath = UIBezierPath(ovalIn: CGRect(x: 80, y: 27, width: 60, height: 60))
+        let ovalPath = UIBezierPath(ovalIn: CGRect(x: 12, y: 6, width: 60, height: 60))
         UIColor.red.setFill()
         ovalPath.fill()
 
 
         //// Oval 2 Drawing
-        let oval2Path = UIBezierPath(ovalIn: CGRect(x: 90, y: 37, width: 40, height: 40))
+        let oval2Path = UIBezierPath(ovalIn: CGRect(x: 22, y: 16, width: 40, height: 40))
         UIColor.white.setFill()
         oval2Path.fill()
 
 
         //// Oval 3 Drawing
-        let oval3Path = UIBezierPath(ovalIn: CGRect(x: 100, y: 47, width: 20, height: 20))
+        let oval3Path = UIBezierPath(ovalIn: CGRect(x: 32, y: 26, width: 20, height: 20))
         UIColor.red.setFill()
         oval3Path.fill()
 
 
         //// Text Drawing
-        let textRect = CGRect(x: 68, y: 90, width: 84, height: 20)
+        let textRect = CGRect(x: 0, y: 69, width: 84, height: 20)
         let textTextContent = "TARGET"
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .center
