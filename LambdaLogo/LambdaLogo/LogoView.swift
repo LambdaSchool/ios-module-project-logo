@@ -34,6 +34,10 @@ class LogoView: UIView {
         let upperLeftCorner = CGPoint(x: centerPoint.x - strokeDistance, y: centerPoint.y - strokeDistance)
         let lowerMidPoint = CGPoint(x: centerPoint.x, y: rect.midY + 110)
         
+        let upperArrowPoint = CGPoint(x: centerPoint.x, y: rect.midY - 40)
+        let leftArrowPoint = CGPoint(x: upperArrowPoint.x - 40, y: upperArrowPoint.y + 60)
+        let rightArrowPoint = CGPoint(x: upperArrowPoint.x + 40, y: upperArrowPoint.y + 60)
+
         // Top Square
         context.beginPath()
         context.move(to: lowerLeftCorner)
@@ -59,6 +63,16 @@ class LogoView: UIView {
         
         context.fillPath()
         
+        // Inner Arrow
+        context.beginPath()
+        context.move(to: upperArrowPoint)
+        context.setLineWidth(25.0)
+        context.setStrokeColor(UIColor.white.cgColor)
+        
+        context.addLine(to: leftArrowPoint)
+        context.addLine(to: upperArrowPoint)
+        context.addLine(to: rightArrowPoint)
+        
+        context.strokePath()
     }
-    
 }
