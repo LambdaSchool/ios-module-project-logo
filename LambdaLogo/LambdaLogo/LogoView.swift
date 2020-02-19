@@ -32,7 +32,9 @@ class LogoView: UIView {
         let lowerRightCorner = CGPoint(x: centerPoint.x + strokeDistance, y: centerPoint.y + strokeDistance)
         let upperRightCorner = CGPoint(x: centerPoint.x + strokeDistance, y: centerPoint.y - strokeDistance)
         let upperLeftCorner = CGPoint(x: centerPoint.x - strokeDistance, y: centerPoint.y - strokeDistance)
+        let lowerMidPoint = CGPoint(x: centerPoint.x, y: rect.midY + 110)
         
+        // Top Square
         context.beginPath()
         context.move(to: lowerLeftCorner)
         context.setLineWidth(8.0)
@@ -45,6 +47,18 @@ class LogoView: UIView {
         context.addLine(to: lowerLeftCorner)
         
         context.fillPath()
+        
+        // Bottom Triangle
+        context.beginPath()
+        context.move(to: lowerMidPoint)
+        context.setLineWidth(8.0)
+        context.setFillColor(UIColor.red.cgColor)
+
+        context.addLine(to: lowerLeftCorner)
+        context.addLine(to: lowerRightCorner)
+        
+        context.fillPath()
+        
     }
     
 }
