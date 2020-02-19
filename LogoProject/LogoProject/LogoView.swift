@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class LogoView: UIView {
     
     override func draw(_ rect: CGRect) {
