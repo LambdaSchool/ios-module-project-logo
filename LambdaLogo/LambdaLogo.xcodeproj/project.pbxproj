@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C59AEE023D9166200DEF44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C59AEDF23D9166200DEF44C /* AppDelegate.swift */; };
-		2C59AEE223D9166200DEF44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C59AEE123D9166200DEF44C /* SceneDelegate.swift */; };
-		2C59AEE723D9166200DEF44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C59AEE523D9166200DEF44C /* Main.storyboard */; };
-		2C59AEE923D9166300DEF44C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C59AEE823D9166300DEF44C /* Assets.xcassets */; };
-		2C59AEEC23D9166300DEF44C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C59AEEA23D9166300DEF44C /* LaunchScreen.storyboard */; };
-		2C59AEF423D9171600DEF44C /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C59AEF323D9171600DEF44C /* LogoViewController.swift */; };
-		2C59AEF623D9172500DEF44C /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C59AEF523D9172500DEF44C /* LogoView.swift */; };
+		2C342F6123FDE0640087551D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C342F6023FDE0640087551D /* AppDelegate.swift */; };
+		2C342F6323FDE0640087551D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C342F6223FDE0640087551D /* SceneDelegate.swift */; };
+		2C342F6523FDE0640087551D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C342F6423FDE0640087551D /* ViewController.swift */; };
+		2C342F6823FDE0640087551D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C342F6623FDE0640087551D /* Main.storyboard */; };
+		2C342F6A23FDE0650087551D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C342F6923FDE0650087551D /* Assets.xcassets */; };
+		2C342F6D23FDE0650087551D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C342F6B23FDE0650087551D /* LaunchScreen.storyboard */; };
+		2C342F7523FDE1070087551D /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C342F7423FDE1070087551D /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C59AEDC23D9166200DEF44C /* XOXO Logo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XOXO Logo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C59AEDF23D9166200DEF44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C59AEE123D9166200DEF44C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C59AEE623D9166200DEF44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2C59AEE823D9166300DEF44C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2C59AEEB23D9166300DEF44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2C59AEED23D9166300DEF44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C59AEF323D9171600DEF44C /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
-		2C59AEF523D9172500DEF44C /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		2C342F5D23FDE0640087551D /* LambdaLogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LambdaLogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C342F6023FDE0640087551D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C342F6223FDE0640087551D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2C342F6423FDE0640087551D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C342F6723FDE0640087551D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C342F6923FDE0650087551D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C342F6C23FDE0650087551D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C342F6E23FDE0650087551D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C342F7423FDE1070087551D /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C59AED923D9166200DEF44C /* Frameworks */ = {
+		2C342F5A23FDE0640087551D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C59AED323D9166200DEF44C = {
+		2C342F5423FDE0630087551D = {
 			isa = PBXGroup;
 			children = (
-				2C59AEDE23D9166200DEF44C /* XOXO Logo */,
-				2C59AEDD23D9166200DEF44C /* Products */,
+				2C342F5F23FDE0640087551D /* LambdaLogo */,
+				2C342F5E23FDE0640087551D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2C59AEDD23D9166200DEF44C /* Products */ = {
+		2C342F5E23FDE0640087551D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C59AEDC23D9166200DEF44C /* XOXO Logo.app */,
+				2C342F5D23FDE0640087551D /* LambdaLogo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C59AEDE23D9166200DEF44C /* XOXO Logo */ = {
+		2C342F5F23FDE0640087551D /* LambdaLogo */ = {
 			isa = PBXGroup;
 			children = (
-				2C59AEDF23D9166200DEF44C /* AppDelegate.swift */,
-				2C59AEE123D9166200DEF44C /* SceneDelegate.swift */,
-				2C59AEE523D9166200DEF44C /* Main.storyboard */,
-				2C59AEF323D9171600DEF44C /* LogoViewController.swift */,
-				2C59AEF523D9172500DEF44C /* LogoView.swift */,
-				2C59AEE823D9166300DEF44C /* Assets.xcassets */,
-				2C59AEEA23D9166300DEF44C /* LaunchScreen.storyboard */,
-				2C59AEED23D9166300DEF44C /* Info.plist */,
+				2C342F6023FDE0640087551D /* AppDelegate.swift */,
+				2C342F6223FDE0640087551D /* SceneDelegate.swift */,
+				2C342F6423FDE0640087551D /* ViewController.swift */,
+				2C342F7423FDE1070087551D /* LogoView.swift */,
+				2C342F6623FDE0640087551D /* Main.storyboard */,
+				2C342F6923FDE0650087551D /* Assets.xcassets */,
+				2C342F6B23FDE0650087551D /* LaunchScreen.storyboard */,
+				2C342F6E23FDE0650087551D /* Info.plist */,
 			);
-			path = "XOXO Logo";
+			path = LambdaLogo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C59AEDB23D9166200DEF44C /* XOXO Logo */ = {
+		2C342F5C23FDE0640087551D /* LambdaLogo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C59AEF023D9166300DEF44C /* Build configuration list for PBXNativeTarget "XOXO Logo" */;
+			buildConfigurationList = 2C342F7123FDE0650087551D /* Build configuration list for PBXNativeTarget "LambdaLogo" */;
 			buildPhases = (
-				2C59AED823D9166200DEF44C /* Sources */,
-				2C59AED923D9166200DEF44C /* Frameworks */,
-				2C59AEDA23D9166200DEF44C /* Resources */,
+				2C342F5923FDE0640087551D /* Sources */,
+				2C342F5A23FDE0640087551D /* Frameworks */,
+				2C342F5B23FDE0640087551D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "XOXO Logo";
-			productName = "XOXO Logo";
-			productReference = 2C59AEDC23D9166200DEF44C /* XOXO Logo.app */;
+			name = LambdaLogo;
+			productName = LambdaLogo;
+			productReference = 2C342F5D23FDE0640087551D /* LambdaLogo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2C59AED423D9166200DEF44C /* Project object */ = {
+		2C342F5523FDE0630087551D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Tobi Kuyoro";
 				TargetAttributes = {
-					2C59AEDB23D9166200DEF44C = {
+					2C342F5C23FDE0640087551D = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = 2C59AED723D9166200DEF44C /* Build configuration list for PBXProject "XOXO Logo" */;
+			buildConfigurationList = 2C342F5823FDE0630087551D /* Build configuration list for PBXProject "LambdaLogo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,56 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 2C59AED323D9166200DEF44C;
-			productRefGroup = 2C59AEDD23D9166200DEF44C /* Products */;
+			mainGroup = 2C342F5423FDE0630087551D;
+			productRefGroup = 2C342F5E23FDE0640087551D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C59AEDB23D9166200DEF44C /* XOXO Logo */,
+				2C342F5C23FDE0640087551D /* LambdaLogo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C59AEDA23D9166200DEF44C /* Resources */ = {
+		2C342F5B23FDE0640087551D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C59AEEC23D9166300DEF44C /* LaunchScreen.storyboard in Resources */,
-				2C59AEE923D9166300DEF44C /* Assets.xcassets in Resources */,
-				2C59AEE723D9166200DEF44C /* Main.storyboard in Resources */,
+				2C342F6D23FDE0650087551D /* LaunchScreen.storyboard in Resources */,
+				2C342F6A23FDE0650087551D /* Assets.xcassets in Resources */,
+				2C342F6823FDE0640087551D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2C59AED823D9166200DEF44C /* Sources */ = {
+		2C342F5923FDE0640087551D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C59AEE023D9166200DEF44C /* AppDelegate.swift in Sources */,
-				2C59AEF623D9172500DEF44C /* LogoView.swift in Sources */,
-				2C59AEE223D9166200DEF44C /* SceneDelegate.swift in Sources */,
-				2C59AEF423D9171600DEF44C /* LogoViewController.swift in Sources */,
+				2C342F6523FDE0640087551D /* ViewController.swift in Sources */,
+				2C342F7523FDE1070087551D /* LogoView.swift in Sources */,
+				2C342F6123FDE0640087551D /* AppDelegate.swift in Sources */,
+				2C342F6323FDE0640087551D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C59AEE523D9166200DEF44C /* Main.storyboard */ = {
+		2C342F6623FDE0640087551D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2C59AEE623D9166200DEF44C /* Base */,
+				2C342F6723FDE0640087551D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2C59AEEA23D9166300DEF44C /* LaunchScreen.storyboard */ = {
+		2C342F6B23FDE0650087551D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2C59AEEB23D9166300DEF44C /* Base */,
+				2C342F6C23FDE0650087551D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2C59AEEE23D9166300DEF44C /* Debug */ = {
+		2C342F6F23FDE0650087551D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		2C59AEEF23D9166300DEF44C /* Release */ = {
+		2C342F7023FDE0650087551D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,36 +284,36 @@
 			};
 			name = Release;
 		};
-		2C59AEF123D9166300DEF44C /* Debug */ = {
+		2C342F7223FDE0650087551D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W485VTCC9R;
-				INFOPLIST_FILE = "XOXO Logo/Info.plist";
+				INFOPLIST_FILE = LambdaLogo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tobikuyoro.XOXO-Logo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tobikuyoro.LambdaLogo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		2C59AEF223D9166300DEF44C /* Release */ = {
+		2C342F7323FDE0650087551D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W485VTCC9R;
-				INFOPLIST_FILE = "XOXO Logo/Info.plist";
+				INFOPLIST_FILE = LambdaLogo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tobikuyoro.XOXO-Logo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tobikuyoro.LambdaLogo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,25 +323,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C59AED723D9166200DEF44C /* Build configuration list for PBXProject "XOXO Logo" */ = {
+		2C342F5823FDE0630087551D /* Build configuration list for PBXProject "LambdaLogo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C59AEEE23D9166300DEF44C /* Debug */,
-				2C59AEEF23D9166300DEF44C /* Release */,
+				2C342F6F23FDE0650087551D /* Debug */,
+				2C342F7023FDE0650087551D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C59AEF023D9166300DEF44C /* Build configuration list for PBXNativeTarget "XOXO Logo" */ = {
+		2C342F7123FDE0650087551D /* Build configuration list for PBXNativeTarget "LambdaLogo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C59AEF123D9166300DEF44C /* Debug */,
-				2C59AEF223D9166300DEF44C /* Release */,
+				2C342F7223FDE0650087551D /* Debug */,
+				2C342F7323FDE0650087551D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2C59AED423D9166200DEF44C /* Project object */;
+	rootObject = 2C342F5523FDE0630087551D /* Project object */;
 }

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  XOXO Logo
+//  LambdaLogo
 //
-//  Created by Tobi Kuyoro on 22/01/2020.
+//  Created by Tobi Kuyoro on 19/02/2020.
 //  Copyright © 2020 Tobi Kuyoro. All rights reserved.
 //
 
