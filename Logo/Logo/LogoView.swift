@@ -10,20 +10,20 @@ import UIKit
 
 class LogoView: UIView {
     
-    var logoView: UIView!
+    var logoView =  UIView()
+    
     
     // MARK: - View Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        logoView.contentMode = .scaleAspectFill
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        logoView.contentMode = .scaleAspectFill
     }
-    
-    
-    
     
     override func draw(_ rect: CGRect) {
         
@@ -33,6 +33,15 @@ class LogoView: UIView {
         
         let xOrigin = rect.origin.x
         let yOrigin = rect.origin.y
+        let xMid = rect.midX
+        let yMid = rect.midY
+        let xMax = rect.maxX
+        let yMax = rect.midY
+        let width = rect.width
+        let height = rect.height
+        let lineWidth: CGFloat = 2
+        
+        
         
         // Colors
         
@@ -52,216 +61,195 @@ class LogoView: UIView {
                              green: 0.368,
                              blue: 0.196,
                              alpha: 1)
-        //        let greenYellow = [green, yellow]
-        
-        
         let greenBGColor = green.withAlphaComponent(0.3)
-        
-        //        let gradient2 = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors:greenYellow as CFArray, locations: [CGFloat(0.0), CGFloat(1.0)])!
-        //
-        //        let gradient = CGGradient(colorsSpace: nil, colors: [
-        //            ],
-        //                                  locations: <#T##UnsafePointer<CGFloat>?#>)
-        
-        //
-        //         var gradientView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 35))
-        //         let gradientLayer:CAGradientLayer = CAGradientLayer()
-        //         gradientLayer.frame.size = self.gradientView.frame.size
-        //         gradientLayer.colors =
-        //         [UIColor.white.cgColor,UIColor.red.withAlphaComponent(1).cgColor]
-        //        //Use diffrent colors
-        //         gradientView.layer.addSublayer(gradientLayer)
         
         // MARK: Background images
         
-//        let centerRectanglePath = UIBezierPath(rect: CGRect(x: xOrigin + 40,
-//                                                            y: yOrigin + 3,
-//                                                            width: 116,
-//                                                            height: 143))
-        let centerRectanglePath = UIBezierPath(rect: CGRect(x: xOrigin + 40,
-                                                            y: yOrigin + 3,
-                                                            width: 116,
-                                                            height: 143))
+        let centerRectanglePath = UIBezierPath(rect: CGRect(x: rect.midX * 0.4,
+                                                            y: rect.midY * 0.355,
+                                                            width: rect.height * 0.6,
+                                                            height: rect.height * 0.565))
         
         greenBGColor.setFill()
         centerRectanglePath.fill()
         
-        let tallRightRectanglePath = UIBezierPath(rect: CGRect(x: xOrigin + 156,
-                                                               y: yOrigin + 14,
-                                                               width: 16,
-                                                               height: 123))
+        let tallRightRectanglePath = UIBezierPath(rect: CGRect(x: rect.maxX - (rect.width * 0.2),
+                                                               y: yOrigin + rect.height * 0.20,
+                                                               width: rect.width * 0.1,
+                                                               height: rect.height * 0.5))
         greenBGColor.setFill()
         tallRightRectanglePath.fill()
         
-        let smallRightRectanglePath = UIBezierPath(rect: CGRect(x: xOrigin + 172,
-                                                                y: yOrigin + 67,
-                                                                width: 16,
-                                                                height: 17))
+        let smallRightRectanglePath = UIBezierPath(rect: CGRect(x: rect.maxX - (rect.width * 0.1),
+                                                                y: rect.midY - (rect.width * 0.06),
+                                                                width: rect.width * 0.05,
+                                                                height: rect.height * 0.05))
         greenBGColor.setFill()
         smallRightRectanglePath.fill()
         
         
-        let tallLeftrectanglePath = UIBezierPath(rect: CGRect(x: xOrigin + 27,
-                                                              y: yOrigin + 17,
-                                                              width: 13,
-                                                              height: 119))
+        let tallLeftrectanglePath = UIBezierPath(rect: CGRect(x: xOrigin + (rect.width * 0.1),
+                                                              y: rect.midY * 0.4,
+                                                              width: rect.width * 0.1,
+                                                              height: rect.height * 0.51))
         greenBGColor.setFill()
         tallLeftrectanglePath.fill()
         
         
-        let smallLeftRectanglePath = UIBezierPath(rect: CGRect(x: xOrigin + 14,
-                                                               y: yOrigin + 67,
-                                                               width: 13,
-                                                               height: 17))
+        let smallLeftRectanglePath = UIBezierPath(rect: CGRect(x: rect.width * 0.05,
+                                                               y: yOrigin + (rect.width * 0.425),
+                                                               width: rect.width * 0.05,
+                                                               height: rect.height * 0.05))
         greenBGColor.setFill()
         smallLeftRectanglePath.fill()
         
         // MARK: Lines
         
-        // Line Circle 1 to 3
+        // Line Circle 1 to 4
         
         context.setStrokeColor(UIColor.gray.cgColor)
         context.beginPath()
-        context.move(to: CGPoint(x: xOrigin + 106.5,
-                                 y: yOrigin + 37.5))
-        context.setLineWidth(CGFloat(1))
-        context.addLine(to: CGPoint(x: xOrigin + 130.5,
-                                    y: yOrigin + 84.5))
+        context.move(to: CGPoint(x: rect.midX ,
+                                 y: rect.midY - (rect.height * 0.2)))
+        context.setLineWidth(lineWidth)
+        context.addLine(to: CGPoint(x: xMid - (width * 0.19),
+                                    y: yMid - height * 0.04))
         context.strokePath()
         
         // Line Circle 1 to 3
         
         context.setStrokeColor(UIColor.gray.cgColor)
         context.beginPath()
-        context.move(to: CGPoint(x: xOrigin + 105.5,
-                                 y: yOrigin + 37.5))
-        context.setLineWidth(CGFloat(1))
-        context.addLine(to: CGPoint(x: xOrigin + 119.5,
-                                    y: yOrigin + 127.5))
+        context.move(to: CGPoint(x: xMid,
+                                 y: rect.midY - rect.height * 0.2))
+        context.setLineWidth(lineWidth)
+        context.addLine(to: CGPoint(x: xMid - width * 0.115,
+                                    y: yMax + height * 0.18))
         context.strokePath()
         
-        // Circle 1 to 4
+        // Circle 1 to 2
         
         context.setStrokeColor(UIColor.gray.cgColor)
         context.beginPath()
-        context.move(to: CGPoint(x: xOrigin + 67.5,
-                                 y: yOrigin + 114.5))
-        context.setLineWidth(CGFloat(1))
-        context.addLine(to: CGPoint(x: xOrigin + 105.5,
-                                    y: yOrigin + 37.5))
+        context.move(to: CGPoint(x: xMid,
+                                 y: rect.midY - rect.height * 0.2))
+        context.setLineWidth(lineWidth)
+        //test
+        context.addLine(to: CGPoint(x: xMid + (width * 0.29),
+                                    y: yMid + height * 0.015))
         context.strokePath()
         
         // Line Box 3 to 1
         
+        
+        
         context.setStrokeColor(UIColor.gray.cgColor)
         context.beginPath()
-        context.move(to: CGPoint(x: xOrigin + 53.5,
-                                 y: yOrigin + 77.5))
-        context.setLineWidth(CGFloat(1))
-        context.addLine(to: CGPoint(x: xOrigin + 153.5,
-                                    y: yOrigin + 43.5))
+        context.move(to: CGPoint(x: xMid - width * 0.24,
+                                 y: yMid + height * 0.12))
+        context.setLineWidth(lineWidth)
+        context.addLine(to: CGPoint(x: xMid - width * 0.22,
+                                    y: yMid - height * 0.25))
         context.strokePath()
         
         // Line Box 3 to 2
         
         context.setStrokeColor(UIColor.gray.cgColor)
         context.beginPath()
-        context.move(to: CGPoint(x: xOrigin + 55.5,
-                                 y: yOrigin + 75.5))
-        context.setLineWidth(CGFloat(1))
-        context.addLine(to: CGPoint(x: xOrigin + 154.5,
-                                    y: yOrigin + 109.5))
+        context.move(to: CGPoint(x: xMid - width * 0.24,
+                                 y: yMid + height * 0.12))
+        context.setLineWidth(lineWidth)
+        context.addLine(to: CGPoint(x: xMid + width * 0.27,
+                                    y: yMid - height * 0.2))
         context.strokePath()
         
         // Line: Box 3 to 4
         
+        //x: xMid + (width * 0.18), y: yMid + (height * 0.1)
         context.setStrokeColor(UIColor.gray.cgColor)
         context.beginPath()
-        context.move(to: CGPoint(x: xOrigin + 61.5,
-                                 y: yOrigin + 31.5))
-        context.setLineWidth(CGFloat(1))
-        context.addLine(to: CGPoint(x: xOrigin + 53.5,
-                                    y: yOrigin + 77.5))
+        context.move(to: CGPoint(x: xMid - width * 0.24,
+                                 y: yMid + height * 0.12))
+        context.setLineWidth(lineWidth)
+        context.addLine(to: CGPoint(x: xMid + width * 0.2,
+                                    y: yMid + height * 0.135))
         context.strokePath()
         
         
         // MARK: Box and circle objects
         
-        let rectanglePath = UIBezierPath(roundedRect: CGRect(x: xOrigin + 55,
-                                                             
-                                                             y: yOrigin + 26, width: 12, height: 12), cornerRadius: 2)
+        let blueBoxPath = UIBezierPath(roundedRect: CGRect(x: rect.midX - (rect.width * 0.25),
+                                                           
+                                                           y: rect.midY - (rect.height * 0.25), width: rect.width * 0.06,
+                                                           height: rect.width * 0.06),
+                                       cornerRadius: 2)
         blue.setFill()
-        rectanglePath.fill()
+        blueBoxPath.fill()
         
-        let rectangle3Path = UIBezierPath(roundedRect: CGRect(x: xOrigin + 41,
-                                                              y: yOrigin + 64,
-                                                              width: 26,
-                                                              height: 26),
+        let skyBlueBoxPath = UIBezierPath(roundedRect: CGRect(x: rect.midX - (rect.width * 0.3),
+                                                              y: rect.midY + (rect.height * 0.05),
+                                                              width: rect.width * 0.1,
+                                                              height: rect.width * 0.1),
                                           cornerRadius: 2)
-        context.saveGState()
-        rectangle3Path.addClip()
         UIColor.systemTeal.setFill()
-        rectangle3Path.fill()
-        context.restoreGState()
+        skyBlueBoxPath.fill()
         
-        let rectangle1Path = UIBezierPath(roundedRect: CGRect(x: xOrigin + 148,
-                                                              y: yOrigin + 38,
-                                                              width: 11,
-                                                              height: 11),
-                                          cornerRadius: 2)
+        let greenBoxPath = UIBezierPath(roundedRect: CGRect(x: rect.midX + (width * 0.25),
+                                                            y: yMid - (height * 0.22),
+                                                            width: rect.width * 0.06,
+                                                            height: rect.width * 0.06),
+                                        cornerRadius: 2)
         green.setFill()
-        rectangle1Path.fill()
+        greenBoxPath.fill()
         
-        let rectangle2Path = UIBezierPath(roundedRect: CGRect(x: xOrigin + 148,
-                                                              y: yOrigin + 103,
-                                                              width: 12,
-                                                              height: 12),
-                                          cornerRadius: 2)
+        let redBoxPath = UIBezierPath(roundedRect: CGRect(x: xMid + (width * 0.18),
+                                                          y: yMid + (height * 0.1),
+                                                          width: rect.width * 0.06,
+                                                          height: rect.width * 0.06),
+                                      cornerRadius: 2)
         orange.setFill()
-        rectangle2Path.fill()
+        redBoxPath.fill()
         
-        let oval1Path = UIBezierPath(ovalIn: CGRect(x: xOrigin + 125,
-                                                    y: yOrigin + 78,
-                                                    width: 12,
-                                                    height: 12))
+        let blueSpherePath = UIBezierPath(ovalIn: CGRect(x: xMid + (width * 0.27),
+                                                         y: yMid,
+                                                         width: rect.width * 0.06,
+                                                         height: rect.width * 0.06))
         blue.setFill()
-        oval1Path.fill()
+        blueSpherePath.fill()
         
-        let oval2Path = UIBezierPath(ovalIn: CGRect(x: xOrigin + 113,
-                                                    y: yOrigin + 121,
-                                                    width: 12,
-                                                    height: 12))
+        let yellowSpherePath = UIBezierPath(ovalIn: CGRect(x: xMid - (width * 0.15),
+                                                           y: yMid + (height * 0.16),
+                                                           width: rect.width * 0.06,
+                                                           height: rect.width * 0.06))
         yellow.setFill()
-        oval2Path.fill()
+        yellowSpherePath.fill()
         
-        let oval3Path = UIBezierPath(ovalIn: CGRect(x: xOrigin + 61,
-                                                    y: yOrigin + 109,
-                                                    width: 12,
-                                                    height: 12))
+        let greenSpherePath = UIBezierPath(ovalIn: CGRect(x: xMid - (width * 0.2),
+                                                          y: yMid - (height * 0.08),
+                                                          width: rect.width * 0.06,
+                                                          height: rect.width * 0.06))
         green.setFill()
-        oval3Path.fill()
+        greenSpherePath.fill()
         
-        let oval4Path = UIBezierPath(ovalIn: CGRect(x: xOrigin + 93,
-                                                    y: yOrigin + 23,
-                                                    width: 26,
-                                                    height: 26))
-        context.saveGState()
-        oval4Path.addClip()
+        let purpleSpherePath = UIBezierPath(ovalIn: CGRect(x: xMid - (width * 0.05),
+                                                           y: yMid - (width * 0.25),
+                                                           width: rect.width * 0.1,
+                                                           height: rect.width * 0.1))
         UIColor.purple.setFill()
-        oval4Path.fill()
-        context.restoreGState()
+        purpleSpherePath.fill()
         
         // MARK: Symbols
         
-        let textRect = CGRect(x: xOrigin + 0,
-                              y: yOrigin + 5,
-                              width: 83,
-                              height: 158)
+        let textRect = CGRect(x:  xOrigin,
+                              y: yOrigin,
+                              width: rect.width / 5,
+                              height: rect.height * 0.8)
         let textTextContent = "{"
         let textStyle = NSMutableParagraphStyle()
         textStyle.alignment = .left
+        
         let textFontAttributes = [
-            .font: UIFont.systemFont(ofSize: 170),
+            .font: UIFont.systemFont(ofSize: 275),
             .foregroundColor: UIColor.black,
             .paragraphStyle: textStyle,
             ] as [NSAttributedString.Key: Any]
@@ -273,15 +261,15 @@ class LogoView: UIView {
         context.restoreGState()
         
         
-        let text2Rect = CGRect(x: xOrigin + 148,
-                               y: yOrigin + 5,
-                               width: 55,
-                               height: 158)
+        let text2Rect = CGRect(x: rect.maxX - (rect.width / 4.8),
+                               y: (yOrigin + (rect.height * 0.005)),
+                               width: rect.width / 5,
+                               height: rect.height * 0.8)
         let text2TextContent = "}"
         let text2Style = NSMutableParagraphStyle()
         text2Style.alignment = .right
         let text2FontAttributes = [
-            .font: UIFont.systemFont(ofSize: 170),
+            .font: UIFont.systemFont(ofSize: 275),
             .foregroundColor: UIColor.black,
             .paragraphStyle: text2Style,
             ] as [NSAttributedString.Key: Any]
@@ -294,15 +282,15 @@ class LogoView: UIView {
         
         // MARK: Text
         
-        let text3Rect = CGRect(x: xOrigin + 0,
-                               y: yOrigin + 146,
-                               width: 202,
-                               height: 33)
+        let text3Rect = CGRect(x: xOrigin,
+                               y: yMid + height * 0.2,
+                               width: width,
+                               height: height * 0.2)
         let text3TextContent = "Coding Geek"
         let text3Style = NSMutableParagraphStyle()
         text3Style.alignment = .center
         let text3FontAttributes = [
-            .font: UIFont(name: "MarkerFelt-Wide", size: 28.5)!,
+            .font: UIFont(name: "MarkerFelt-Wide", size: 60)!,
             .foregroundColor: UIColor.black,
             .paragraphStyle: text3Style,
             ] as [NSAttributedString.Key: Any]
@@ -313,15 +301,15 @@ class LogoView: UIView {
         text3TextContent.draw(in: CGRect(x: text3Rect.minX, y: text3Rect.minY + (text3Rect.height - text3TextHeight) / 2, width: text3Rect.width, height: text3TextHeight), withAttributes: text3FontAttributes)
         context.restoreGState()
         
-        let text4Rect = CGRect(x: xOrigin + 56,
-                               y: yOrigin + 178,
-                               width: 101,
-                               height: 23)
+        let text4Rect = CGRect(x: xOrigin,
+                               y: yMid + (height * 0.35),
+                               width: width,
+                               height: height * 0.2)
         let text4TextContent = "a C.G. Development Company"
         let text4Style = NSMutableParagraphStyle()
         text4Style.alignment = .center
         let text4FontAttributes = [
-            .font: UIFont(name: "Zapfino", size: 5)!,
+            .font: UIFont(name: "Zapfino", size: 10)!,
             .foregroundColor: UIColor.black,
             .paragraphStyle: text4Style,
             ] as [NSAttributedString.Key: Any]
@@ -333,3 +321,24 @@ class LogoView: UIView {
         context.restoreGState()
     }
 }
+
+//
+//func characterHeight(rect: CGRect, constrainedBy width: CGFloat, with font: UIFont) -> CGFloat
+//    {
+//        let boundingRect = rect
+//        let boundingWidth = boundingRect.width
+//        let constraintSize = CGSize(width: boundingWidth, height: .greatestFiniteMagnitude)
+//        let boundingBox = rect(with: constraintSize, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+//
+//        return boundingBox.height
+//    }
+//
+//func characterWidth(rect: CGRect, constrainedBy height: CGFloat, with font: UIFont) -> CGFloat
+//    {
+//        let boundingRect = rect
+//        let constrainedSize = CGSize(width: .greatestFiniteMagnitude, height: height)
+//        let boundingBox = boundingRect(with: constrainedSize, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+//
+//        return boundingBox.width
+
+
