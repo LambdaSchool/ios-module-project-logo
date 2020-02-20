@@ -57,7 +57,7 @@ class logo: UIView {
         context.restoreGState()
 
     }
-    
+    //loved doing this project! 
     
 }
 
