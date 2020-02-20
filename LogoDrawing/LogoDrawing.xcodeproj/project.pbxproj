@@ -14,6 +14,7 @@
 		D269C96B23FDD9E500D47D6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D269C96A23FDD9E500D47D6D /* Assets.xcassets */; };
 		D269C96E23FDD9E500D47D6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D269C96C23FDD9E500D47D6D /* LaunchScreen.storyboard */; };
 		D269C97623FDF53B00D47D6D /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269C97523FDF53B00D47D6D /* LogoView.swift */; };
+		D269C97823FEBEB900D47D6D /* NikeLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269C97723FEBEB900D47D6D /* NikeLogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D269C96D23FDD9E500D47D6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D269C96F23FDD9E500D47D6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D269C97523FDF53B00D47D6D /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		D269C97723FEBEB900D47D6D /* NikeLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikeLogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				D269C96C23FDD9E500D47D6D /* LaunchScreen.storyboard */,
 				D269C96F23FDD9E500D47D6D /* Info.plist */,
 				D269C97523FDF53B00D47D6D /* LogoView.swift */,
+				D269C97723FEBEB900D47D6D /* NikeLogoView.swift */,
 			);
 			path = LogoDrawing;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D269C96623FDD9E300D47D6D /* ViewController.swift in Sources */,
+				D269C97823FEBEB900D47D6D /* NikeLogoView.swift in Sources */,
 				D269C97623FDF53B00D47D6D /* LogoView.swift in Sources */,
 				D269C96223FDD9E300D47D6D /* AppDelegate.swift in Sources */,
 				D269C96423FDD9E300D47D6D /* SceneDelegate.swift in Sources */,
