@@ -78,13 +78,16 @@ class LogoView: UIView {
             context.addLine(to: CGPoint(x: lambdaBottomLeftRightControlPoint.x, y: lambdaBottomLeftRightControlPoint.y))
             context.addQuadCurve(to: CGPoint(x: lambdaBottomLeftRightControlPoint.x + lambdaCornerRadius, y: lambdaBottomLeftRightControlPoint.y - lambdaCornerRadius), control: lambdaBottomLeftRightControlPoint)
             
-//            context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + 50 + 40 + lambdaAdjust, y: bottomLeftControlPoint.y - lambdaAdjust))
-            
             // MARK: - middle bottom
             context.addLine(to: CGPoint(x: rect.midX, y: topLambda + lambdaAdjust * 4))
             
             // MARK: - bottom right left
-            context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50 - 40 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust))
+            let lambdaBottomRightLeftControlPoint = CGPoint(x: bottomRightControlPoint.x - 50 - 40 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust)
+            
+            context.addLine(to: CGPoint(x: lambdaBottomRightLeftControlPoint.x - lambdaCornerRadius, y: lambdaBottomRightLeftControlPoint.y - lambdaCornerRadius))
+            context.addQuadCurve(to: CGPoint(x: lambdaBottomRightLeftControlPoint.x, y: lambdaBottomRightLeftControlPoint.y), control: lambdaBottomRightLeftControlPoint)
+            
+//            context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50 - 40 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust))
             
             // MARK: - bottom right right
             context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust))
