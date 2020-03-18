@@ -87,10 +87,12 @@ class LogoView: UIView {
             context.addLine(to: CGPoint(x: lambdaBottomRightLeftControlPoint.x - lambdaCornerRadius, y: lambdaBottomRightLeftControlPoint.y - lambdaCornerRadius))
             context.addQuadCurve(to: CGPoint(x: lambdaBottomRightLeftControlPoint.x, y: lambdaBottomRightLeftControlPoint.y), control: lambdaBottomRightLeftControlPoint)
             
-//            context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50 - 40 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust))
             
             // MARK: - bottom right right
-            context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust))
+            let lambdaBottomRightRightControlPoint = CGPoint(x: bottomRightControlPoint.x - 50 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust)
+            
+            context.addLine(to: CGPoint(x: lambdaBottomRightRightControlPoint.x - lambdaCornerRadius, y: lambdaBottomRightRightControlPoint.y))
+            context.addQuadCurve(to: CGPoint(x: lambdaBottomRightRightControlPoint.x, y: lambdaBottomRightRightControlPoint.y - lambdaCornerRadius), control: lambdaBottomRightRightControlPoint)
             
             // MARK: - Top right
             context.addLine(to: CGPoint(x: rect.midX + lambdaAdjust * 2, y: topLambda))
