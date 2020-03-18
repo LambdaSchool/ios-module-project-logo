@@ -38,27 +38,38 @@ class LogoView: UIView {
        
         let roundedRectPath = CGPath(roundedRect: rect, cornerWidth: 8.0, cornerHeight: 8.0, transform: nil)
         let path = CGMutablePath()
-        let leftCorner = CGPoint(x: rect.minX, y: rect.minY)
-        let rightCorner = CGPoint(x: rect.size.width, y: rect.minY)
-        let pointCorner = CGPoint(x: rect.midX, y: -rect.size.height / 2.0)
+        let leftCorner = CGPoint(x: rect.minX, y: rect.maxY * 0.65)
+        let rightCorner = CGPoint(x: rect.size.width, y: rect.maxY * 0.65)
+        let topLeftCorner = CGPoint(x: rect.minX, y: rect.minY)
+        let topRightCorner = CGPoint(x: rect.size.width, y: rect.minY)
+        let pointCorner = CGPoint(x: rect.midX, y: rect.midY * 2.0)
         
         if let context = UIGraphicsGetCurrentContext() {
                                
         // logo background
             context.beginPath()
             context.addPath(roundedRectPath)
-            context.setFillColor(logoBgColor.cgColor)
+            context.setFillColor(letterColor.cgColor)
             context.fillPath()
             
             
         // logo bottom point
-            context.setStrokeColor(letterColor.cgColor)
+           
             context.beginPath()
             context.move(to: leftCorner)
-            context.addQuadCurve(to: rightCorner, control: pointCorner)
-            context.setFillColor(letterColor.cgColor)
-            context.strokePath()
+            context.addLine(to: pointCorner)
+            context.addLine(to: rightCorner)
+            context.setFillColor(logoBgColor.cgColor)
+            context.fillPath()
                         
+        // logo top portion
+            context.beginPath()
+            context.move(to: leftCorner)
+            context.addLine(to: topLeftCorner)
+            context.addLine(to: topRightCorner)
+            context.addLine(to: rightCorner)
+            context.setFillColor(logoBgColor.cgColor)
+            context.fillPath()
             
         // lambda letter
         
