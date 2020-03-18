@@ -14,15 +14,16 @@ class LogoView: UIView {
     private let cyan = CGColor(srgbRed: 11/255, green: 232/255, blue: 230/255, alpha: 1)
     private let pink = CGColor(srgbRed: 255/255, green: 77/255, blue: 144/255, alpha: 1)
     private let yellow = CGColor(srgbRed: 255/255, green: 175/255, blue: 22/255, alpha: 1)
-    
+    private let rectRatio: CGFloat = 2.75
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
-        context.translateBy(x: rect.midX, y: rect.midY)
+        context.translateBy(x: rect.midX, y: rect.height * 0.6)
         context.setBlendMode(.multiply)
         
-        let pillSize = CGSize(width: rect.width / 2, height: rect.width / 5.5)
+        let pillWidth = rect.width * 0.7
+        let pillSize = CGSize(width: pillWidth, height: pillWidth / rectRatio)
         let pillOrigin = CGPoint(x: 0 - pillSize.width / 2, y: 0 )
         let pillFrame = CGRect(origin: pillOrigin, size: pillSize)
         
