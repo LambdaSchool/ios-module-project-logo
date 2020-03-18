@@ -54,12 +54,24 @@ class LogoView: UIView {
         // Bottom Triangle
         let offset = 10.0
         
-        let startPoint  = CGPoint(x: offset,        y: offset + 78 + debug)
-        let nextPoint   = CGPoint(x: offset +  50,  y: offset + 78 + 37 + debug)
-        let endPoint    = CGPoint(x: offset + 100,  y: offset + 78 + debug)
+        var startPoint  = CGPoint(x: offset,        y: offset + 78 + debug)
+        var nextPoint   = CGPoint(x: offset +  50,  y: offset + 78 + 37 + debug)
+        var endPoint    = CGPoint(x: offset + 100,  y: offset + 78 + debug)
         context.beginPath()
         context.move(to: startPoint)
         context.setFillColor(lambdaRed)
+        context.addLine(to: nextPoint)
+        context.addLine(to: endPoint)
+        context.closePath()
+        context.fillPath()
+
+        // White Triangle
+        startPoint  = CGPoint(x: offset + 22,  y: offset + 60)
+        nextPoint   = CGPoint(x: offset + 50,  y: offset + 13)
+        endPoint    = CGPoint(x: offset + 78,  y: offset + 60)
+        context.beginPath()
+        context.move(to: startPoint)
+        context.setFillColor(UIColor.white.cgColor)
         context.addLine(to: nextPoint)
         context.addLine(to: endPoint)
         context.closePath()
