@@ -18,16 +18,16 @@ class LogoView: UIView {
         
         context.translateBy(x: rect.midX, y: rect.midY)
         
-        let pillSize = CGSize(width: rect.width / 5.5, height: rect.height / 2)
-        let pillOrigin = CGPoint(x: 0, y: 0 - pillSize.height / 2)
+        let pillSize = CGSize(width: rect.width / 2, height: rect.width / 5.5)
+        let pillOrigin = CGPoint(x: 0 - pillSize.width / 2, y: 0 )
         let pillFrame = CGRect(origin: pillOrigin, size: pillSize)
         
         
         context.setBlendMode(.multiply)
         
         func drawPill(color: CGColor, rotation: CGFloat) {
-            var tranform = CGAffineTransform(rotationAngle: -1.5 * .pi + rotation)
-            let pillPath = CGPath(roundedRect: pillFrame, cornerWidth: pillFrame.width / 2 , cornerHeight: pillFrame.width / 2, transform: &tranform)
+            var tranform = CGAffineTransform(rotationAngle: rotation)
+            let pillPath = CGPath(roundedRect: pillFrame, cornerWidth: pillFrame.height / 2 , cornerHeight: pillFrame.height / 2, transform: &tranform)
             context.addPath(pillPath)
             context.setFillColor(color)
             context.fillPath()
