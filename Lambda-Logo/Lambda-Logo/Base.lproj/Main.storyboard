@@ -16,27 +16,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siK-C4-nAj" customClass="Logo" customModule="Lambda_Logo" customModuleProvider="target">
-                                <rect key="frame" x="132" y="173" width="150" height="150"/>
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Vj0-pe-dzu"/>
                                     <constraint firstAttribute="height" constant="150" id="hU3-4f-v9e"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lambda_Avatar_White" translatesAutoresizingMaskIntoConstraints="NO" id="lc1-Uc-bJ8">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gt2-tK-eqe" customClass="StretchLogo" customModule="Lambda_Logo" customModuleProvider="target">
+                                <rect key="frame" x="87" y="140" width="240" height="179"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Cml-pe-dbJ"/>
-                                    <constraint firstAttribute="height" constant="200" id="fNd-eZ-Sec"/>
+                                    <constraint firstAttribute="height" constant="179" id="3k7-Of-jb0"/>
+                                    <constraint firstAttribute="width" constant="240" id="EeC-eD-1qE"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="siK-C4-nAj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e9P-O7-fGx"/>
-                            <constraint firstItem="lc1-Uc-bJ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g1g-g9-Bag"/>
-                            <constraint firstItem="siK-C4-nAj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="i0h-mN-k9c"/>
-                            <constraint firstItem="lc1-Uc-bJ8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oDp-A4-Vy9"/>
+                            <constraint firstItem="siK-C4-nAj" firstAttribute="top" secondItem="gt2-tK-eqe" secondAttribute="bottom" constant="54" id="9PX-fK-FxN"/>
+                            <constraint firstItem="siK-C4-nAj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GrL-6x-jvI"/>
+                            <constraint firstItem="gt2-tK-eqe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TXE-4s-2Wl"/>
+                            <constraint firstItem="siK-C4-nAj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gFv-dI-lUq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -46,7 +47,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Lambda_Avatar_White" width="1000" height="1000"/>
-    </resources>
 </document>

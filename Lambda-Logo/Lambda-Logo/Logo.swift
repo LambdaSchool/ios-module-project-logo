@@ -29,28 +29,33 @@ class Logo: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        if let context = UIGraphicsGetCurrentContext() {
             
             let viewCenter = CGPoint(x: rect.midX,
                                       y: rect.midY)
-         /*
-            context.addEllipse(in: rect)
-            context.setFillColor(testColor.cgColor)
-                context.fillPath()
+         
             
-            context.addEllipse(in: CGRect(x: rect.origin.x + 35, y: rect.origin.y + 35, width: rect.size.width - 35, height: rect.size.height - 35))
-            context.setStrokeColor(realColor.cgColor)
-            context.setLineWidth(35)
-            context.strokePath()
-         */
-            context.setStrokeColor(realColor.cgColor)
-            context.beginPath()
-            context.move(to: viewCenter)
-            context.setLineWidth(85)
-            context.addLine(to: CGPoint(x: rect.minX + 20, y: rect.minY))
-            context.strokePath()
+            let path = UIBezierPath()
+            path.move(to: CGPoint(x: viewCenter.x, y: viewCenter.y + 60))
+            path.addLine(to: CGPoint(x: viewCenter.x - 47, y: viewCenter.y + 25))
+            path.addLine(to: CGPoint(x: viewCenter.x - 47, y: viewCenter.y - 50))
+            path.addLine(to: CGPoint(x: viewCenter.x + 47, y: viewCenter.y - 50))
+            path.addLine(to: CGPoint(x: viewCenter.x + 47, y: viewCenter.y + 25))
+            path.close()
+            UIColor.black.setFill()
+            path.fill()
             
+            let path1 = UIBezierPath()
+            path1.move(to: CGPoint(x: viewCenter.x - 28, y: viewCenter.y + 14))
+            path1.addLine(to: CGPoint(x: viewCenter.x - 5, y: viewCenter.y - 26))
+            path1.addLine(to: CGPoint(x: viewCenter.x + 5, y: viewCenter.y - 26))
+            path1.addLine(to: CGPoint(x: viewCenter.x + 28, y: viewCenter.y + 14))
+            path1.addLine(to: CGPoint(x: viewCenter.x + 14, y: viewCenter.y + 14))
+            path1.addLine(to: CGPoint(x: viewCenter.x, y: viewCenter.y - 11))
+            path1.addLine(to: CGPoint(x: viewCenter.x - 14, y: viewCenter.y + 14))
+            path1.close()
+            UIColor.white.setFill()
+            path1.fill()
+
         }
-    }
     
 }

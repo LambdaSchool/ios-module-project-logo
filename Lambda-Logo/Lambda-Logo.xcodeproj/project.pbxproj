@@ -16,6 +16,7 @@
 		C43BA7512422AB67003478C8 /* Lambda_LogoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA7502422AB67003478C8 /* Lambda_LogoTests.swift */; };
 		C43BA75C2422AB67003478C8 /* Lambda_LogoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA75B2422AB67003478C8 /* Lambda_LogoUITests.swift */; };
 		C43BA76A2422ABC1003478C8 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA7692422ABC1003478C8 /* Logo.swift */; };
+		C43BA7A82422CC4E003478C8 /* StretchLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA7A72422CC4E003478C8 /* StretchLogo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C43BA75B2422AB67003478C8 /* Lambda_LogoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda_LogoUITests.swift; sourceTree = "<group>"; };
 		C43BA75D2422AB67003478C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C43BA7692422ABC1003478C8 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
+		C43BA7A72422CC4E003478C8 /* StretchLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchLogo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				C43BA7442422AB66003478C8 /* LaunchScreen.storyboard */,
 				C43BA7472422AB66003478C8 /* Info.plist */,
 				C43BA7692422ABC1003478C8 /* Logo.swift */,
+				C43BA7A72422CC4E003478C8 /* StretchLogo.swift */,
 			);
 			path = "Lambda-Logo";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				C43BA73E2422AB63003478C8 /* ViewController.swift in Sources */,
 				C43BA73A2422AB63003478C8 /* AppDelegate.swift in Sources */,
 				C43BA76A2422ABC1003478C8 /* Logo.swift in Sources */,
+				C43BA7A82422CC4E003478C8 /* StretchLogo.swift in Sources */,
 				C43BA73C2422AB63003478C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
