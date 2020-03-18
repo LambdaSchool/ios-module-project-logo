@@ -58,10 +58,10 @@
 		92CFD6DB2422B934007D7A96 /* Logo */ = {
 			isa = PBXGroup;
 			children = (
+				92CFD6F52422BC4D007D7A96 /* LogoView.swift */,
 				92CFD6F22422B9C1007D7A96 /* Resources */,
 				92CFD6F02422B9A5007D7A96 /* Storyboard */,
 				92CFD6E02422B934007D7A96 /* ViewController.swift */,
-				92CFD6F52422BC4D007D7A96 /* LogoView.swift */,
 			);
 			path = Logo;
 			sourceTree = "<group>";
