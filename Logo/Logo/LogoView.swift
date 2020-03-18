@@ -13,7 +13,8 @@ import Foundation
 class LogoView: UIView {
 
     let debug = 1.0
-    
+    let lambdaRed = CGColor(srgbRed: 170.0/255, green: 42.0/255, blue: 56.0/255, alpha: 1.0)
+
     // MARK: - View Lifecycle
     
     override init(frame: CGRect) {
@@ -47,7 +48,7 @@ class LogoView: UIView {
         // Top rectangle
         let rect = CGRect(x: 10, y: 10, width: 100, height: 78)
         context.addRect(rect)
-        context.setFillColor(UIColor.red.cgColor)
+        context.setFillColor(lambdaRed)
         context.fillPath()
 
         // Bottom Triangle
@@ -58,7 +59,7 @@ class LogoView: UIView {
         let endPoint    = CGPoint(x: offset + 100,  y: offset + 78 + debug)
         context.beginPath()
         context.move(to: startPoint)
-        context.setFillColor(UIColor.red.cgColor)
+        context.setFillColor(lambdaRed)
         context.addLine(to: nextPoint)
         context.addLine(to: endPoint)
         context.closePath()
