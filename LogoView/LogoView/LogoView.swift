@@ -53,30 +53,31 @@ class LogoView: UIView {
             
             // MARK: - Lambda path
             let topLambda = CGFloat(rect.origin.y + rect.height * 0.3)
+            let lambdaAdjust = CGFloat(10)
             
             // MARK: - Middle
             context.move(to: CGPoint(x: rect.midX, y: topLambda))
             
             // MARK: - Top Left
-            context.addLine(to: CGPoint(x: rect.midX - 25, y: topLambda))
+            context.addLine(to: CGPoint(x: rect.midX - lambdaAdjust, y: topLambda))
             
             // MARK: - bottom left left
-            context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + 50, y: bottomLeftControlPoint.y - 25))
+            context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + 50 + lambdaAdjust, y: bottomLeftControlPoint.y - lambdaAdjust))
             
             // MARK: - bottom left right
-            context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + 50 + 40, y: bottomLeftControlPoint.y - 25))
+            context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + 50 + 40 + lambdaAdjust, y: bottomLeftControlPoint.y - lambdaAdjust))
             
             // MARK: - middle bottom
-            context.addLine(to: CGPoint(x: rect.midX, y: topLambda + 25))
+            context.addLine(to: CGPoint(x: rect.midX, y: topLambda + lambdaAdjust * 4))
             
             // MARK: - bottom right left
-            context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50 - 40, y: bottomRightControlPoint.y - 25))
+            context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50 - 40 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust))
             
             // MARK: - bottom right right
-            context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50, y: bottomRightControlPoint.y - 25))
+            context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust))
             
             // MARK: - Top right
-            context.addLine(to: CGPoint(x: rect.midX + 25, y: topLambda))
+            context.addLine(to: CGPoint(x: rect.midX + lambdaAdjust, y: topLambda))
             
             context.setFillColor(UIColor.white.cgColor)
             context.fillPath()
