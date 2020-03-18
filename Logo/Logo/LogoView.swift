@@ -19,6 +19,7 @@ class LogoView: UIView {
     private let borderWidth: CGFloat = 2.0
     
     
+    
     // MARK: - View Lifecycle
     
     override init(frame: CGRect) {
@@ -28,7 +29,6 @@ class LogoView: UIView {
  
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        backgroundColor = UIColor.clear
     }
     
     
@@ -36,23 +36,30 @@ class LogoView: UIView {
     
     override func draw(_ rect: CGRect) {
        
-        if let context = UIGraphicsGetCurrentContext() {
+        let roundedRectPath = CGPath(roundedRect: rect, cornerWidth: 8.0, cornerHeight: 8.0, transform: nil)
+        let path = CGMutablePath()
+        let leftCorner = CGPoint(x: rect.minX, y: rect.minY)
+        let rightCorner = CGPoint(x: rect.size.width, y: rect.minY)
+        let pointCorner = CGPoint(x: rect.midX, y: -rect.size.height / 2.0)
         
+        if let context = UIGraphicsGetCurrentContext() {
+                               
         // logo background
-            context.addRect(rect)
+            context.beginPath()
+            context.addPath(roundedRectPath)
             context.setFillColor(logoBgColor.cgColor)
             context.fillPath()
-                     
-        // logo border
-            context.addRect(CGRect(x: rect.origin.x + borderWidth / 2.0,
-                                   y: rect.origin.y + borderWidth / 2.0,
-                                   width: rect.size.width - borderWidth,
-                                   height: rect.size.height - borderWidth))
-            context.setStrokeColor(borderColor.cgColor)
-            context.setLineWidth(borderWidth)
+            
+            
+        // logo bottom point
+            context.setStrokeColor(letterColor.cgColor)
+            context.beginPath()
+            context.move(to: leftCorner)
+            context.addQuadCurve(to: rightCorner, control: pointCorner)
+            context.setFillColor(letterColor.cgColor)
             context.strokePath()
-        
-        
+                        
+            
         // lambda letter
         
         
