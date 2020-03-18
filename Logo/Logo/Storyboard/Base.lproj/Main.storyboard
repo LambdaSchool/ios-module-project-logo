@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZt-nB-PDq" customClass="LogoView" customModule="Logo" customModuleProvider="target">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZt-nB-PDq" customClass="LogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="282.5" width="331" height="331"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UZt-nB-PDq" secondAttribute="height" multiplier="1:1" id="DWo-zb-ouO"/>
@@ -27,6 +27,7 @@
                         <constraints>
                             <constraint firstItem="UZt-nB-PDq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C01-eU-czi"/>
                             <constraint firstItem="UZt-nB-PDq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lzk-Ef-FFh"/>
+                            <constraint firstItem="UZt-nB-PDq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="tRi-xn-9r9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
