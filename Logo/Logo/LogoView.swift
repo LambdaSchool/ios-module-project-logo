@@ -45,8 +45,9 @@ class LogoView: UIView {
         let pointCorner = CGPoint(x: rect.midX, y: rect.midY * 2.0)
         
         let letterLeftCorner = CGPoint(x: rect.minX + 10.0, y: rect.maxY + 8.0)
-        let letterPointOne = CGPoint(x: rect.minX + 6.0, y: rect.maxY)
-        let letterPointTwo = CGPoint(x: rect.minX + 6.0, y: rect.maxY)
+        let letterRightCorner = CGPoint(x: rect.maxX - 10.0, y: rect.maxY + 8.0)
+        let letterTopPoint = CGPoint(x: rect.midX, y: rect.maxY - )
+       
         // inside diagnol up
         
         
