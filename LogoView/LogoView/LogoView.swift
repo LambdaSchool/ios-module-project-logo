@@ -95,7 +95,11 @@ class LogoView: UIView {
             context.addQuadCurve(to: CGPoint(x: lambdaBottomRightRightControlPoint.x, y: lambdaBottomRightRightControlPoint.y - lambdaCornerRadius), control: lambdaBottomRightRightControlPoint)
             
             // MARK: - Top right
-            context.addLine(to: CGPoint(x: rect.midX + lambdaAdjust * 2, y: topLambda))
+            let lambdaTopRightControlPoint = CGPoint(x: rect.midX + lambdaAdjust * 2, y: topLambda)
+            
+            context.addLine(to: CGPoint(x: lambdaTopRightControlPoint.x + lambdaCornerRadius, y: lambdaTopRightControlPoint.y + lambdaCornerRadius))
+            context.addQuadCurve(to: CGPoint(x: lambdaTopRightControlPoint.x - lambdaCornerRadius, y: lambdaTopRightControlPoint.y), control: lambdaTopRightControlPoint)
+            
             
             context.setFillColor(UIColor.white.cgColor)
             context.fillPath()
