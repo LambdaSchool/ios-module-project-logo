@@ -32,10 +32,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="1jl-cQ-dr2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="EF9-jy-faV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LxY-gl-jvO" secondAttribute="bottom" id="Eid-hK-IbK"/>
                             <constraint firstItem="LxY-gl-jvO" firstAttribute="top" secondItem="1jl-cQ-dr2" secondAttribute="bottom" constant="8" id="coJ-VQ-Nm6"/>
                             <constraint firstItem="LxY-gl-jvO" firstAttribute="leading" secondItem="1jl-cQ-dr2" secondAttribute="leading" id="f80-tH-wRf"/>
-                            <constraint firstItem="1jl-cQ-dr2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="gDp-jy-xF7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1jl-cQ-dr2" secondAttribute="trailing" constant="40" id="m55-db-9fz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1jl-cQ-dr2" secondAttribute="trailing" constant="40" id="m55-db-9fz"/>
+                            <constraint firstItem="1jl-cQ-dr2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qxv-9a-sUV"/>
                             <constraint firstItem="LxY-gl-jvO" firstAttribute="trailing" secondItem="1jl-cQ-dr2" secondAttribute="trailing" id="sow-q3-cAP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
