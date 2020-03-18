@@ -20,6 +20,7 @@ class LogoView: UIView {
             
             // MARK: - Properties
             let cornerRadius = CGFloat(10)
+            let bottomCornerRadius = CGFloat(5)
             let squareHeight = CGFloat(rect.origin.y + rect.width * 0.6)
             let triangleHeight = CGFloat(squareHeight + squareHeight * 0.5)
             
@@ -36,14 +37,19 @@ class LogoView: UIView {
             // MARK: - Bottom right rounded Corner
             let bottomRightControlPoint = CGPoint(x: topRightControlPoint.x, y: squareHeight)
             context.addLine(to: CGPoint(x: bottomRightControlPoint.x, y: bottomRightControlPoint.y - cornerRadius))
-            context.addQuadCurve(to: CGPoint(x: bottomRightControlPoint.x - cornerRadius, y: bottomRightControlPoint.y), control: bottomRightControlPoint)
+            context.addQuadCurve(to: CGPoint(x: bottomRightControlPoint.x - bottomCornerRadius, y: bottomRightControlPoint.y + bottomCornerRadius), control: bottomRightControlPoint)
+            
+            // MARK: - Triangle Peak
+            let triangleBottomControlPoint = CGPoint(x: rect.midX, y: triangleHeight)
+            context.addLine(to: CGPoint(x: triangleBottomControlPoint.x + cornerRadius, y: triangleBottomControlPoint.y - cornerRadius))
+            context.addQuadCurve(to: CGPoint(x: triangleBottomControlPoint.x - cornerRadius, y: triangleBottomControlPoint.y - cornerRadius), control: triangleBottomControlPoint)
             
             // MARK: - Bottom left rounded Corner
             let bottomLeftControlPoint = CGPoint(x: topLeftControlPoint.x, y: squareHeight)
-            context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + cornerRadius, y: bottomLeftControlPoint.y))
+            context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + bottomCornerRadius, y: bottomLeftControlPoint.y + bottomCornerRadius))
             context.addQuadCurve(to: CGPoint(x: bottomLeftControlPoint.x, y: bottomLeftControlPoint.y - cornerRadius), control: bottomLeftControlPoint)
             
-            context.setFillColor(UIColor.blue.cgColor)
+            context.setFillColor(UIColor.red.cgColor)
             context.fillPath()
             
             
