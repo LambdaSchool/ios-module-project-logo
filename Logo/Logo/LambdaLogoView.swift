@@ -11,8 +11,7 @@ import Foundation
 
 @IBDesignable
 class LambdaLogoView: UIView {
-
-    /*
+    
      override init(frame: CGRect) {
          super.init(frame: frame)
          backgroundColor = UIColor.clear
@@ -22,8 +21,6 @@ class LambdaLogoView: UIView {
          super.init(coder: aDecoder)
          backgroundColor = UIColor.clear
      }
-     
-     */
     
     let red = UIColor(red:0.73, green:0.07, blue:0.20, alpha:1.00)
      

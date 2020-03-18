@@ -14,6 +14,7 @@
 		13253EE42422A8B3006B5F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13253EE32422A8B3006B5F97 /* Assets.xcassets */; };
 		13253EE72422A8B3006B5F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13253EE52422A8B3006B5F97 /* LaunchScreen.storyboard */; };
 		13253EF12422A965006B5F97 /* LambdaLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13253EF02422A965006B5F97 /* LambdaLogoView.swift */; };
+		1355C23C2422C60E00DD5C40 /* NewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1355C23B2422C60D00DD5C40 /* NewButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		13253EE62422A8B3006B5F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13253EE82422A8B3006B5F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13253EF02422A965006B5F97 /* LambdaLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaLogoView.swift; sourceTree = "<group>"; };
+		1355C23B2422C60D00DD5C40 /* NewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				13253EDC2422A8B2006B5F97 /* SceneDelegate.swift */,
 				13253EDE2422A8B2006B5F97 /* ViewController.swift */,
 				13253EF02422A965006B5F97 /* LambdaLogoView.swift */,
+				1355C23B2422C60D00DD5C40 /* NewButton.swift */,
 				13253EE02422A8B2006B5F97 /* Main.storyboard */,
 				13253EE32422A8B3006B5F97 /* Assets.xcassets */,
 				13253EE52422A8B3006B5F97 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				13253EF12422A965006B5F97 /* LambdaLogoView.swift in Sources */,
 				13253EDF2422A8B2006B5F97 /* ViewController.swift in Sources */,
 				13253EDB2422A8B2006B5F97 /* AppDelegate.swift in Sources */,
+				1355C23C2422C60E00DD5C40 /* NewButton.swift in Sources */,
 				13253EDD2422A8B2006B5F97 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
