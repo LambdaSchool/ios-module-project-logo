@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C43BA73A2422AB63003478C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA7392422AB63003478C8 /* AppDelegate.swift */; };
+		C43BA73C2422AB63003478C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA73B2422AB63003478C8 /* SceneDelegate.swift */; };
+		C43BA73E2422AB63003478C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA73D2422AB63003478C8 /* ViewController.swift */; };
+		C43BA7412422AB63003478C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43BA73F2422AB63003478C8 /* Main.storyboard */; };
+		C43BA7432422AB66003478C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43BA7422422AB66003478C8 /* Assets.xcassets */; };
+		C43BA7462422AB66003478C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43BA7442422AB66003478C8 /* LaunchScreen.storyboard */; };
+		C43BA7512422AB67003478C8 /* Lambda_LogoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA7502422AB67003478C8 /* Lambda_LogoTests.swift */; };
+		C43BA75C2422AB67003478C8 /* Lambda_LogoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA75B2422AB67003478C8 /* Lambda_LogoUITests.swift */; };
+		C43BA76A2422ABC1003478C8 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BA7692422ABC1003478C8 /* Logo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C43BA74D2422AB67003478C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C43BA72E2422AB63003478C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C43BA7352422AB63003478C8;
+			remoteInfo = "Lambda-Logo";
+		};
+		C43BA7582422AB67003478C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C43BA72E2422AB63003478C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C43BA7352422AB63003478C8;
+			remoteInfo = "Lambda-Logo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C43BA7362422AB63003478C8 /* Lambda-Logo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lambda-Logo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43BA7392422AB63003478C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C43BA73B2422AB63003478C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C43BA73D2422AB63003478C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C43BA7402422AB63003478C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C43BA7422422AB66003478C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C43BA7452422AB66003478C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C43BA7472422AB66003478C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C43BA74C2422AB67003478C8 /* Lambda-LogoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lambda-LogoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43BA7502422AB67003478C8 /* Lambda_LogoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda_LogoTests.swift; sourceTree = "<group>"; };
+		C43BA7522422AB67003478C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C43BA7572422AB67003478C8 /* Lambda-LogoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lambda-LogoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43BA75B2422AB67003478C8 /* Lambda_LogoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lambda_LogoUITests.swift; sourceTree = "<group>"; };
+		C43BA75D2422AB67003478C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C43BA7692422ABC1003478C8 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C43BA7332422AB63003478C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C43BA7492422AB67003478C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C43BA7542422AB67003478C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C43BA72D2422AB63003478C8 = {
+			isa = PBXGroup;
+			children = (
+				C43BA7382422AB63003478C8 /* Lambda-Logo */,
+				C43BA74F2422AB67003478C8 /* Lambda-LogoTests */,
+				C43BA75A2422AB67003478C8 /* Lambda-LogoUITests */,
+				C43BA7372422AB63003478C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C43BA7372422AB63003478C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C43BA7362422AB63003478C8 /* Lambda-Logo.app */,
+				C43BA74C2422AB67003478C8 /* Lambda-LogoTests.xctest */,
+				C43BA7572422AB67003478C8 /* Lambda-LogoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C43BA7382422AB63003478C8 /* Lambda-Logo */ = {
+			isa = PBXGroup;
+			children = (
+				C43BA7392422AB63003478C8 /* AppDelegate.swift */,
+				C43BA73B2422AB63003478C8 /* SceneDelegate.swift */,
+				C43BA73D2422AB63003478C8 /* ViewController.swift */,
+				C43BA73F2422AB63003478C8 /* Main.storyboard */,
+				C43BA7422422AB66003478C8 /* Assets.xcassets */,
+				C43BA7442422AB66003478C8 /* LaunchScreen.storyboard */,
+				C43BA7472422AB66003478C8 /* Info.plist */,
+				C43BA7692422ABC1003478C8 /* Logo.swift */,
+			);
+			path = "Lambda-Logo";
+			sourceTree = "<group>";
+		};
+		C43BA74F2422AB67003478C8 /* Lambda-LogoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C43BA7502422AB67003478C8 /* Lambda_LogoTests.swift */,
+				C43BA7522422AB67003478C8 /* Info.plist */,
+			);
+			path = "Lambda-LogoTests";
+			sourceTree = "<group>";
+		};
+		C43BA75A2422AB67003478C8 /* Lambda-LogoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C43BA75B2422AB67003478C8 /* Lambda_LogoUITests.swift */,
+				C43BA75D2422AB67003478C8 /* Info.plist */,
+			);
+			path = "Lambda-LogoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C43BA7352422AB63003478C8 /* Lambda-Logo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C43BA7602422AB67003478C8 /* Build configuration list for PBXNativeTarget "Lambda-Logo" */;
+			buildPhases = (
+				C43BA7322422AB63003478C8 /* Sources */,
+				C43BA7332422AB63003478C8 /* Frameworks */,
+				C43BA7342422AB63003478C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lambda-Logo";
+			productName = "Lambda-Logo";
+			productReference = C43BA7362422AB63003478C8 /* Lambda-Logo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C43BA74B2422AB67003478C8 /* Lambda-LogoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C43BA7632422AB67003478C8 /* Build configuration list for PBXNativeTarget "Lambda-LogoTests" */;
+			buildPhases = (
+				C43BA7482422AB67003478C8 /* Sources */,
+				C43BA7492422AB67003478C8 /* Frameworks */,
+				C43BA74A2422AB67003478C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C43BA74E2422AB67003478C8 /* PBXTargetDependency */,
+			);
+			name = "Lambda-LogoTests";
+			productName = "Lambda-LogoTests";
+			productReference = C43BA74C2422AB67003478C8 /* Lambda-LogoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C43BA7562422AB67003478C8 /* Lambda-LogoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C43BA7662422AB67003478C8 /* Build configuration list for PBXNativeTarget "Lambda-LogoUITests" */;
+			buildPhases = (
+				C43BA7532422AB67003478C8 /* Sources */,
+				C43BA7542422AB67003478C8 /* Frameworks */,
+				C43BA7552422AB67003478C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C43BA7592422AB67003478C8 /* PBXTargetDependency */,
+			);
+			name = "Lambda-LogoUITests";
+			productName = "Lambda-LogoUITests";
+			productReference = C43BA7572422AB67003478C8 /* Lambda-LogoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C43BA72E2422AB63003478C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Bradley Diroff";
+				TargetAttributes = {
+					C43BA7352422AB63003478C8 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					C43BA74B2422AB67003478C8 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = C43BA7352422AB63003478C8;
+					};
+					C43BA7562422AB67003478C8 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = C43BA7352422AB63003478C8;
+					};
+				};
+			};
+			buildConfigurationList = C43BA7312422AB63003478C8 /* Build configuration list for PBXProject "Lambda-Logo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C43BA72D2422AB63003478C8;
+			productRefGroup = C43BA7372422AB63003478C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C43BA7352422AB63003478C8 /* Lambda-Logo */,
+				C43BA74B2422AB67003478C8 /* Lambda-LogoTests */,
+				C43BA7562422AB67003478C8 /* Lambda-LogoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C43BA7342422AB63003478C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C43BA7462422AB66003478C8 /* LaunchScreen.storyboard in Resources */,
+				C43BA7432422AB66003478C8 /* Assets.xcassets in Resources */,
+				C43BA7412422AB63003478C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C43BA74A2422AB67003478C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C43BA7552422AB67003478C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C43BA7322422AB63003478C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C43BA73E2422AB63003478C8 /* ViewController.swift in Sources */,
+				C43BA73A2422AB63003478C8 /* AppDelegate.swift in Sources */,
+				C43BA76A2422ABC1003478C8 /* Logo.swift in Sources */,
+				C43BA73C2422AB63003478C8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C43BA7482422AB67003478C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C43BA7512422AB67003478C8 /* Lambda_LogoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C43BA7532422AB67003478C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C43BA75C2422AB67003478C8 /* Lambda_LogoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C43BA74E2422AB67003478C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C43BA7352422AB63003478C8 /* Lambda-Logo */;
+			targetProxy = C43BA74D2422AB67003478C8 /* PBXContainerItemProxy */;
+		};
+		C43BA7592422AB67003478C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C43BA7352422AB63003478C8 /* Lambda-Logo */;
+			targetProxy = C43BA7582422AB67003478C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C43BA73F2422AB63003478C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C43BA7402422AB63003478C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C43BA7442422AB66003478C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C43BA7452422AB66003478C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C43BA75E2422AB67003478C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C43BA75F2422AB67003478C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C43BA7612422AB67003478C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZTTC6J4225;
+				INFOPLIST_FILE = "Lambda-Logo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yesTime.Lambda-Logo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C43BA7622422AB67003478C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZTTC6J4225;
+				INFOPLIST_FILE = "Lambda-Logo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yesTime.Lambda-Logo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C43BA7642422AB67003478C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZTTC6J4225;
+				INFOPLIST_FILE = "Lambda-LogoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yesTime.Lambda-LogoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lambda-Logo.app/Lambda-Logo";
+			};
+			name = Debug;
+		};
+		C43BA7652422AB67003478C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZTTC6J4225;
+				INFOPLIST_FILE = "Lambda-LogoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yesTime.Lambda-LogoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lambda-Logo.app/Lambda-Logo";
+			};
+			name = Release;
+		};
+		C43BA7672422AB67003478C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZTTC6J4225;
+				INFOPLIST_FILE = "Lambda-LogoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yesTime.Lambda-LogoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Lambda-Logo";
+			};
+			name = Debug;
+		};
+		C43BA7682422AB67003478C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZTTC6J4225;
+				INFOPLIST_FILE = "Lambda-LogoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yesTime.Lambda-LogoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Lambda-Logo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C43BA7312422AB63003478C8 /* Build configuration list for PBXProject "Lambda-Logo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C43BA75E2422AB67003478C8 /* Debug */,
+				C43BA75F2422AB67003478C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43BA7602422AB67003478C8 /* Build configuration list for PBXNativeTarget "Lambda-Logo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C43BA7612422AB67003478C8 /* Debug */,
+				C43BA7622422AB67003478C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43BA7632422AB67003478C8 /* Build configuration list for PBXNativeTarget "Lambda-LogoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C43BA7642422AB67003478C8 /* Debug */,
+				C43BA7652422AB67003478C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43BA7662422AB67003478C8 /* Build configuration list for PBXNativeTarget "Lambda-LogoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C43BA7672422AB67003478C8 /* Debug */,
+				C43BA7682422AB67003478C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C43BA72E2422AB63003478C8 /* Project object */;
+}
