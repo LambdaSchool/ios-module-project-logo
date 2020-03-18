@@ -54,20 +54,23 @@ class LogoView: UIView {
             // MARK: - Lambda path
             let topLambda = CGFloat(rect.origin.y + rect.height * 0.3)
             let lambdaAdjust = CGFloat(10)
-            let lambdaCornerRadius = CGFloat(5)
+            let lambdaCornerRadius = CGFloat(2.5)
             
             // MARK: - Middle
             context.move(to: CGPoint(x: rect.midX, y: topLambda))
             
             // MARK: - Top Left
-            let lambdaTopLeftController = CGPoint(x: rect.midX - lambdaAdjust * 2, y: topLambda)
+            let lambdaTopLeftControlPoint = CGPoint(x: rect.midX - lambdaAdjust * 2, y: topLambda)
             
-            context.addLine(to: CGPoint(x: lambdaTopLeftController.x + lambdaCornerRadius, y: lambdaTopLeftController.y))
-            context.addQuadCurve(to: CGPoint(x: lambdaTopLeftController.x - lambdaCornerRadius / 2, y: lambdaTopLeftController.y + lambdaCornerRadius / 2), control: lambdaTopLeftController)
+            context.addLine(to: CGPoint(x: lambdaTopLeftControlPoint.x + lambdaCornerRadius, y: lambdaTopLeftControlPoint.y))
+            context.addQuadCurve(to: CGPoint(x: lambdaTopLeftControlPoint.x - lambdaCornerRadius, y: lambdaTopLeftControlPoint.y + lambdaCornerRadius), control: lambdaTopLeftControlPoint)
             
             
             // MARK: - bottom left left
-            context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + 50 + lambdaAdjust, y: bottomLeftControlPoint.y - lambdaAdjust))
+            let lambdaBottomLeftLeftControlPoint = CGPoint(x: bottomLeftControlPoint.x + 50 + lambdaAdjust, y: bottomLeftControlPoint.y - lambdaAdjust)
+            
+            context.addLine(to: CGPoint(x: lambdaBottomLeftLeftControlPoint.x, y: lambdaBottomLeftLeftControlPoint.y - lambdaCornerRadius))
+            context.addQuadCurve(to: CGPoint(x: lambdaBottomLeftLeftControlPoint.x + lambdaCornerRadius, y: lambdaBottomLeftLeftControlPoint.y), control: lambdaBottomLeftLeftControlPoint)
             
             // MARK: - bottom left right
             context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + 50 + 40 + lambdaAdjust, y: bottomLeftControlPoint.y - lambdaAdjust))
