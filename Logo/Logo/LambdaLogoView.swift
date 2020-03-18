@@ -43,11 +43,14 @@ class LambdaLogoView: UIView {
             // Triangle
             let leftCorner = CGPoint(x: rectangle.minX + 5, y: rectangle.maxY)
             let rightCorner = CGPoint(x: rectangle.maxX - 5, y: rectangle.maxY)
-            let centerBottom = CGPoint(x: rect.midX, y: rect.maxY)
+            let centerBottom3 = CGPoint(x: rect.midX, y: rect.maxY)
+            let centerBottom = CGPoint(x: rect.midX - 10, y: rect.maxY - 10)
+            let centerBottom2 = CGPoint(x: rect.midX + 10, y: rect.maxY - 10)
             context.setStrokeColor(UIColor.white.cgColor)
             context.beginPath()
             context.move(to: leftCorner)
             context.addLine(to: centerBottom)
+            context.addQuadCurve(to: centerBottom2, control: centerBottom3)
             context.addLine(to: rightCorner)
             context.addLine(to: leftCorner)
             context.closePath()
@@ -64,20 +67,14 @@ class LambdaLogoView: UIView {
             context.addLine(to: CGPoint(x: rectangle.midX - 50, y: rectangle.midY + 75))
             context.addLine(to: CGPoint(x: rectangle.midX - 75, y: rectangle.midY + 75))
             context.addLine(to: CGPoint(x: rectangle.midX - 15, y: rectangle.midY - 25))
-            context.addLine(to: CGPoint(x: rectangle.midX + 20, y: rectangle.midY - 25))
+            context.addLine(to: CGPoint(x: rectangle.midX + 15, y: rectangle.midY - 25))
             context.addLine(to: CGPoint(x: rectangle.midX + 75, y: rectangle.midY + 75))
-            context.addLine(to: CGPoint(x: rectangle.midX + 40, y: rectangle.midY + 75))
+            context.addLine(to: CGPoint(x: rectangle.midX + 50, y: rectangle.midY + 75))
             context.addLine(to: middle)
             context.setFillColor(red.cgColor)
-
             context.closePath()
             context.fillPath()
-
             context.strokePath()
-
-            
-            
-            
         }
     }
 
