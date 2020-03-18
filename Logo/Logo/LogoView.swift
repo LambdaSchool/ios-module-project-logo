@@ -44,6 +44,17 @@ class LogoView: UIView {
         let topRightCorner = CGPoint(x: rect.size.width, y: rect.minY)
         let pointCorner = CGPoint(x: rect.midX, y: rect.midY * 2.0)
         
+        let letterLeftCorner = CGPoint(x: rect.minX + 10.0, y: rect.maxY + 8.0)
+        let letterPointOne = CGPoint(x: rect.minX + 6.0, y: rect.maxY)
+        let letterPointTwo = CGPoint(x: rect.minX + 6.0, y: rect.maxY)
+        // inside diagnol up
+        
+        
+        // inside diagnol down
+        
+        
+        
+        
         if let context = UIGraphicsGetCurrentContext() {
                                
         // logo background
@@ -72,6 +83,16 @@ class LogoView: UIView {
             context.fillPath()
             
         // lambda letter
+            
+            context.beginPath()
+            context.move(to: letterLeftCorner)
+            context.move(to: letterPointOne)
+            
+            
+            
+            context.setFillColor(letterColor.cgColor)
+            context.strokePath()
+            
         
         
         
