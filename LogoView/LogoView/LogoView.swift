@@ -16,8 +16,6 @@ class LogoView: UIView {
         
         if let context = UIGraphicsGetCurrentContext() {
             
-//            let roundedRectanglePath = CGPath(roundedRect: CGRect(x: rect.origin.x + rect.width * 0.15, y: rect.origin.y + rect.height * 0.1, width: rect.width * 0.7, height: rect.width * 0.7 * 0.8), cornerWidth: 10, cornerHeight: 10, transform: nil)
-            
             // MARK: - Properties
             let cornerRadius = CGFloat(10)
             let bottomCornerRadius = CGFloat(5)
@@ -49,8 +47,22 @@ class LogoView: UIView {
             context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + bottomCornerRadius, y: bottomLeftControlPoint.y + bottomCornerRadius))
             context.addQuadCurve(to: CGPoint(x: bottomLeftControlPoint.x, y: bottomLeftControlPoint.y - cornerRadius), control: bottomLeftControlPoint)
             
+            
             context.setFillColor(UIColor.red.cgColor)
             context.fillPath()
+            
+            // MARK: - Lambda path
+            let topLambda = CGFloat(rect.origin.y + rect.height * 0.3)
+            
+            // MARK: - Middle to left
+            context.move(to: CGPoint(x: rect.midX, y: topLambda))
+            context.addLine(to: CGPoint(x: rect.midX - 25, y: topLambda))
+            
+            
+            context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + 50, y: bottomLeftControlPoint.y - 50))
+            context.setFillColor(UIColor.white.cgColor)
+            context.fillPath()
+            
             
             
             
