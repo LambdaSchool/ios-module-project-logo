@@ -50,16 +50,19 @@ class LogoView: UIView {
             
             // left exit from loop
             context.saveGState()
-            context.translateBy(x: 94, y: 24)
             context.rotate(by: 40 * CGFloat.pi/180)
-
-            let rectanglePath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 39, height: 62))
-            UIColor.gray.setFill()
-            rectanglePath.fill()
-
+            let leftExitRectangle = UIBezierPath(rect: CGRect(x: 88, y: -117, width: 40, height: 110))
+            context.setFillColor(UIColor.white.cgColor)
+            leftExitRectangle.fill()
             context.restoreGState()
             
             // right exit from loop
+            context.saveGState()
+            context.rotate(by: -40 * CGFloat.pi/180)
+            let rightExitRectangle = UIBezierPath(rect: CGRect(x: 127, y: 100, width: 40, height: 100))
+            context.setFillColor(UIColor.white.cgColor)
+            rightExitRectangle.fill()
+            context.restoreGState()
 
         }
     }
