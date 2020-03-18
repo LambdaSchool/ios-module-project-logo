@@ -63,7 +63,16 @@ class LambdaLogoView: UIView {
             context.setLineWidth(5)
             context.addLine(to: CGPoint(x: rectangle.midX - 50, y: rectangle.midY + 75))
             context.addLine(to: CGPoint(x: rectangle.midX - 75, y: rectangle.midY + 75))
-            
+            context.addLine(to: CGPoint(x: rectangle.midX - 15, y: rectangle.midY - 25))
+            context.addLine(to: CGPoint(x: rectangle.midX + 20, y: rectangle.midY - 25))
+            context.addLine(to: CGPoint(x: rectangle.midX + 75, y: rectangle.midY + 75))
+            context.addLine(to: CGPoint(x: rectangle.midX + 40, y: rectangle.midY + 75))
+            context.addLine(to: middle)
+            context.setFillColor(red.cgColor)
+
+            context.closePath()
+            context.fillPath()
+
             context.strokePath()
 
             
