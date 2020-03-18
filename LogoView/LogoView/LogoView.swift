@@ -54,12 +54,17 @@ class LogoView: UIView {
             // MARK: - Lambda path
             let topLambda = CGFloat(rect.origin.y + rect.height * 0.3)
             let lambdaAdjust = CGFloat(10)
+            let lambdaCornerRadius = CGFloat(5)
             
             // MARK: - Middle
             context.move(to: CGPoint(x: rect.midX, y: topLambda))
             
             // MARK: - Top Left
-            context.addLine(to: CGPoint(x: rect.midX - lambdaAdjust, y: topLambda))
+            let lambdaTopLeftController = CGPoint(x: rect.midX - lambdaAdjust * 2, y: topLambda)
+            
+            context.addLine(to: CGPoint(x: lambdaTopLeftController.x + lambdaCornerRadius, y: lambdaTopLeftController.y))
+            context.addQuadCurve(to: CGPoint(x: lambdaTopLeftController.x - lambdaCornerRadius / 2, y: lambdaTopLeftController.y + lambdaCornerRadius / 2), control: lambdaTopLeftController)
+            
             
             // MARK: - bottom left left
             context.addLine(to: CGPoint(x: bottomLeftControlPoint.x + 50 + lambdaAdjust, y: bottomLeftControlPoint.y - lambdaAdjust))
@@ -77,7 +82,7 @@ class LogoView: UIView {
             context.addLine(to: CGPoint(x: bottomRightControlPoint.x - 50 - lambdaAdjust, y: bottomRightControlPoint.y - lambdaAdjust))
             
             // MARK: - Top right
-            context.addLine(to: CGPoint(x: rect.midX + lambdaAdjust, y: topLambda))
+            context.addLine(to: CGPoint(x: rect.midX + lambdaAdjust * 2, y: topLambda))
             
             context.setFillColor(UIColor.white.cgColor)
             context.fillPath()
