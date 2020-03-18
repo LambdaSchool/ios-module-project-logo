@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,17 +16,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0f-Ex-PQF" customClass="LambdaLogoView" customModule="Logo" customModuleProvider="target">
-                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <rect key="frame" x="62" y="303" width="290" height="290"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="y0f-Ex-PQF" secondAttribute="height" multiplier="1:1" id="8xW-kh-6dY"/>
-                                    <constraint firstAttribute="height" constant="300" id="piA-CV-Cws"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.72981911899999996" green="0.076091192660000001" blue="0.20237681269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="y0f-Ex-PQF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2vm-yH-cgW"/>
+                            <constraint firstItem="y0f-Ex-PQF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="5pq-oj-nrs"/>
                             <constraint firstItem="y0f-Ex-PQF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wUw-Tj-Qgc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
