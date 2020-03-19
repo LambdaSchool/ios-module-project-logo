@@ -12,8 +12,8 @@ import Foundation
 @IBDesignable // Interface Builder will render the view directly in the canvas
 class LogoView: UIView {
 
-    let offset = 10.0
-    let debug = 0.0
+    let offset: CGFloat = 10.0
+    let debug: CGFloat = 0.0
     let lambdaRed = CGColor(srgbRed: 170.0/255, green: 42.0/255, blue: 56.0/255, alpha: 1.0)
 
     // MARK: - View Lifecycle
@@ -45,17 +45,24 @@ class LogoView: UIView {
 //        context.addEllipse(in: smallCircle)
 //        context.setFillColor(UIColor.blue.cgColor)
 //        context.fillPath()
+
+        let scaleFactor: CGFloat = (rect.width - 20.0) / 100.0
         
         // Top rectangle
-        var rect = CGRect(x: 10, y: 10, width: 100, height: 78)
+        var rect = CGRect(x: 10, y: 10,
+                          width: 100 * scaleFactor,
+                          height: 78 * scaleFactor)
         context.addRect(rect)
         context.setFillColor(lambdaRed)
         context.fillPath()
 
         // Bottom Triangle
-        var startPoint  = CGPoint(x: offset,        y: offset + 78 + debug)
-        var nextPoint   = CGPoint(x: offset +  50,  y: offset + 78 + 37 + debug)
-        var endPoint    = CGPoint(x: offset + 100,  y: offset + 78 + debug)
+        var startPoint  = CGPoint(x: offset,
+                                  y: offset + ((78 + debug) * scaleFactor))
+        var nextPoint   = CGPoint(x: offset + (50.0 * scaleFactor),
+                                  y: offset + ((78 + 37 + debug) * scaleFactor))
+        var endPoint    = CGPoint(x: offset + (100.0 * scaleFactor),
+                                  y: offset + ((78 + debug) * scaleFactor))
         context.beginPath()
         context.move(to: startPoint)
         context.setFillColor(lambdaRed)
@@ -65,9 +72,12 @@ class LogoView: UIView {
         context.fillPath()
 
         // White Triangle
-        startPoint  = CGPoint(x: offset + 22,  y: offset + 65)
-        nextPoint   = CGPoint(x: offset + 50,  y: offset + 15)
-        endPoint    = CGPoint(x: offset + 78,  y: offset + 65)
+        startPoint  = CGPoint(x: offset + (22 * scaleFactor),
+                              y: offset + (65 * scaleFactor))
+        nextPoint   = CGPoint(x: offset + (50 * scaleFactor),
+                              y: offset + (15 * scaleFactor))
+        endPoint    = CGPoint(x: offset + (78 * scaleFactor),
+                              y: offset + (65 * scaleFactor))
         context.beginPath()
         context.move(to: startPoint)
         context.setFillColor(UIColor.white.cgColor)
@@ -77,9 +87,12 @@ class LogoView: UIView {
         context.fillPath()
 
         // Punch Out Triangle
-        startPoint  = CGPoint(x: offset + 35,  y: offset + 65)
-        nextPoint   = CGPoint(x: offset + 50,  y: offset + 40)
-        endPoint    = CGPoint(x: offset + 65,  y: offset + 65)
+        startPoint  = CGPoint(x: offset + (35 * scaleFactor),
+                              y: offset + (66 * scaleFactor))
+        nextPoint   = CGPoint(x: offset + (50 * scaleFactor),
+                              y: offset + (40 * scaleFactor))
+        endPoint    = CGPoint(x: offset + (65 * scaleFactor),
+                              y: offset + (66 * scaleFactor))
         context.beginPath()
         context.move(to: startPoint)
         context.setFillColor(lambdaRed)
@@ -89,7 +102,10 @@ class LogoView: UIView {
         context.fillPath()
 
         // Punch Out Square for tip of White Triangle
-        rect = CGRect(x: offset + 35, y: offset + 10, width: 30, height: 15)
+        rect = CGRect(x: offset + (35 * scaleFactor),
+                      y: offset + (10 * scaleFactor),
+                      width: (30 * scaleFactor),
+                      height: (15 * scaleFactor))
         context.addRect(rect)
 //        context.setFillColor(UIColor.blue.cgColor)
         context.setFillColor(lambdaRed)
