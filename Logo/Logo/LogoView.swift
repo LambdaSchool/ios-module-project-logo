@@ -44,9 +44,9 @@ class LogoView: UIView {
         let topRightCorner = CGPoint(x: rect.size.width, y: rect.minY)
         let pointCorner = CGPoint(x: rect.midX, y: rect.midY * 2.0)
         
-        let letterLeftCorner = CGPoint(x: rect.minX + 10.0, y: rect.maxY + 8.0)
-        let letterRightCorner = CGPoint(x: rect.maxX - 10.0, y: rect.maxY + 8.0)
-        let letterTopPoint = CGPoint(x: rect.midX, y: rect.maxY - )
+        let letterLeftCorner = CGPoint(x: rect.maxX * 0.20, y: rect.maxY * 0.58)
+        let letterRightCorner = CGPoint(x: rect.maxX * 0.80, y: rect.maxY * 0.58)
+        let letterTopPoint = CGPoint(x: rect.midX, y: rect.maxY / 6.5)
        
         // inside diagnol up
         
@@ -83,18 +83,20 @@ class LogoView: UIView {
             context.setFillColor(logoBgColor.cgColor)
             context.fillPath()
             
-        // lambda letter
+        // lambda letter - outer
             
             context.beginPath()
             context.move(to: letterLeftCorner)
-            context.move(to: letterPointOne)
-            
-            
-            
+            context.addLine(to: letterRightCorner)
+            context.addLine(to: letterTopPoint)
+            context.addLine(to: letterLeftCorner)
             context.setFillColor(letterColor.cgColor)
-            context.strokePath()
+            context.fillPath()
             
-        
+        // lambda letter inner
+            
+            
+            // lambda letter top
         
         
         
