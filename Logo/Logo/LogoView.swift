@@ -25,7 +25,7 @@ class LogoView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-//        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.clear
     }
     
     // Only override draw() if you perform custom drawing.
@@ -58,11 +58,11 @@ class LogoView: UIView {
 
         // Bottom Triangle
         var startPoint  = CGPoint(x: offset,
-                                  y: offset + ((78 + debug) * scaleFactor))
+                                  y: offset + ((77.9 + debug) * scaleFactor))
         var nextPoint   = CGPoint(x: offset + (50.0 * scaleFactor),
-                                  y: offset + ((78 + 37 + debug) * scaleFactor))
+                                  y: offset + ((77.9 + 37 + debug) * scaleFactor))
         var endPoint    = CGPoint(x: offset + (100.0 * scaleFactor),
-                                  y: offset + ((78 + debug) * scaleFactor))
+                                  y: offset + ((77.9 + debug) * scaleFactor))
         context.beginPath()
         context.move(to: startPoint)
         context.setFillColor(lambdaRed)
