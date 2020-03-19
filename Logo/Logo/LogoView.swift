@@ -12,7 +12,8 @@ import Foundation
 @IBDesignable // Interface Builder will render the view directly in the canvas
 class LogoView: UIView {
 
-    let debug = 1.0
+    let offset = 10.0
+    let debug = 0.0
     let lambdaRed = CGColor(srgbRed: 170.0/255, green: 42.0/255, blue: 56.0/255, alpha: 1.0)
 
     // MARK: - View Lifecycle
@@ -52,8 +53,6 @@ class LogoView: UIView {
         context.fillPath()
 
         // Bottom Triangle
-        let offset = 10.0
-        
         var startPoint  = CGPoint(x: offset,        y: offset + 78 + debug)
         var nextPoint   = CGPoint(x: offset +  50,  y: offset + 78 + 37 + debug)
         var endPoint    = CGPoint(x: offset + 100,  y: offset + 78 + debug)
@@ -67,7 +66,7 @@ class LogoView: UIView {
 
         // White Triangle
         startPoint  = CGPoint(x: offset + 22,  y: offset + 60)
-        nextPoint   = CGPoint(x: offset + 50,  y: offset + 13)
+        nextPoint   = CGPoint(x: offset + 50,  y: offset + 10)
         endPoint    = CGPoint(x: offset + 78,  y: offset + 60)
         context.beginPath()
         context.move(to: startPoint)
@@ -77,18 +76,16 @@ class LogoView: UIView {
         context.closePath()
         context.fillPath()
 
-        
-//        context.setStrokeColor(hours.color.cgColor)
-//        context.beginPath()
-//        context.move(to: clockCenter)
-//        context.setLineWidth(hours.width)
-//        context.addLine(to: hourHandEndPoint)
-//        context.strokePath()
-//
-//        path.move(to: startPoint)
-//        path.addLine(to: nextPoint)
-//        path.addLine(to: endPoint)
-//        path.closeSubpath()
-
+        // Punch Out Triangle
+        startPoint  = CGPoint(x: offset + 35,  y: offset + 60)
+        nextPoint   = CGPoint(x: offset + 50,  y: offset + 31)
+        endPoint    = CGPoint(x: offset + 65,  y: offset + 60)
+        context.beginPath()
+        context.move(to: startPoint)
+        context.setFillColor(lambdaRed)
+        context.addLine(to: nextPoint)
+        context.addLine(to: endPoint)
+        context.closePath()
+        context.fillPath()
     }
 }

@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZt-nB-PDq" customClass="LogoView" customModule="Logo" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="282.5" width="331" height="331"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZt-nB-PDq" customClass="LogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="63" y="265" width="331" height="331"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UZt-nB-PDq" secondAttribute="height" multiplier="1:1" id="DWo-zb-ouO"/>
