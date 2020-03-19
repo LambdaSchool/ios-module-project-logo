@@ -65,9 +65,9 @@ class LogoView: UIView {
         context.fillPath()
 
         // White Triangle
-        startPoint  = CGPoint(x: offset + 22,  y: offset + 60)
-        nextPoint   = CGPoint(x: offset + 50,  y: offset + 10)
-        endPoint    = CGPoint(x: offset + 78,  y: offset + 60)
+        startPoint  = CGPoint(x: offset + 22,  y: offset + 65)
+        nextPoint   = CGPoint(x: offset + 50,  y: offset + 15)
+        endPoint    = CGPoint(x: offset + 78,  y: offset + 65)
         context.beginPath()
         context.move(to: startPoint)
         context.setFillColor(UIColor.white.cgColor)
@@ -77,9 +77,9 @@ class LogoView: UIView {
         context.fillPath()
 
         // Punch Out Triangle
-        startPoint  = CGPoint(x: offset + 35,  y: offset + 60)
-        nextPoint   = CGPoint(x: offset + 50,  y: offset + 31)
-        endPoint    = CGPoint(x: offset + 65,  y: offset + 60)
+        startPoint  = CGPoint(x: offset + 35,  y: offset + 65)
+        nextPoint   = CGPoint(x: offset + 50,  y: offset + 40)
+        endPoint    = CGPoint(x: offset + 65,  y: offset + 65)
         context.beginPath()
         context.move(to: startPoint)
         context.setFillColor(lambdaRed)
