@@ -40,6 +40,4 @@ class LogoView: UIView {
         drawPill(color: pink, rotation: 2 * .pi / 3)
         drawPill(color: yellow, rotation: -2 * .pi / 3)
     }
-    
-
 }
