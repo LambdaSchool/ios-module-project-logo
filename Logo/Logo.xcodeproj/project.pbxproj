@@ -60,11 +60,11 @@
 		0487423424226C5600A9D943 /* Logo */ = {
 			isa = PBXGroup;
 			children = (
-				0487424924226C8000A9D943 /* LogoView.swift */,
 				0487424B24226C8E00A9D943 /* Resources */,
 				0487423924226C5600A9D943 /* ViewController.swift */,
 				0487423B24226C5600A9D943 /* Main.storyboard */,
 				0446ED072423BF80008AB411 /* PhotosLogoView.swift */,
+				0487424924226C8000A9D943 /* LogoView.swift */,
 			);
 			path = Logo;
 			sourceTree = "<group>";
