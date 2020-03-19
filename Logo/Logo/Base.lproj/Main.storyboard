@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Logo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jl-cQ-dr2" customClass="PhotosLogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="40" y="84" width="334" height="257"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1jl-cQ-dr2" secondAttribute="height" multiplier="1.3:1" id="TfK-Az-seI"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allure" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-gl-jvO">
+                                <rect key="frame" x="40" y="349" width="334" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LxY-gl-jvO" secondAttribute="height" multiplier="167:64" id="B38-0s-HpO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1jl-cQ-dr2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="EF9-jy-faV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LxY-gl-jvO" secondAttribute="bottom" id="Eid-hK-IbK"/>
+                            <constraint firstItem="LxY-gl-jvO" firstAttribute="top" secondItem="1jl-cQ-dr2" secondAttribute="bottom" constant="8" id="coJ-VQ-Nm6"/>
+                            <constraint firstItem="LxY-gl-jvO" firstAttribute="leading" secondItem="1jl-cQ-dr2" secondAttribute="leading" id="f80-tH-wRf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1jl-cQ-dr2" secondAttribute="trailing" constant="40" id="m55-db-9fz"/>
+                            <constraint firstItem="1jl-cQ-dr2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qxv-9a-sUV"/>
+                            <constraint firstItem="LxY-gl-jvO" firstAttribute="trailing" secondItem="1jl-cQ-dr2" secondAttribute="trailing" id="sow-q3-cAP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="N22-LO-XuK">
+            <objects>
+                <viewController id="3eP-I9-TVz" customClass="ViewController" customModule="Logo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uzr-Xf-NqF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMD-Mq-buW" customClass="LogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="40" y="84" width="334" height="257"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WMD-Mq-buW" secondAttribute="height" multiplier="1.3:1" id="zua-5G-yjm"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allure" translatesAutoresizingMaskIntoConstraints="NO" id="deQ-gI-caT">
+                                <rect key="frame" x="40" y="349" width="334" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="deQ-gI-caT" secondAttribute="height" multiplier="167:64" id="AiT-bi-LNf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WMD-Mq-buW" firstAttribute="top" secondItem="r1j-IL-OA4" secondAttribute="top" constant="40" id="2Jy-WA-Iei"/>
+                            <constraint firstItem="r1j-IL-OA4" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="deQ-gI-caT" secondAttribute="bottom" id="4Oi-iJ-IbK"/>
+                            <constraint firstItem="r1j-IL-OA4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WMD-Mq-buW" secondAttribute="trailing" constant="40" id="Eba-aW-ywQ"/>
+                            <constraint firstItem="deQ-gI-caT" firstAttribute="trailing" secondItem="WMD-Mq-buW" secondAttribute="trailing" id="Job-09-58E"/>
+                            <constraint firstItem="deQ-gI-caT" firstAttribute="leading" secondItem="WMD-Mq-buW" secondAttribute="leading" id="cJy-EW-Q3G"/>
+                            <constraint firstItem="WMD-Mq-buW" firstAttribute="centerX" secondItem="Uzr-Xf-NqF" secondAttribute="centerX" id="yhw-SY-kNm"/>
+                            <constraint firstItem="deQ-gI-caT" firstAttribute="top" secondItem="WMD-Mq-buW" secondAttribute="bottom" constant="8" id="yi5-ui-182"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r1j-IL-OA4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBz-40-MuT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="644-IH-Iwi">
+            <objects>
+                <viewController id="MKu-vn-dTQ" customClass="ViewController" customModule="Logo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lgF-1l-WBV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olr-GW-syj" customClass="PhotosLogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="40" y="84" width="334" height="257"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="olr-GW-syj" secondAttribute="height" multiplier="1.3:1" id="iCt-l9-hMe"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allure" translatesAutoresizingMaskIntoConstraints="NO" id="bQj-if-gUg">
+                                <rect key="frame" x="40" y="349" width="334" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bQj-if-gUg" secondAttribute="height" multiplier="167:64" id="cQW-Rd-omI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bQj-if-gUg" firstAttribute="trailing" secondItem="olr-GW-syj" secondAttribute="trailing" id="8QY-Zn-gdi"/>
+                            <constraint firstItem="Pex-h2-frI" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bQj-if-gUg" secondAttribute="bottom" id="Iem-V7-LCA"/>
+                            <constraint firstItem="olr-GW-syj" firstAttribute="top" secondItem="Pex-h2-frI" secondAttribute="top" constant="40" id="PXZ-3A-zZz"/>
+                            <constraint firstItem="olr-GW-syj" firstAttribute="centerX" secondItem="lgF-1l-WBV" secondAttribute="centerX" id="RWB-fK-PX5"/>
+                            <constraint firstItem="bQj-if-gUg" firstAttribute="leading" secondItem="olr-GW-syj" secondAttribute="leading" id="SBl-KM-ait"/>
+                            <constraint firstItem="Pex-h2-frI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="olr-GW-syj" secondAttribute="trailing" constant="40" id="dm5-qk-NyV"/>
+                            <constraint firstItem="bQj-if-gUg" firstAttribute="top" secondItem="olr-GW-syj" secondAttribute="bottom" constant="8" id="v6G-4j-YeR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pex-h2-frI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBa-Qa-TUh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="allure" width="702" height="270"/>
+    </resources>
+</document>
