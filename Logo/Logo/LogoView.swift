@@ -47,7 +47,7 @@ class LogoView: UIView {
 //        context.fillPath()
         
         // Top rectangle
-        let rect = CGRect(x: 10, y: 10, width: 100, height: 78)
+        var rect = CGRect(x: 10, y: 10, width: 100, height: 78)
         context.addRect(rect)
         context.setFillColor(lambdaRed)
         context.fillPath()
@@ -86,6 +86,13 @@ class LogoView: UIView {
         context.addLine(to: nextPoint)
         context.addLine(to: endPoint)
         context.closePath()
+        context.fillPath()
+
+        // Punch Out Square for tip of White Triangle
+        rect = CGRect(x: offset + 35, y: offset + 10, width: 30, height: 15)
+        context.addRect(rect)
+//        context.setFillColor(UIColor.blue.cgColor)
+        context.setFillColor(lambdaRed)
         context.fillPath()
     }
 }
