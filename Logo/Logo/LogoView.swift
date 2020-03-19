@@ -26,10 +26,11 @@ class LogoView: UIView {
         let pillSize = CGSize(width: pillWidth, height: pillWidth / rectRatio)
         let pillOrigin = CGPoint(x: 0 - pillSize.width / 2, y: 0 )
         let pillFrame = CGRect(origin: pillOrigin, size: pillSize)
+        let cornerRadius = pillFrame.height / 2
         
         func drawPill(color: CGColor, rotation: CGFloat) {
             var tranform = CGAffineTransform(rotationAngle: rotation)
-            let pillPath = CGPath(roundedRect: pillFrame, cornerWidth: pillFrame.height / 2 , cornerHeight: pillFrame.height / 2, transform: &tranform)
+            let pillPath = CGPath(roundedRect: pillFrame, cornerWidth: cornerRadius , cornerHeight: cornerRadius, transform: &tranform)
             context.addPath(pillPath)
             context.setFillColor(color)
             context.fillPath()
