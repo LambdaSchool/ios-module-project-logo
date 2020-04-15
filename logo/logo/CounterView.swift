@@ -21,7 +21,13 @@ class CounterView: UIView {
         }
     }
     
-    @IBInspectable var counter: Int = 5
+    @IBInspectable var counter: Int = 5 {
+        didSet {
+            if counter <= Constants.numberOfGlasses {
+                setNeedsDisplay()
+            }
+        }
+    }
     @IBInspectable var outlineColor: UIColor = UIColor.blue
     @IBInspectable var counterColor: UIColor = UIColor.orange
     
@@ -48,6 +54,41 @@ class CounterView: UIView {
         path.lineWidth = Constants.arcWidth
         counterColor.setStroke()
         path.stroke()
+        
+        
+        //Draw the outline
+        
+        // Calculate the difference between the two angles ensuring it is positive
+        let angleDifference: CGFloat = 2 * .pi - startAngle + endAngle
+        
+        // then calculate the arc for each single glass
+        let arcLengthPerGlass = angleDifference / CGFloat(Constants.numberOfGlasses)
+        
+        // then multiply out by the actual glasses drunk
+        let outlineEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
+        
+        // Draw the outer arc
+        let outlinePath = UIBezierPath(arcCenter: center,
+                                       radius: bounds.width/2 - Constants.halfOfLineWidth,
+                                       startAngle: startAngle,
+                                       endAngle: outlineEndAngle,
+                                       clockwise: true)
+        
+        // Draw the inner arc
+        outlinePath.addArc(withCenter: center,
+                           radius: bounds.width/2 - Constants.arcWidth + Constants.halfOfLineWidth,
+                           startAngle: outlineEndAngle,
+                           endAngle: startAngle,
+                           clockwise: false)
+        
+        // Close the path
+        outlinePath.close()
+        
+        outlineColor.setStroke()
+        outlinePath.lineWidth = Constants.lineWidth
+        outlinePath.stroke()
+        
+
     }
 
 
