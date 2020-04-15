@@ -59,10 +59,21 @@ class LogoView: UIView {
             let point20 = CGPoint(x: point13.x + 35, y: point13.y)
             let point21 = CGPoint(x: point15.x, y: point15.y - 35)
             
+            let borderWidth: CGFloat = 2.0
             
             context.addEllipse(in: rect)
-            context.setFillColor(UIColor.lightGray.cgColor)
+            context.setFillColor(UIColor.systemTeal.cgColor)
             context.fillPath()
+            
+            let borderRect = CGRect(x: rect.origin.x + borderWidth / 2,
+            y: rect.origin.y + borderWidth / 2,
+            width: rect.width - borderWidth,
+            height: rect.height - borderWidth)
+            
+            context.addEllipse(in: borderRect)
+            context.setLineWidth(CGFloat(2))
+            context.setStrokeColor(UIColor.systemRed.cgColor)
+            context.strokePath()
             
             let yellowCircle = CGRect(x: logoCenter.x - 25,
                                       y: logoCenter.y - 145,
@@ -134,8 +145,9 @@ class LogoView: UIView {
             context.setFillColor(UIColor.red.cgColor)
             context.strokePath()
             
-            let elipseRect = CGRect(x: (logoCenter.x - CGFloat(30)), y: (logoCenter.y - CGFloat(30)), width: 60, height: 60)
-            context.addEllipse(in: elipseRect)
+            let redRect = CGRect(x: (logoCenter.x - CGFloat(30)),
+                                    y: (logoCenter.y - CGFloat(30)), width: 60, height: 60)
+            context.addRect(redRect)
             context.setFillColor(UIColor.systemRed.cgColor)
             context.setLineWidth(10)
             context.setStrokeColor(UIColor.systemGreen.cgColor)
