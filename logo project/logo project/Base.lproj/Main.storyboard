@@ -16,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIh-bY-Jjh" customClass="LogoView" customModule="logo_project" customModuleProvider="target">
-                                <rect key="frame" x="69" y="215" width="276" height="466"/>
+                                <rect key="frame" x="61" y="300" width="292" height="296"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lIh-bY-Jjh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="WKk-BJ-327"/>
-                            <constraint firstItem="lIh-bY-Jjh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="171" id="ajh-es-SaB"/>
+                            <constraint firstItem="lIh-bY-Jjh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="WKk-BJ-327"/>
+                            <constraint firstItem="lIh-bY-Jjh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="256" id="ajh-es-SaB"/>
                             <constraint firstItem="lIh-bY-Jjh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ouN-p2-ep7"/>
                             <constraint firstItem="lIh-bY-Jjh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r0S-m8-upj"/>
                         </constraints>

@@ -28,15 +28,15 @@ class LogoView: UIView {
         if let context = UIGraphicsGetCurrentContext() {
             
             //initial rectangle
-            let myRect = CGRect(x: 0, y: 0, width: rect.maxX, height: rect.midY)
+            let myRect = CGRect(x: 0, y: 0, width: rect.maxX, height: rect.midY * 1.2)
             context.addRect(myRect)
             context.setFillColor(UIColor.red.cgColor)
             context.fillPath()
             
             //triangle
             let triangleWidth: CGFloat = rect.maxX
-            let heightToCenter: CGFloat = -0.5 * (myRect.height)/2
-            let center = CGPoint(x: rect.midX, y: rect.midY - heightToCenter)
+            let heightToCenter: CGFloat = -0.45 * (myRect.height)/2
+            let center = CGPoint(x: rect.midX, y: (rect.midY * 1.2) - heightToCenter)
             context.setFillColor(UIColor.red.cgColor)
             context.move(to: CGPoint(x:center.x, y:center.y - heightToCenter*2))
             
@@ -47,17 +47,40 @@ class LogoView: UIView {
             
             //upside down V
             context.beginPath()
-            context.move(to: CGPoint(x: myRect.midX - 10, y: myRect.midY))
-            context.addLine(to: CGPoint(x: (myRect.maxX) * 0.8, y: myRect.maxY))
+            context.move(to: CGPoint(x: myRect.midX, y: myRect.midY - 30))
+            context.addLine(to: CGPoint(x: (myRect.maxX) * 0.7, y: myRect.maxY - 30))
             context.setStrokeColor(UIColor.white.cgColor)
-            context.setLineWidth(38)
+            context.setLineWidth(35)
             context.strokePath()
             
             context.beginPath()
-            context.move(to: CGPoint(x: myRect.midX + 10, y: myRect.midY))
-            context.addLine(to: CGPoint(x: (myRect.maxX) * 0.2, y: myRect.maxY))
+            context.move(to: CGPoint(x: myRect.midX, y: myRect.midY - 30))
+            context.addLine(to: CGPoint(x: (myRect.maxX) * 0.3, y: myRect.maxY - 30))
             context.setStrokeColor(UIColor.white.cgColor)
-            context.setLineWidth(38)
+            context.setLineWidth(35)
+            context.strokePath()
+            
+            //create flat top on V
+            context.beginPath()
+            context.move(to: CGPoint(x: myRect.midX, y: myRect.midY))
+            context.addLine(to: CGPoint(x: myRect.midX, y: myRect.midY - 39.5))
+            context.setStrokeColor(UIColor.white.cgColor)
+            context.setLineWidth(30)
+            context.strokePath()
+            
+            //create flat bottom
+            context.beginPath()
+            context.move(to: CGPoint(x: (myRect.maxX) * 0.3, y: myRect.maxY - 20))
+            context.addLine(to: CGPoint(x: (myRect.maxX) * 0.3, y: myRect.maxY - 40))
+            context.setStrokeColor(UIColor.white.cgColor)
+            context.setLineWidth(29)
+            context.strokePath()
+            
+            context.beginPath()
+            context.move(to: CGPoint(x: (myRect.maxX) * 0.7, y: myRect.maxY - 20))
+            context.addLine(to: CGPoint(x: (myRect.maxX) * 0.7, y: myRect.maxY - 40))
+            context.setStrokeColor(UIColor.white.cgColor)
+            context.setLineWidth(29)
             context.strokePath()
             
             
