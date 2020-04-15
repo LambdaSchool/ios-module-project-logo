@@ -25,14 +25,32 @@ class LogoView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
+        
         if let context = UIGraphicsGetCurrentContext() {
             
             let lambdaRect = CGRect(x: rect.origin.x, y: rect.origin.y, width: rect.size.width, height: rect.size.height * 0.6)
-            context.addRect(lambdaRect)
+            let clipPath = UIBezierPath(roundedRect: lambdaRect, cornerRadius: 10).cgPath
+            context.addPath(clipPath)
             context.setFillColor(lambdaRed.cgColor)
+            context.closePath()
             context.fillPath()
             
+            context.beginPath()
+            context.move(to: CGPoint(x: rect.origin.x, y: rect.size.height * 0.6 - rect.size.height * 0.02))
+//            context.addLine(to: CGPoint(x: rect.size.width / 2, y: rect.size.height))
+            context.addCurve(to: CGPoint(x: rect.size.width / 2 + 10,
+                                         y: rect.size.height - 10),
+                             control1: CGPoint(x: rect.size.width / 2 + 8,
+                                               y: rect.size.height + 10),
+                             control2: CGPoint(x: rect.size.width / 2 - 12,
+                                               y: rect.size.height + 10))
+            context.addLine(to: CGPoint(x: rect.size.width, y: rect.size.height * 0.6 - rect.size.height * 0.02))
+            context.closePath()
             
+//            context.
+            
+            context.setFillColor(lambdaRed.cgColor)
+            context.fillPath()
         }
     }
     
