@@ -27,10 +27,12 @@ class LogoView: UIView {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext() {
+            
+            
             let logoCenter = CGPoint(x: rect.size.width / 2.0, y: rect.size.height / 2.0)
-            let point1 = CGPoint(x: (rect.size.width / 2.0) - 40, y: (rect.size.width / 2.0) - 45)
-            let point2 = CGPoint(x: (rect.size.width / 2.0) + 15, y: (rect.size.width / 2.0) - 45)
-            let point3 = CGPoint(x: (rect.size.width / 2.0) - 95, y: (rect.size.width / 2.0) - 110)
+            let point1 = CGPoint(x: logoCenter.x - 40, y: logoCenter.y - 45)
+            let point2 = CGPoint(x: point1.x + 55, y: point1.y)
+            let point3 = CGPoint(x: point1.x - 55, y: point1.y - 65)
             
             let point4 = CGPoint(x: (rect.size.width / 2.0) - 50, y: (rect.size.width / 2.0) - 35)
             let point5 = CGPoint(x: (rect.size.width / 2.0) - 100, y: (rect.size.width / 2.0) - 100)
@@ -48,12 +50,43 @@ class LogoView: UIView {
             let point14 = CGPoint(x: (rect.size.width / 2.0) - 45, y: (rect.size.width / 2.0) + 45)
             let point15 = CGPoint(x: (rect.size.width / 2.0) - 45, y: (rect.size.width / 2.0) + 95)
             
-            let point16 = CGPoint(x: (rect.size.width / 2.0), y: (rect.size.width / 2.0))
-            let point17 = CGPoint(x: (rect.size.width / 2.0), y: (rect.size.width / 2.0))
-            let point18 = CGPoint(x: (rect.size.width / 2.0), y: (rect.size.width / 2.0))
-            let point19 = CGPoint(x: (rect.size.width / 2.0), y: (rect.size.width / 2.0))
-            let point20 = CGPoint(x: (rect.size.width / 2.0), y: (rect.size.width / 2.0))
-            let point21 = CGPoint(x: (rect.size.width / 2.0), y: (rect.size.width / 2.0))
+            let point16 = CGPoint(x: point13.x + 5, y: point13.y)
+            let point17 = CGPoint(x: point15.x, y: point15.y - 5)
+            
+            let point18 = CGPoint(x: point13.x + 20, y: point13.y)
+            let point19 = CGPoint(x: point15.x, y: point15.y - 20)
+            
+            let point20 = CGPoint(x: point13.x + 35, y: point13.y)
+            let point21 = CGPoint(x: point15.x, y: point15.y - 35)
+            
+            
+            context.addEllipse(in: rect)
+            context.setFillColor(UIColor.lightGray.cgColor)
+            context.fillPath()
+            
+            let yellowCircle = CGRect(x: logoCenter.x - 25,
+                                      y: logoCenter.y - 145,
+                                      width: 50,
+                                      height: 50)
+            context.addEllipse(in: yellowCircle)
+            context.setFillColor(UIColor.systemYellow.cgColor)
+            context.fillPath()
+            
+            let blueCircle = CGRect(x: (rect.size.width / 2.0) + 60,
+                                    y: logoCenter.y - 100,
+                                    width: 50,
+                                    height: 50)
+            context.addEllipse(in: blueCircle)
+            context.setFillColor(UIColor.systemBlue.cgColor)
+            context.fillPath()
+            
+            let greenCircle = CGRect(x: (rect.size.width / 2.0) + 90,
+                                    y: logoCenter.y - 25,
+                                    width: 50,
+                                    height: 50)
+            context.addEllipse(in: greenCircle)
+            context.setFillColor(UIColor.systemGreen.cgColor)
+            context.fillPath()
             
             context.beginPath()
             context.move(to: point1)
@@ -82,27 +115,21 @@ class LogoView: UIView {
             context.addLine(to: point14)
             context.addLine(to: point15)
             
-//            context.move(to: point16)
-//            context.addLine(to: point17)
-//            
-//            context.move(to: <#T##CGPoint#>)
-//            context.addLine(to: <#T##CGPoint#>)
-//            
-//            context.move(to: <#T##CGPoint#>)
-//            context.addLine(to: <#T##CGPoint#>)
-//            
-//            context.move(to: <#T##CGPoint#>)
-//            context.addLine(to: <#T##CGPoint#>)
-//            
-//            context.move(to: <#T##CGPoint#>)
-//            context.addLine(to: <#T##CGPoint#>)
-//
+            
+            context.move(to: point16)
+            context.addLine(to: point17)
 
-
-
+            context.move(to: point18)
+            context.addLine(to: point19)
 
             
-            context.setLineWidth(4.0)
+            context.addQuadCurve(to: point19, control: point18)
+            
+            context.move(to: point20)
+            context.addLine(to: point21)
+
+            
+            context.setLineWidth(3.0)
             context.setStrokeColor(UIColor.black.cgColor)
             context.setFillColor(UIColor.red.cgColor)
             context.strokePath()
@@ -110,6 +137,8 @@ class LogoView: UIView {
             let elipseRect = CGRect(x: (logoCenter.x - CGFloat(30)), y: (logoCenter.y - CGFloat(30)), width: 60, height: 60)
             context.addEllipse(in: elipseRect)
             context.setFillColor(UIColor.systemRed.cgColor)
+            context.setLineWidth(10)
+            context.setStrokeColor(UIColor.systemGreen.cgColor)
             context.fillPath()
             
         }
