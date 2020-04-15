@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12B7D5E324463C3800AE65C0 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B7D5E224463C3800AE65C0 /* LogoView.swift */; };
+		12B7D5E524463C8800AE65C0 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B7D5E424463C8800AE65C0 /* LogoViewController.swift */; };
 		12F296C224462924008F1683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F296C124462924008F1683 /* AppDelegate.swift */; };
 		12F296C424462924008F1683 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F296C324462924008F1683 /* SceneDelegate.swift */; };
 		12F296C924462924008F1683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12F296C724462924008F1683 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12B7D5E224463C3800AE65C0 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		12B7D5E424463C8800AE65C0 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 		12F296BE24462924008F1683 /* Logo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F296C124462924008F1683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12F296C324462924008F1683 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 		121C8177244629900030E2C4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				12B7D5E424463C8800AE65C0 /* LogoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -71,6 +76,7 @@
 		121C8179244629A00030E2C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12B7D5E224463C3800AE65C0 /* LogoView.swift */,
 				121C817B244629AA0030E2C4 /* Storyboards */,
 			);
 			path = Views;
@@ -192,7 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F296C224462924008F1683 /* AppDelegate.swift in Sources */,
+				12B7D5E324463C3800AE65C0 /* LogoView.swift in Sources */,
 				12F296C424462924008F1683 /* SceneDelegate.swift in Sources */,
+				12B7D5E524463C8800AE65C0 /* LogoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
