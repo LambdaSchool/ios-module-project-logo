@@ -19,15 +19,15 @@
                                 <rect key="frame" x="82" y="323" width="250" height="250"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="FTN-3u-dWW"/>
-                                    <constraint firstAttribute="height" constant="250" id="ML4-7P-hv2"/>
+                                    <constraint firstAttribute="width" secondItem="dwY-iR-jug" secondAttribute="height" multiplier="1:1" id="Dg9-vP-D7w"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dwY-iR-jug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zgo-YO-Zle"/>
-                            <constraint firstItem="dwY-iR-jug" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aNY-5j-JTd"/>
+                            <constraint firstItem="dwY-iR-jug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ol2-i8-2Om"/>
+                            <constraint firstItem="dwY-iR-jug" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bYZ-gT-v49"/>
+                            <constraint firstItem="dwY-iR-jug" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.603865" id="fNJ-eo-FJT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
