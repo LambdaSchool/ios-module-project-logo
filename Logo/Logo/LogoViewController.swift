@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LogoViewController.swift
 //  Logo
 //
 //  Created by Elizabeth Thomas on 4/13/20.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LogoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
 
