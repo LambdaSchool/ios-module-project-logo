@@ -49,7 +49,7 @@ class LeafView: UIView {
             
             // Cutout Section
             
-            let cutoutRadius: CGFloat = 30
+            let cutoutRadius: CGFloat = rect.midX/5
             let cutoutCircle = CGRect(x: rect.midX,
                                       y: (3*rect.height)/5,
                                       width: 2*cutoutRadius,
