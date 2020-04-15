@@ -60,7 +60,7 @@ class LogoView: UIView {
 //            lambdaString.draw(at: lambdaCenter, withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
 //                                                                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 200, weight: .black)])
             lambdaString.draw(in: lambdaStringRect, withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
-                                                                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 200, weight: .black)])
+                                                                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: rect.size.width * 0.7, weight: .black)])
         }
     }
     
