@@ -13,6 +13,7 @@
 		4B9EE07D244795BA0023003A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B9EE07C244795BA0023003A /* Assets.xcassets */; };
 		4B9EE080244795BA0023003A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9EE07E244795BA0023003A /* LaunchScreen.storyboard */; };
 		4B9EE088244797DD0023003A /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9EE087244797DD0023003A /* LogoView.swift */; };
+		4B9EE08A2447AB0A0023003A /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9EE0892447AB0A0023003A /* LogoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4B9EE07F244795BA0023003A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B9EE081244795BA0023003A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B9EE087244797DD0023003A /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		4B9EE0892447AB0A0023003A /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4B9EE075244795B90023003A /* SceneDelegate.swift */,
 				4B9EE087244797DD0023003A /* LogoView.swift */,
 				4B9EE079244795B90023003A /* Main.storyboard */,
+				4B9EE0892447AB0A0023003A /* LogoViewController.swift */,
 				4B9EE07C244795BA0023003A /* Assets.xcassets */,
 				4B9EE07E244795BA0023003A /* LaunchScreen.storyboard */,
 				4B9EE081244795BA0023003A /* Info.plist */,
@@ -141,6 +144,7 @@
 				4B9EE074244795B90023003A /* AppDelegate.swift in Sources */,
 				4B9EE088244797DD0023003A /* LogoView.swift in Sources */,
 				4B9EE076244795B90023003A /* SceneDelegate.swift in Sources */,
+				4B9EE08A2447AB0A0023003A /* LogoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
