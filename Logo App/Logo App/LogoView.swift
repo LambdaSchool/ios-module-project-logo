@@ -30,7 +30,9 @@ class LogoView: UIView {
         if let context = UIGraphicsGetCurrentContext(){
             
             //MARK: Rect Properties
+            //Add in positions to use dynamically
             
+            //Red background logo
             context.beginPath()
             context.move(to: rect.origin)
             context.addLine(to: CGPoint(x: rect.width,y: 0.0))
@@ -44,11 +46,12 @@ class LogoView: UIView {
             context.strokePath()
             context.fillPath()
             
+            //White logo part
             context.beginPath()
             context.move(to: CGPoint(x: rect.width / 4, y: rect.height / 1.50))
             context.addLine(to: CGPoint(x: rect.width / 2, y: rect.height / 4))
-            context.addLine(to: CGPoint(x: 175, y: 175))
-            context.setLineWidth(10)
+            context.addLine(to: CGPoint(x: 180, y: 170))
+            context.setLineWidth(20)
             context.setStrokeColor(lambdaInColor)
             context.strokePath()
         }
