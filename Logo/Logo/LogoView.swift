@@ -71,9 +71,9 @@ import UIKit
             
             //Stem
             let startingPointStem = CGPoint(x: width * 0.65, y: height * 0.02)
-            let bottomPointStem = CGPoint(x: width * 0.5, y: height * 0.2)
+            let bottomPointStem = CGPoint(x: width * 0.55, y: height * 0.2)
             context.move(to: startingPointStem)
-            context.addQuadCurve(to: bottomPointStem, control: CGPoint(x: width * 0.65, y: height * 0.15))
+            context.addQuadCurve(to: bottomPointStem, control: CGPoint(x: width * 0.66, y: height * 0.15))
             context.addQuadCurve(to: startingPointStem, control: CGPoint(x: width * 0.5, y: height * 0.05))
             //context.addEllipse(in: CGRect(x: width * 0.55, y: height * 0.1 , width: 2, height: 2))
             
