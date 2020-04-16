@@ -17,6 +17,16 @@ class DrawView: UIView {
         
     let lambdaRed = UIColor(red: 0.728, green: 0.077, blue: 0.205, alpha: 1)
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = UIColor.clear
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        backgroundColor = UIColor.clear
+    }
+    
     override func draw(_ rect: CGRect) {
         
         guard let currentContext = UIGraphicsGetCurrentContext() else {
