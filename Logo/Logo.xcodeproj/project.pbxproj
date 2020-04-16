@@ -14,6 +14,7 @@
 		FEAC88712448A9B1004D1D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAC88702448A9B1004D1D26 /* Assets.xcassets */; };
 		FEAC88742448A9B1004D1D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAC88722448A9B1004D1D26 /* LaunchScreen.storyboard */; };
 		FEAC887C2448A9F3004D1D26 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC887B2448A9F3004D1D26 /* LogoView.swift */; };
+		FEAC88A22449190F004D1D26 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC88A12449190F004D1D26 /* LogoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FEAC88732448A9B1004D1D26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEAC88752448A9B1004D1D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEAC887B2448A9F3004D1D26 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		FEAC88A12449190F004D1D26 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FEAC886B2448A9B0004D1D26 /* ViewController.swift */,
 				FEAC886D2448A9B0004D1D26 /* Main.storyboard */,
 				FEAC887B2448A9F3004D1D26 /* LogoView.swift */,
+				FEAC88A12449190F004D1D26 /* LogoViewController.swift */,
 				FEAC88702448A9B1004D1D26 /* Assets.xcassets */,
 				FEAC88722448A9B1004D1D26 /* LaunchScreen.storyboard */,
 				FEAC88752448A9B1004D1D26 /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				FEAC886C2448A9B0004D1D26 /* ViewController.swift in Sources */,
 				FEAC887C2448A9F3004D1D26 /* LogoView.swift in Sources */,
+				FEAC88A22449190F004D1D26 /* LogoViewController.swift in Sources */,
 				FEAC88682448A9B0004D1D26 /* AppDelegate.swift in Sources */,
 				FEAC886A2448A9B0004D1D26 /* SceneDelegate.swift in Sources */,
 			);
