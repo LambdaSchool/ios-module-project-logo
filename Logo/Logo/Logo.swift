@@ -55,7 +55,7 @@ class LogoView: UIView {
             
             //The Right Ear
             let rightEarRadius: CGFloat = 35
-            let rightCenterEar = CGRect(x: mouseCenter.x + 25,
+            let rightCenterEar = CGRect(x: mouseCenter.x + 30,
                                         y: mouseCenter.y - 105,
                                         width: 2.5 * rightEarRadius,
                                         height: 2.5 * rightEarRadius)
