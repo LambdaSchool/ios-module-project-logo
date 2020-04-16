@@ -68,9 +68,10 @@ class LogoView: UIView {
             
             let centerBowRadius: CGFloat = 25
             let centerBowRect = CGRect(x: mouseCenter.x - 18,
-                                       y: mouseCenter.y - 80,
+                                       y: mouseCenter.y - 85,
                                        width: 10 + centerBowRadius,
                                        height: 1.5 * centerBowRadius)
+
             let centerBowRoundCourners = CGPath(roundedRect: centerBowRect,
                                                 cornerWidth: 5,
                                                 cornerHeight: 5,
@@ -97,21 +98,15 @@ class LogoView: UIView {
             
             let topRightRadius: CGFloat = 40
             let topRightRect = CGRect(x: mouseCenter.x + 10,
-                                      y: mouseCenter.y - 110,
+                                      y: mouseCenter.y - 132,
                                       width: topRightRadius * 1,
                                       height: topRightRadius * 2)
-            context.rotate(by: -37.659)
+           context.rotate(by: -37.55)
+
+            
             context.addEllipse(in: topRightRect)
             context.setFillColor(bowColor.cgColor)
             context.fillPath()
         }
-        
-        
-
     }
-    
-    
-    
-    
-    
 }
