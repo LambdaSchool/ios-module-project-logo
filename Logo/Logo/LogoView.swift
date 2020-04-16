@@ -14,6 +14,16 @@ class MyLogo: UIView {
     
     private let alienBgColor = UIColor.green
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .clear
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        backgroundColor = .clear
+    }
+    
     
     override func draw(_ rect: CGRect) {
          
@@ -23,27 +33,29 @@ class MyLogo: UIView {
             context.setFillColor(alienBgColor.cgColor)
             context.fillPath()
             
+            // Left Alien Eye
+            context.addEllipse(in: CGRect(x: 80, y: 130, width: 75, height: 50))
+            context.setFillColor(UIColor.black.cgColor)
+            context.fillPath()
+            
+            // Right Alien Eye
+            
+            context.addEllipse(in: CGRect(x: 180, y: 130, width: 75, height: 50))
+            context.setFillColor(UIColor.black.cgColor)
+            context.fillPath()
             
             
-            context.move(to: )
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
-        
-        
-        
-        
-        
-        
-        
-        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

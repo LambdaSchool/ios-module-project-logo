@@ -15,13 +15,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2po-Qr-Bt9" customClass="MyLogo" customModule="Logo" customModuleProvider="target">
-                                <rect key="frame" x="62" y="341" width="308" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2po-Qr-Bt9" customClass="MyLogo" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="40" y="281" width="334" height="334"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2po-Qr-Bt9" secondAttribute="height" multiplier="1:1" id="g9m-nk-2Je"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2po-Qr-Bt9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="8Ut-cU-nt6"/>
+                            <constraint firstItem="2po-Qr-Bt9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qaw-GS-GB2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2po-Qr-Bt9" secondAttribute="trailing" constant="40" id="veO-nA-r8w"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
