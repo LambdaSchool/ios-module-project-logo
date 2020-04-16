@@ -13,6 +13,7 @@
 		1DA2483A24479557000EE127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2483824479557000EE127 /* Main.storyboard */; };
 		1DA2483C24479563000EE127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2483B24479563000EE127 /* Assets.xcassets */; };
 		1DA2483F24479563000EE127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2483D24479563000EE127 /* LaunchScreen.storyboard */; };
+		1DA248472447C914000EE127 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA248462447C914000EE127 /* DrawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1DA2483B24479563000EE127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DA2483E24479563000EE127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DA2484024479563000EE127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA248462447C914000EE127 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				1DA2483224479557000EE127 /* AppDelegate.swift */,
 				1DA2483424479557000EE127 /* SceneDelegate.swift */,
 				1DA2483624479557000EE127 /* ViewController.swift */,
+				1DA248462447C914000EE127 /* DrawView.swift */,
 				1DA2483824479557000EE127 /* Main.storyboard */,
 				1DA2483B24479563000EE127 /* Assets.xcassets */,
 				1DA2483D24479563000EE127 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				1DA2483724479557000EE127 /* ViewController.swift in Sources */,
 				1DA2483324479557000EE127 /* AppDelegate.swift in Sources */,
+				1DA248472447C914000EE127 /* DrawView.swift in Sources */,
 				1DA2483524479557000EE127 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
