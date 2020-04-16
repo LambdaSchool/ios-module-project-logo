@@ -102,8 +102,6 @@ class LogoView: UIView {
                                       width: topRightRadius * 1,
                                       height: topRightRadius * 2)
            context.rotate(by: -37.55)
-
-            
             context.addEllipse(in: topRightRect)
             context.setFillColor(bowColor.cgColor)
             context.fillPath()
