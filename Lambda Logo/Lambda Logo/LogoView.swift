@@ -35,7 +35,10 @@ class LogoView: UIView {
             
             // changed this number probably 100 times to get it just right
             context.setLineWidth(25)
+            context.setFillColor(UIColor.red.cgColor)
+            context.fillPath()
             context.strokePath()
+
             
             
             
