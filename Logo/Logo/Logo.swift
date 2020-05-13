@@ -33,34 +33,34 @@ class LogoView: UIView {
         
         if let context = UIGraphicsGetCurrentContext() {
             
-            // The View as a whole
+            // original background - basis of other layers
             let center = CGPoint(x: rect.midX, y: rect.midY)
             let bgRect = CGRect(x: center.x - 100, y: center.y - 100, width: 200, height: 200)
             let bgRectRounded = CGPath(roundedRect: bgRect, cornerWidth: 30, cornerHeight: 30, transform: nil)
             context.addPath(bgRectRounded)
             context.setFillColor(bgColor)
             context.fillPath()
-            
+
             
             // The Gradient Color
             let colorSpace = CGColorSpaceCreateDeviceRGB()
             let startColor = UIColor.systemPurple.cgColor
             guard let startColorComponents = startColor.components else { return }
-            
+
             let endColor = UIColor.systemYellow.cgColor
             guard let endColorComponents = endColor.components else { return }
-            
+
             let colorComponents: [CGFloat] = [startColorComponents[0], startColorComponents[1], startColorComponents[2], startColorComponents[3], endColorComponents[0], endColorComponents[1], endColorComponents[2], endColorComponents[3]]
-            
+
             let locations: [CGFloat] = [0.0, 1.0]
-            
+
             guard let gradient = CGGradient(colorSpace: colorSpace, colorComponents: colorComponents, locations: locations, count: 2) else { return }
-            
-            let startPoint = CGPoint(x: 0, y: 0)
-            let endPoint = CGPoint(x: self.bounds.width, y: self.bounds.height)
-            
+
+            let startPoint = CGPoint(x: self.bounds.width, y: 0)
+            let endPoint = CGPoint(x: 0, y: self.bounds.height)
+
             context.drawLinearGradient(gradient, start: startPoint, end: endPoint, options: CGGradientDrawingOptions(rawValue: UInt32(0)))
-            
+
             // The Square
             let innerSquare = CGRect(x: center.x / 2.5, y: center.y / 2.5, width: bgRect.width - 20, height: bgRect.height - 20)
             let innerSquareRounded = CGPath(roundedRect: innerSquare, cornerWidth: 20, cornerHeight: 20, transform: nil)
