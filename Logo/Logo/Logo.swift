@@ -33,17 +33,17 @@ class LogoView: UIView {
         
         if let context = UIGraphicsGetCurrentContext() {
             
-            
+            // The View as a whole
             let center = CGPoint(x: rect.midX, y: rect.midY)
-            
             let bgRect = CGRect(x: center.x - 100, y: center.y - 100, width: 200, height: 200)
             let bgRectRounded = CGPath(roundedRect: bgRect, cornerWidth: 30, cornerHeight: 30, transform: nil)
             context.addPath(bgRectRounded)
             context.setFillColor(bgColor)
             context.fillPath()
             
-            let colorSpace = CGColorSpaceCreateDeviceRGB()
             
+            // The Gradient Color
+            let colorSpace = CGColorSpaceCreateDeviceRGB()
             let startColor = UIColor.systemPurple.cgColor
             guard let startColorComponents = startColor.components else { return }
             
@@ -61,7 +61,7 @@ class LogoView: UIView {
             
             context.drawLinearGradient(gradient, start: startPoint, end: endPoint, options: CGGradientDrawingOptions(rawValue: UInt32(0)))
             
-            
+            // The Square
             let innerSquare = CGRect(x: center.x / 2.5, y: center.y / 2.5, width: bgRect.width - 20, height: bgRect.height - 20)
             let innerSquareRounded = CGPath(roundedRect: innerSquare, cornerWidth: 20, cornerHeight: 20, transform: nil)
             context.addPath(innerSquareRounded)
@@ -69,15 +69,16 @@ class LogoView: UIView {
             context.setLineWidth(8)
             context.strokePath()
             
+            // The inner Circle
             context.addEllipse(in: CGRect(x: center.x / 1.7, y: center.y / 1.7, width: rect.size.width / 2.5, height: rect.size.height / 2.5))
             context.setStrokeColor(whiteColor)
             context.setLineWidth(10)
             context.strokePath()
             
+            // The upper right Circle
             context.addEllipse(in: CGRect(x: center.x + 55, y: center.y - 70, width: rect.size.width / 15, height: rect.size.width / 15))
             context.setFillColor(whiteColor)
             context.fillPath()
-           
         }
     }
 }
