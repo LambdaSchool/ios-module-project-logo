@@ -15,7 +15,7 @@ class LogoView: UIView {
     
     private let borderColor = UIColor.white
     private let borderWidth: CGFloat = 2.0
-    private let clockBgColor = UIColor.green
+    private let clockBgColor = UIColor.black
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,8 +50,8 @@ class LogoView: UIView {
             height: rect.size.height - borderWidth - 40))
             
             
-            context.setStrokeColor(UIColor.red.cgColor)
-            context.setLineWidth(5)
+            context.setStrokeColor(UIColor.systemPink.cgColor)
+            context.setLineWidth(10)
             context.strokePath()
 //            context.addEllipse(in: rect)
 //            context.setFillColor(UIColor.red.cgColor)
