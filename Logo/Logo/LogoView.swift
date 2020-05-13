@@ -11,21 +11,15 @@ import CoreGraphics
 
 @IBDesignable
 class LogoView: UIView {
-    
-    struct LambdaLine {
-        let width: CGFloat
-        
-        let length: CGFloat
-        let color: UIColor
-    }
+
+    //MARK: - Properties
+    private var targetRed = UIColor.red
+    private var centerCircleColor = UIColor.white
+    let targetBorderColor = UIColor.white
+    let borderWidth: CGFloat = 30.0
 
     
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    private var lambdaColor = UIColor.red
-    private var centerCircle = UIColor.white
-    let borderColor = UIColor.white
-    let borderWidth: CGFloat = 30.0
+    //MARK: - Overide (Required Functions)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,6 +31,8 @@ class LogoView: UIView {
         backgroundColor = UIColor.clear
     }
     
+    //MARK: - Draw Function
+    
     override func draw(_ rect: CGRect) {
         // Drawing code
         
@@ -44,29 +40,36 @@ class LogoView: UIView {
             
             let clockCenter = CGPoint(x: rect.size.width / 2.0,
             y: rect.size.height / 2.0)
+            let rightSide = CGPoint(x: rect.size.width / 4.0, y: rect.size.height / 3.0)
             
             context.addRect(CGRect(x: rect.origin.x, y: rect.origin.y, width: 240, height: 240))
-            context.setFillColor(lambdaColor.cgColor)
+            context.setFillColor(targetRed.cgColor)
             context.fillPath()
             
             context.addEllipse(in: rect)
-            context.setFillColor(lambdaColor.cgColor)
+            context.setFillColor(targetRed.cgColor)
             context.fillPath()
             
             context.addEllipse(in: CGRect(x: rect.origin.x + borderWidth / 10, y: rect.origin.y + borderWidth / 2, width: rect.size.width, height: rect.size.height - borderWidth))
             context.setLineWidth(borderWidth)
-            context.setStrokeColor(borderColor.cgColor)
+            context.setStrokeColor(targetBorderColor.cgColor)
             context.strokePath()
             
-            context.addEllipse(in: CGRect(x: rect.origin.x + 60, y: rect.origin.y + 73, width: 120, height: 100))
-            context.setFillColor(centerCircle.cgColor)
+            let targetCircle: CGFloat = 60.0
+            let centerCircle = CGRect(x: clockCenter.x - targetCircle, y: clockCenter.y - targetCircle, width: 2 * targetCircle, height: 2 * targetCircle)
+            
+            context.addEllipse(in: centerCircle)
+            context.setFillColor(UIColor.white.cgColor)
             context.fillPath()
             
+//            context.addEllipse(in: CGRect(x: rect.origin.x + 60, y: rect.origin.y + 73, width: 120, height: 100))
+//            context.setFillColor(centerCircle.cgColor)
+//            context.fillPath()
             
-    
-            //origin is x,y
-            
-            
+            context.setStrokeColor(UIColor.blue.cgColor)
+            context.beginPath()
+            context.move(to: clockCenter)
+            context.addLine(to: rightSide)
         }
     }
 }
