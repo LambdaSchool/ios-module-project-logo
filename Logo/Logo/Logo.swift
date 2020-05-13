@@ -15,8 +15,6 @@ class LogoView: UIView {
    
     private let bgColor = UIColor.systemIndigo.cgColor
     private let whiteColor = UIColor.white.cgColor
-    private let startColor = UIColor.systemPurple.cgColor
-    private let endColor = UIColor.systemOrange.cgColor
     
     
     
@@ -26,16 +24,15 @@ class LogoView: UIView {
         
     }
     
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        backgroundColor = UIColor.clear
     }
     
     override func draw(_ rect: CGRect) {
         
         if let context = UIGraphicsGetCurrentContext() {
+            
             
             let center = CGPoint(x: rect.midX, y: rect.midY)
             
@@ -45,6 +42,24 @@ class LogoView: UIView {
             context.setFillColor(bgColor)
             context.fillPath()
             
+            let colorSpace = CGColorSpaceCreateDeviceRGB()
+            
+            let startColor = UIColor.systemPurple.cgColor
+            guard let startColorComponents = startColor.components else { return }
+            
+            let endColor = UIColor.systemYellow.cgColor
+            guard let endColorComponents = endColor.components else { return }
+            
+            let colorComponents: [CGFloat] = [startColorComponents[0], startColorComponents[1], startColorComponents[2], startColorComponents[3], endColorComponents[0], endColorComponents[1], endColorComponents[2], endColorComponents[3]]
+            
+            let locations: [CGFloat] = [0.0, 1.0]
+            
+            guard let gradient = CGGradient(colorSpace: colorSpace, colorComponents: colorComponents, locations: locations, count: 2) else { return }
+            
+            let startPoint = CGPoint(x: 0, y: 0)
+            let endPoint = CGPoint(x: self.bounds.width, y: self.bounds.height)
+            
+            context.drawLinearGradient(gradient, start: startPoint, end: endPoint, options: CGGradientDrawingOptions(rawValue: UInt32(0)))
             
             
             let innerSquare = CGRect(x: center.x / 2.5, y: center.y / 2.5, width: bgRect.width - 20, height: bgRect.height - 20)

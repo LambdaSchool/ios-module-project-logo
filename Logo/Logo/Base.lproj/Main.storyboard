@@ -17,7 +17,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7p-kP-pLD" customClass="LogoView" customModule="Logo" customModuleProvider="target">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="P7p-kP-pLD" secondAttribute="height" multiplier="1:1" id="a7i-CC-kZn"/>
                                     <constraint firstAttribute="width" constant="300" id="n2L-uO-SX7"/>
