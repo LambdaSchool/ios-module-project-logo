@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ogu-vu-eiN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="1aV-ZW-Euv">
+            <objects>
+                <viewController id="Ogu-vu-eiN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2sx-lM-tIP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIl-j1-Dxk" customClass="RoyalsView" customModule="royals_baseball" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kansas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvV-pP-zmA">
+                                        <rect key="frame" x="8" y="131" width="133" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="El4-LD-rge"/>
+                                            <constraint firstAttribute="width" constant="133" id="S2G-vx-ToG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="27"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Royals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9R-no-2B2">
+                                        <rect key="frame" x="269" y="158" width="137" height="83"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="83" id="O8S-eq-e59"/>
+                                            <constraint firstAttribute="width" constant="137" id="RhQ-aF-ozf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Job-9h-Zhu">
+                                        <rect key="frame" x="156" y="158" width="91" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="hjg-Lk-7a1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2606172112056338" green="0.54962081006901398" blue="0.35402620991267608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Y9R-no-2B2" firstAttribute="leading" secondItem="Job-9h-Zhu" secondAttribute="trailing" constant="22" id="5xf-gZ-CXn"/>
+                                    <constraint firstItem="FvV-pP-zmA" firstAttribute="leading" secondItem="iIl-j1-Dxk" secondAttribute="leadingMargin" id="BN6-Yk-0nH"/>
+                                    <constraint firstItem="Y9R-no-2B2" firstAttribute="top" secondItem="iIl-j1-Dxk" secondAttribute="top" constant="158" id="HrQ-EC-YdU"/>
+                                    <constraint firstItem="FvV-pP-zmA" firstAttribute="top" secondItem="iIl-j1-Dxk" secondAttribute="top" constant="131" id="Q74-X2-fsv"/>
+                                    <constraint firstItem="Y9R-no-2B2" firstAttribute="trailing" secondItem="iIl-j1-Dxk" secondAttribute="trailingMargin" id="Wfp-Qn-4ST"/>
+                                    <constraint firstItem="Job-9h-Zhu" firstAttribute="leading" secondItem="FvV-pP-zmA" secondAttribute="trailing" constant="15" id="fci-z1-pNH"/>
+                                    <constraint firstItem="Job-9h-Zhu" firstAttribute="firstBaseline" secondItem="Y9R-no-2B2" secondAttribute="firstBaseline" id="fwP-Ao-NZa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iIl-j1-Dxk" firstAttribute="top" secondItem="nen-Js-LdN" secondAttribute="top" id="Jvm-7d-fxs"/>
+                            <constraint firstItem="nen-Js-LdN" firstAttribute="trailing" secondItem="iIl-j1-Dxk" secondAttribute="trailing" id="ltc-ry-oAH"/>
+                            <constraint firstItem="nen-Js-LdN" firstAttribute="bottom" secondItem="iIl-j1-Dxk" secondAttribute="bottom" id="pB5-bD-D24"/>
+                            <constraint firstItem="iIl-j1-Dxk" firstAttribute="leading" secondItem="nen-Js-LdN" secondAttribute="leading" id="yu0-gL-axz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nen-Js-LdN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlj-7w-NSF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359.4202898550725" y="164.73214285714286"/>
+        </scene>
+    </scenes>
+</document>
