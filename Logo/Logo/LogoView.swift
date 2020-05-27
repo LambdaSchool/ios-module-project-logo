@@ -16,7 +16,9 @@ class LogoView: UIView {
     var redEndAngle = CGFloat(1.7 * .pi)  //2.3
 //    var redStartAngle: CGFloat = 0.0
 //    var redEndAngle: CGFloat = 0.0
-    var moved: Bool = false {
+    
+    var moved: Bool = false
+        var timezone: TimeZone? {
         didSet {
             let change = CADisplayLink(target: self, selector: #selector(updateArc(_:)))
             change.preferredFramesPerSecond = 1
@@ -37,7 +39,7 @@ class LogoView: UIView {
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-       
+       moved = true
         if let context = UIGraphicsGetCurrentContext() {
             
             
@@ -289,12 +291,17 @@ class LogoView: UIView {
     }
     
     @objc func updateArc(_ sender: CADisplayLink) {
-      if moved! {
-          redStartAngle = 2.7 * .pi  //3.2
-          redEndAngle = 1.7 * .pi
-          moved?.toggle()
+        
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = timezone!
+        
+        print("update")
+        if moved {
+            redStartAngle = 2.7 * .pi  //3.2
+            redEndAngle = 1.7 * .pi
+            moved.toggle()
       } else {
-          moved!.toggle()
+          moved.toggle()
           redStartAngle = 3.2  //3.2
           redEndAngle = 2.3
       }
