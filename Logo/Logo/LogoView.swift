@@ -12,10 +12,21 @@ import UIKit
 @IBDesignable
 class LogoView: UIView {
     
+    var redStartAngle = CGFloat(2.7 * .pi)  //3.2
+    var redEndAngle = CGFloat(1.7 * .pi)  //2.3
+//    var redStartAngle: CGFloat = 0.0
+//    var redEndAngle: CGFloat = 0.0
+    var moved: Bool = false {
+        didSet {
+            let change = CADisplayLink(target: self, selector: #selector(updateArc(_:)))
+            change.preferredFramesPerSecond = 1
+            change.add(to: .current, forMode: .common)
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor.clear
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,7 +37,7 @@ class LogoView: UIView {
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-        
+       
         if let context = UIGraphicsGetCurrentContext() {
             
             
@@ -235,8 +246,11 @@ class LogoView: UIView {
             
             let redArcRadius = max(bounds.width - 55, bounds.height - 55)
             
-            let redStartAngle: CGFloat = 2 * .pi / 4
-            let redEndAngle: CGFloat = 6.5 * .pi / 4
+            
+//            redStartAngle = 2.7 * .pi  //3.2
+//            redEndAngle = 1.7 * .pi  //2.3
+//            let redStartAngle: CGFloat = 2 * .pi / 4
+//            let redEndAngle: CGFloat = 6.5 * .pi / 4
             
             let redArcPath = UIBezierPath(
                 arcCenter: redArcCenter,
@@ -272,5 +286,18 @@ class LogoView: UIView {
             purplePath.fill(with: .difference, alpha: 0.25)
             purplePath.stroke()            
         }
+    }
+    
+    @objc func updateArc(_ sender: CADisplayLink) {
+      if moved! {
+          redStartAngle = 2.7 * .pi  //3.2
+          redEndAngle = 1.7 * .pi
+          moved?.toggle()
+      } else {
+          moved!.toggle()
+          redStartAngle = 3.2  //3.2
+          redEndAngle = 2.3
+      }
+        setNeedsDisplay()
     }
 }
