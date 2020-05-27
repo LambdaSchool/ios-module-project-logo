@@ -81,6 +81,30 @@ class LogoView: UIView{
             //C4
             context.setStrokeColor(c4.color.cgColor)
             context.beginPath()
+            context.move(to: CGPoint(x: viewCenter.x / 1.402,
+                                     y: viewCenter.y / 1.3))
+            context.setLineWidth(c4.width)
+            context.addLine(to: CGPoint(x: rect.size.width / 2.78,
+                                        y: rect.size.height / 1.55))
+            context.strokePath()
+            //C5
+            context.setStrokeColor(c5.color.cgColor)
+            context.beginPath()
+            context.move(to: CGPoint(x: rect.size.width / 2.952,
+                                     y: rect.size.height / 1.55))
+            context.setLineWidth(c5.width)
+            context.addLine(to: CGPoint(x: rect.size.width / 1.79,
+                                        y: rect.size.height / 1.5551))
+            context.strokePath()
+            //C6
+            context.setStrokeColor(c6.color.cgColor)
+            context.beginPath()
+            context.move(to: CGPoint(x: viewCenter.x / 1.492,
+                                     y: viewCenter.y / 1.3))
+            context.setLineWidth(c6.width)
+            context.addLine(to: CGPoint(x: rect.size.width / 1.8,
+                                        y: rect.size.height / 2.6))
+            context.strokePath()
             
         }
     }
