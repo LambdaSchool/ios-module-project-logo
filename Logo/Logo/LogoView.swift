@@ -34,28 +34,128 @@ class LogoView: UIView {
             
             let point1 = CGPoint(x: logoCenter.x - 10, y: logoCenter.y - 15)
             let point2 = CGPoint(x: point1.x + 20, y: point1.y)
-            let point3 = CGPoint(x: point1.x - 45, y: point1.y - 47)
+            let point3 = CGPoint(x: point2.x - 65, y: point2.y - 47)
             
             
-            let point4 = CGPoint(x: (rect.size.width / 2.0) - 15, y: (rect.size.width / 2.0) + 10)
+            let point4 = CGPoint(x: logoCenter.x - 15, y: logoCenter.y + 10)
             let point5 = CGPoint(x: point4.x, y: point4.y - 20)
-            let point6 = CGPoint(x: (rect.size.width / 2.0) - 58, y: (rect.size.width / 2.0) - 58)
+            let point6 = CGPoint(x: point5.x - 45, y: point5.y - 48)
             
             
-            let point7 = CGPoint(x: (rect.size.width / 2.0) + 15, y: logoCenter.y + 11)
-            let point8 = CGPoint(x: point7.x + 44, y: (rect.size.width / 2.0) + 48)
-            let point9 = CGPoint(x: point7.x, y: point5.y)
-            
+            let point7 = CGPoint(x: logoCenter.x + 15, y: logoCenter.y + 11)
+            let point8 = CGPoint(x: point7.x, y: point5.y + 2)
+            let point9 = CGPoint(x: point7.x + 43, y: logoCenter.y + 48)
             
             
             let point10 = CGPoint(x: point2.x, y: point7.y + 5)
-            let point11 = CGPoint(x: (rect.size.width / 2.0) - 10, y: point10.y)
-            let point12 = CGPoint(x: point8.x + 3, y: point8.y + 8)
+            let point11 = CGPoint(x: point2.x - 17, y: point10.y)
+            let point12 = CGPoint(x: logoCenter.x + 62, y: logoCenter.y + 60)
+            
+            
+            let arr = [CGPoint(x: 0, y: 0),
+                       CGPoint(x: 0, y: 25),
+                       CGPoint(x: 0, y: 30),
+                       CGPoint(x: 0, y: 55),
+                       CGPoint(x: 0, y: 60),
+                       CGPoint(x: 0, y: 85),
+                       CGPoint(x: 0, y: 90),
+                       CGPoint(x: 0, y: 115),
+                       CGPoint(x: 0, y: 120),
+                       CGPoint(x: 0, y: 145),
+                       CGPoint(x: 0, y: 150),
+                       CGPoint(x: 0, y: 175),
+                       CGPoint(x: 0, y: 180),
+                       CGPoint(x: 0, y: 205),
+                       CGPoint(x: 0, y: 210),
+                       CGPoint(x: 0, y: 235),
+                       CGPoint(x: 0, y: 240),
+                       CGPoint(x: 0, y: 265),
+                       CGPoint(x: 0, y: 270),
+                       CGPoint(x: 0, y: 295),
+                       CGPoint(x: 0, y: 300),
+                       CGPoint(x: 0, y: 330),
+                       
+            CGPoint(x: 0, y: 330),
+            CGPoint(x: 25, y: 330),
+            CGPoint(x: 30, y: 330),
+            CGPoint(x: 55, y: 330),
+            CGPoint(x: 60, y: 330),
+            CGPoint(x: 85, y: 330),
+            CGPoint(x: 90, y: 330),
+            CGPoint(x: 115, y: 330),
+            CGPoint(x: 120, y: 330),
+            CGPoint(x: 145, y: 330),
+            CGPoint(x: 150, y: 330),
+            CGPoint(x: 175, y: 330),
+            CGPoint(x: 180, y: 330),
+            CGPoint(x: 205, y: 330),
+            CGPoint(x: 210, y: 330),
+            CGPoint(x: 235, y: 330),
+            CGPoint(x: 240, y: 330),
+            CGPoint(x: 265, y: 330),
+            CGPoint(x: 270, y: 330),
+            CGPoint(x: 295, y: 330),
+            CGPoint(x: 300, y: 330),
+            CGPoint(x: 330, y: 330),
+                       
+                       CGPoint(x: 330, y: 330),
+                       CGPoint(x: 330, y: 305),
+                       CGPoint(x: 330, y: 300),
+                       CGPoint(x: 330, y: 270),
+                       CGPoint(x: 330, y: 265),
+                       CGPoint(x: 330, y: 240),
+                       CGPoint(x: 330, y: 235),
+                       CGPoint(x: 330, y: 210),
+                       CGPoint(x: 330, y: 205),
+                       CGPoint(x: 330, y: 180),
+                       CGPoint(x: 330, y: 175),
+                       CGPoint(x: 330, y: 150),
+                       CGPoint(x: 330, y: 145),
+                       CGPoint(x: 330, y: 120),
+                       CGPoint(x: 330, y: 115),
+                       CGPoint(x: 330, y: 90),
+                       CGPoint(x: 330, y: 85),
+                       CGPoint(x: 330, y: 60),
+                       CGPoint(x: 330, y: 55),
+                       CGPoint(x: 330, y: 30),
+                       CGPoint(x: 330, y: 25),
+                       CGPoint(x: 330, y: 0),
+    
+            CGPoint(x: 330, y: 0),
+            CGPoint(x: 305, y: 0),
+            CGPoint(x: 300, y: 0),
+            CGPoint(x: 270, y: 0),
+            CGPoint(x: 265, y: 0),
+            CGPoint(x: 240, y: 0),
+            CGPoint(x: 235, y: 0),
+            CGPoint(x: 210, y: 0),
+            CGPoint(x: 205, y: 0),
+            CGPoint(x: 180, y: 0),
+            CGPoint(x: 175, y: 0),
+            CGPoint(x: 150, y: 0),
+            CGPoint(x: 145, y: 0),
+            CGPoint(x: 120, y: 0),
+            CGPoint(x: 115, y: 0),
+            CGPoint(x: 90, y: 0),
+            CGPoint(x: 85, y: 0),
+            CGPoint(x: 60, y: 0),
+            CGPoint(x: 55, y: 0),
+            CGPoint(x: 30, y: 0),
+            CGPoint(x: 25, y: 0),
+            CGPoint(x: 0, y: 0)]
+       
             
             
             context.addRect(rect)
-            context.setFillColor(UIColor(red: 32/255, green: 201/255, blue: 228/255, alpha: 0.75).cgColor)
+            context.setFillColor(UIColor(red: 56/255, green: 205/233, blue: 231/255, alpha: 0.75).cgColor)
             context.fillPath()
+            
+            context.addRect(rect)
+             context.setLineWidth(8)
+            context.setStrokeColor(UIColor(red: 136/255, green: 110/255, blue: 228/255, alpha: 1.0).cgColor)
+            context.strokeLineSegments(between: arr)
+            context.strokePath()
+            
           
             
             context.beginPath()
@@ -85,7 +185,7 @@ class LogoView: UIView {
             context.addLine(to: point10)
             
             
-            context.setLineWidth(2.5)
+            context.setLineWidth(1.5)
             context.setStrokeColor(UIColor.black.cgColor)
             context.strokePath()
             
@@ -94,15 +194,13 @@ class LogoView: UIView {
                                  y: (logoCenter.y - CGFloat(7.5)), width: 15, height: 15)
             context.addRect(redRect)
             context.setFillColor(UIColor.systemRed.cgColor)
-            context.setLineWidth(100)
-            context.setStrokeColor(UIColor.systemGreen.cgColor)
+           
             context.fillPath()
             
             
             struct Constants {
                 static let lineWidth: CGFloat = 5.0
-                static let arcWidth: CGFloat = 5// was 25
-                
+                static let arcWidth: CGFloat = 5
                 static var halfOfLineWidth: CGFloat {
                     return lineWidth / 2
                 }
@@ -112,7 +210,7 @@ class LogoView: UIView {
             var counterColor: UIColor = UIColor.systemOrange
             let orangeCenter = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
             
-            let orangeRadius = max(bounds.width, bounds.height)
+            let orangeRadius = max(bounds.width, bounds.height) - 5
             
             let orangeStartAngle: CGFloat = 4.5 * .pi / 4
             let orangeEndAngle: CGFloat = .pi / 3
@@ -129,8 +227,7 @@ class LogoView: UIView {
             orangePath.fill(with: .luminosity, alpha: 0.25)
             orangePath.stroke()
             
-            
-            
+                        
             counterColor = UIColor.systemRed
             
             let redArcCenter = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
@@ -172,8 +269,7 @@ class LogoView: UIView {
             purplePath.lineWidth = Constants.arcWidth
             counterColor.setStroke()
             purplePath.fill(with: .difference, alpha: 0.25)
-            purplePath.stroke()
-            
+            purplePath.stroke()            
         }
     }
 }

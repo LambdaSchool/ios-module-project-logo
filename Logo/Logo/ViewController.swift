@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var LogoView: LogoView!
     
-    let colors: [UIColor] = [UIColor.blue, UIColor.systemGreen, UIColor.cyan, UIColor.yellow, UIColor.darkGray]
+    let colors: [UIColor] = [UIColor.black, UIColor.systemBlue, UIColor.systemGreen, UIColor.cyan, UIColor.yellow, UIColor.darkGray, UIColor.magenta, UIColor.orange, UIColor.systemTeal]
     
     override func viewDidLoad() {
         
