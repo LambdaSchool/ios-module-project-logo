@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		0B949296247E1B0D001DFADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B949295247E1B0D001DFADD /* AppDelegate.swift */; };
 		0B949298247E1B0D001DFADD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B949297247E1B0D001DFADD /* SceneDelegate.swift */; };
-		0B94929A247E1B0D001DFADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B949299247E1B0D001DFADD /* ViewController.swift */; };
 		0B94929D247E1B0D001DFADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B94929B247E1B0D001DFADD /* Main.storyboard */; };
 		0B94929F247E1B11001DFADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B94929E247E1B11001DFADD /* Assets.xcassets */; };
 		0B9492A2247E1B11001DFADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9492A0247E1B11001DFADD /* LaunchScreen.storyboard */; };
+		0B9492AA247E1C39001DFADD /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9492A9247E1C39001DFADD /* LogoViewController.swift */; };
+		0B9492AC247E1C4E001DFADD /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9492AB247E1C4E001DFADD /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B949292247E1B0D001DFADD /* logoDrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = logoDrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B949295247E1B0D001DFADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B949297247E1B0D001DFADD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B949299247E1B0D001DFADD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B94929C247E1B0D001DFADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B94929E247E1B11001DFADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B9492A1247E1B11001DFADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B9492A3247E1B11001DFADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B9492A9247E1C39001DFADD /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
+		0B9492AB247E1C4E001DFADD /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				0B949295247E1B0D001DFADD /* AppDelegate.swift */,
 				0B949297247E1B0D001DFADD /* SceneDelegate.swift */,
-				0B949299247E1B0D001DFADD /* ViewController.swift */,
 				0B94929B247E1B0D001DFADD /* Main.storyboard */,
 				0B94929E247E1B11001DFADD /* Assets.xcassets */,
 				0B9492A0247E1B11001DFADD /* LaunchScreen.storyboard */,
 				0B9492A3247E1B11001DFADD /* Info.plist */,
+				0B9492A9247E1C39001DFADD /* LogoViewController.swift */,
+				0B9492AB247E1C4E001DFADD /* LogoView.swift */,
 			);
 			path = logoDrawingApp;
 			sourceTree = "<group>";
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B94929A247E1B0D001DFADD /* ViewController.swift in Sources */,
 				0B949296247E1B0D001DFADD /* AppDelegate.swift in Sources */,
+				0B9492AC247E1C4E001DFADD /* LogoView.swift in Sources */,
 				0B949298247E1B0D001DFADD /* SceneDelegate.swift in Sources */,
+				0B9492AA247E1C39001DFADD /* LogoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
