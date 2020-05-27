@@ -51,7 +51,7 @@ class LogoView: UIView {
             let point11 = CGPoint(x: point2.x - 17, y: point10.y)
             let point12 = CGPoint(x: logoCenter.x + 62, y: logoCenter.y + 60)
             
-            
+            // segments for border
             let arr = [CGPoint(x: 0, y: 0),
                        CGPoint(x: 0, y: 25),
                        CGPoint(x: 0, y: 30),
@@ -144,14 +144,15 @@ class LogoView: UIView {
             CGPoint(x: 25, y: 0),
             CGPoint(x: 0, y: 0)]
        
-            
+            // UIView
             
             context.addRect(rect)
             context.setFillColor(UIColor(red: 56/255, green: 205/233, blue: 231/255, alpha: 0.75).cgColor)
             context.fillPath()
             
+            // IUView border
             context.addRect(rect)
-             context.setLineWidth(8)
+             context.setLineWidth(5)
             context.setStrokeColor(UIColor(red: 136/255, green: 110/255, blue: 228/255, alpha: 1.0).cgColor)
             context.strokeLineSegments(between: arr)
             context.strokePath()
