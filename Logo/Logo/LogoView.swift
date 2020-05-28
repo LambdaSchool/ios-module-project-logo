@@ -20,6 +20,8 @@ class LogoView: UIView {
     var purpleStartAngle: CGFloat = 5.0 * .pi / 4
     var purpleEndAngle: CGFloat = .pi / 2
     
+    var redAlpha: CGFloat = 1.0
+    var count = 1
     
     private var animationTimer: CADisplayLink?
     
@@ -44,7 +46,7 @@ class LogoView: UIView {
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-     
+        
         if let context = UIGraphicsGetCurrentContext() {
             
             
@@ -93,28 +95,28 @@ class LogoView: UIView {
                        CGPoint(x: 0, y: 300),
                        CGPoint(x: 0, y: 330),
                        
-            CGPoint(x: 0, y: 330),
-            CGPoint(x: 25, y: 330),
-            CGPoint(x: 30, y: 330),
-            CGPoint(x: 55, y: 330),
-            CGPoint(x: 60, y: 330),
-            CGPoint(x: 85, y: 330),
-            CGPoint(x: 90, y: 330),
-            CGPoint(x: 115, y: 330),
-            CGPoint(x: 120, y: 330),
-            CGPoint(x: 145, y: 330),
-            CGPoint(x: 150, y: 330),
-            CGPoint(x: 175, y: 330),
-            CGPoint(x: 180, y: 330),
-            CGPoint(x: 205, y: 330),
-            CGPoint(x: 210, y: 330),
-            CGPoint(x: 235, y: 330),
-            CGPoint(x: 240, y: 330),
-            CGPoint(x: 265, y: 330),
-            CGPoint(x: 270, y: 330),
-            CGPoint(x: 295, y: 330),
-            CGPoint(x: 300, y: 330),
-            CGPoint(x: 330, y: 330),
+                       CGPoint(x: 0, y: 330),
+                       CGPoint(x: 25, y: 330),
+                       CGPoint(x: 30, y: 330),
+                       CGPoint(x: 55, y: 330),
+                       CGPoint(x: 60, y: 330),
+                       CGPoint(x: 85, y: 330),
+                       CGPoint(x: 90, y: 330),
+                       CGPoint(x: 115, y: 330),
+                       CGPoint(x: 120, y: 330),
+                       CGPoint(x: 145, y: 330),
+                       CGPoint(x: 150, y: 330),
+                       CGPoint(x: 175, y: 330),
+                       CGPoint(x: 180, y: 330),
+                       CGPoint(x: 205, y: 330),
+                       CGPoint(x: 210, y: 330),
+                       CGPoint(x: 235, y: 330),
+                       CGPoint(x: 240, y: 330),
+                       CGPoint(x: 265, y: 330),
+                       CGPoint(x: 270, y: 330),
+                       CGPoint(x: 295, y: 330),
+                       CGPoint(x: 300, y: 330),
+                       CGPoint(x: 330, y: 330),
                        
                        CGPoint(x: 330, y: 330),
                        CGPoint(x: 330, y: 305),
@@ -138,30 +140,30 @@ class LogoView: UIView {
                        CGPoint(x: 330, y: 30),
                        CGPoint(x: 330, y: 25),
                        CGPoint(x: 330, y: 0),
-    
-            CGPoint(x: 330, y: 0),
-            CGPoint(x: 305, y: 0),
-            CGPoint(x: 300, y: 0),
-            CGPoint(x: 270, y: 0),
-            CGPoint(x: 265, y: 0),
-            CGPoint(x: 240, y: 0),
-            CGPoint(x: 235, y: 0),
-            CGPoint(x: 210, y: 0),
-            CGPoint(x: 205, y: 0),
-            CGPoint(x: 180, y: 0),
-            CGPoint(x: 175, y: 0),
-            CGPoint(x: 150, y: 0),
-            CGPoint(x: 145, y: 0),
-            CGPoint(x: 120, y: 0),
-            CGPoint(x: 115, y: 0),
-            CGPoint(x: 90, y: 0),
-            CGPoint(x: 85, y: 0),
-            CGPoint(x: 60, y: 0),
-            CGPoint(x: 55, y: 0),
-            CGPoint(x: 30, y: 0),
-            CGPoint(x: 25, y: 0),
-            CGPoint(x: 0, y: 0)]
-       
+                       
+                       CGPoint(x: 330, y: 0),
+                       CGPoint(x: 305, y: 0),
+                       CGPoint(x: 300, y: 0),
+                       CGPoint(x: 270, y: 0),
+                       CGPoint(x: 265, y: 0),
+                       CGPoint(x: 240, y: 0),
+                       CGPoint(x: 235, y: 0),
+                       CGPoint(x: 210, y: 0),
+                       CGPoint(x: 205, y: 0),
+                       CGPoint(x: 180, y: 0),
+                       CGPoint(x: 175, y: 0),
+                       CGPoint(x: 150, y: 0),
+                       CGPoint(x: 145, y: 0),
+                       CGPoint(x: 120, y: 0),
+                       CGPoint(x: 115, y: 0),
+                       CGPoint(x: 90, y: 0),
+                       CGPoint(x: 85, y: 0),
+                       CGPoint(x: 60, y: 0),
+                       CGPoint(x: 55, y: 0),
+                       CGPoint(x: 30, y: 0),
+                       CGPoint(x: 25, y: 0),
+                       CGPoint(x: 0, y: 0)]
+            
             // UIView
             
             context.addRect(rect)
@@ -170,7 +172,7 @@ class LogoView: UIView {
             
             // IUView border
             context.addRect(rect)
-             context.setLineWidth(5)
+            context.setLineWidth(5)
             context.setStrokeColor(UIColor(red: 136/255, green: 110/255, blue: 228/255, alpha: 1.0).cgColor)
             context.strokeLineSegments(between: arr)
             context.strokePath()
@@ -187,12 +189,12 @@ class LogoView: UIView {
             context.addLine(to: point5)
             context.addLine(to: point6)
             context.addLine(to: point4)
-                        
+            
             context.move(to: point7)
             context.addLine(to: point8)
             context.addLine(to: point9)
             context.addLine(to: point7)
-                        
+            
             context.move(to: point10)
             context.addLine(to: point11)
             context.addLine(to: point12)
@@ -205,8 +207,8 @@ class LogoView: UIView {
             let redRect = CGRect(x: (logoCenter.x - CGFloat(7.5)),
                                  y: (logoCenter.y - CGFloat(7.5)), width: 15, height: 15)
             context.addRect(redRect)
-            context.setFillColor(UIColor.systemRed.cgColor)
-           
+            //context.setFillColor(UIColor.systemRed.cgColor)
+            context.setFillColor(red: 253, green: 0, blue: 0, alpha: redAlpha)
             context.fillPath()
             
             struct Constants {
@@ -216,7 +218,7 @@ class LogoView: UIView {
                     return lineWidth / 2
                 }
             }
-                        
+            
             var counterColor: UIColor = UIColor.systemOrange
             let orangeCenter = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
             
@@ -240,7 +242,7 @@ class LogoView: UIView {
             let redArcCenter = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
             
             let redArcRadius = max(bounds.width - 55, bounds.height - 55)
-        
+            
             let redArcPath = UIBezierPath(
                 arcCenter: redArcCenter,
                 radius: redArcRadius/2 - Constants.arcWidth/2,
@@ -253,7 +255,7 @@ class LogoView: UIView {
             counterColor.setStroke()
             redArcPath.fill(with: .hardLight, alpha: 0.25)
             redArcPath.stroke()
-                        
+            
             counterColor = UIColor.purple
             
             let prurpleArcCenter = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
@@ -284,6 +286,20 @@ class LogoView: UIView {
         
         purpleStartAngle -= 0.06
         purpleEndAngle -= 0.06
+        
+        if redAlpha == 1 || count == 1 {
+            print(redAlpha)
+            redAlpha -= 0.02
+            if redAlpha <= 0 {
+                count = 0
+            }
+        } else if redAlpha == 0 || count == 0 {
+print(redAlpha)
+            redAlpha += 0.02
+            if redAlpha >= 1 {
+                count = 1
+            }
+        }
         
         setNeedsDisplay()
     }
