@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OfC-ke-hml">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Logo View Controller-->
+        <scene sceneID="ej6-MV-WAt">
+            <objects>
+                <viewController id="OfC-ke-hml" customClass="LogoViewController" customModule="Logo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kAA-Nq-1Tg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wij-Ta-75a" customClass="LogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wij-Ta-75a" secondAttribute="height" multiplier="1:1" id="CX2-4h-1Ue"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wij-Ta-75a" firstAttribute="centerX" secondItem="kAA-Nq-1Tg" secondAttribute="centerX" id="FtQ-aj-3I6"/>
+                            <constraint firstItem="Wij-Ta-75a" firstAttribute="top" secondItem="H6s-2C-dMb" secondAttribute="top" constant="279" id="Ta7-Dg-vz8"/>
+                            <constraint firstItem="Wij-Ta-75a" firstAttribute="centerY" secondItem="kAA-Nq-1Tg" secondAttribute="centerY" id="d4P-QA-Tx7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H6s-2C-dMb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPx-At-R8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="-127.23214285714285"/>
+        </scene>
+    </scenes>
+</document>
