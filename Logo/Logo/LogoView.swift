@@ -1,5 +1,5 @@
 //
-//  LogoView.swift
+//  logoView.swift
 //  Logo
 //
 //  Created by David Williams on 4/14/20.
@@ -12,19 +12,24 @@ import UIKit
 @IBDesignable
 class LogoView: UIView {
     
-    var redStartAngle = CGFloat(2.7 * .pi)  //3.2
-    var redEndAngle = CGFloat(1.7 * .pi)  //2.3
-//    var redStartAngle: CGFloat = 0.0
-//    var redEndAngle: CGFloat = 0.0
     
-    var moved: Bool = false
-        var timezone: TimeZone? {
-        didSet {
-            let change = CADisplayLink(target: self, selector: #selector(updateArc(_:)))
-            change.preferredFramesPerSecond = 1
-            change.add(to: .current, forMode: .common)
-        }
+    var orangeStartAngle: CGFloat = 4.5 * .pi / 4
+    var orangeEndAngle: CGFloat = .pi / 3
+    var redStartAngle = CGFloat(2.7 * .pi)
+    var redEndAngle = CGFloat(1.7 * .pi)
+    var purpleStartAngle: CGFloat = 5.0 * .pi / 4
+    var purpleEndAngle: CGFloat = .pi / 2
+    
+    
+    private var animationTimer: CADisplayLink?
+    
+    func updateViews() {
+        let aTimer = CADisplayLink(target: self, selector: #selector(updateArc(_:)))
+        aTimer.preferredFramesPerSecond = 32
+        aTimer.add(to: .current, forMode: .common)
+        animationTimer = aTimer
     }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,7 +44,7 @@ class LogoView: UIView {
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-       moved = true
+     
         if let context = UIGraphicsGetCurrentContext() {
             
             
@@ -170,8 +175,6 @@ class LogoView: UIView {
             context.strokeLineSegments(between: arr)
             context.strokePath()
             
-          
-            
             context.beginPath()
             
             context.move(to: point1)
@@ -180,29 +183,24 @@ class LogoView: UIView {
             context.addLine(to: point1)
             context.setFillColor(UIColor.green.cgColor)
             
-            
             context.move(to: point4)
             context.addLine(to: point5)
             context.addLine(to: point6)
             context.addLine(to: point4)
-            
-            
+                        
             context.move(to: point7)
             context.addLine(to: point8)
             context.addLine(to: point9)
             context.addLine(to: point7)
-            
-            
+                        
             context.move(to: point10)
             context.addLine(to: point11)
             context.addLine(to: point12)
             context.addLine(to: point10)
             
-            
             context.setLineWidth(1.5)
             context.setStrokeColor(UIColor.black.cgColor)
             context.strokePath()
-            
             
             let redRect = CGRect(x: (logoCenter.x - CGFloat(7.5)),
                                  y: (logoCenter.y - CGFloat(7.5)), width: 15, height: 15)
@@ -211,7 +209,6 @@ class LogoView: UIView {
            
             context.fillPath()
             
-            
             struct Constants {
                 static let lineWidth: CGFloat = 5.0
                 static let arcWidth: CGFloat = 5
@@ -219,41 +216,31 @@ class LogoView: UIView {
                     return lineWidth / 2
                 }
             }
-            
-            
+                        
             var counterColor: UIColor = UIColor.systemOrange
             let orangeCenter = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
             
             let orangeRadius = max(bounds.width, bounds.height) - 5
             
-            let orangeStartAngle: CGFloat = 4.5 * .pi / 4
-            let orangeEndAngle: CGFloat = .pi / 3
-            
-            let orangePath = UIBezierPath(
+            let orangeArcPath = UIBezierPath(
                 arcCenter: orangeCenter,
                 radius: orangeRadius/2 - Constants.arcWidth/2,
                 startAngle: orangeStartAngle,
                 endAngle: orangeEndAngle,
                 clockwise: true)
             
-            orangePath.lineWidth = Constants.arcWidth
+            orangeArcPath.lineWidth = Constants.arcWidth
+            orangeArcPath.lineCapStyle = .round
             counterColor.setStroke()
-            orangePath.fill(with: .luminosity, alpha: 0.25)
-            orangePath.stroke()
+            orangeArcPath.fill(with: .luminosity, alpha: 0.25)
+            orangeArcPath.stroke()
             
-                        
             counterColor = UIColor.systemRed
             
             let redArcCenter = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
             
             let redArcRadius = max(bounds.width - 55, bounds.height - 55)
-            
-            
-//            redStartAngle = 2.7 * .pi  //3.2
-//            redEndAngle = 1.7 * .pi  //2.3
-//            let redStartAngle: CGFloat = 2 * .pi / 4
-//            let redEndAngle: CGFloat = 6.5 * .pi / 4
-            
+        
             let redArcPath = UIBezierPath(
                 arcCenter: redArcCenter,
                 radius: redArcRadius/2 - Constants.arcWidth/2,
@@ -262,49 +249,42 @@ class LogoView: UIView {
                 clockwise: true)
             
             redArcPath.lineWidth = Constants.arcWidth
+            redArcPath.lineCapStyle = .round
             counterColor.setStroke()
             redArcPath.fill(with: .hardLight, alpha: 0.25)
             redArcPath.stroke()
-            
-            
+                        
             counterColor = UIColor.purple
             
             let prurpleArcCenter = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
             
             let purpleArcRadius = max(bounds.width - 110, bounds.height - 110)
             
-            let purpleStartAngle: CGFloat = 5.0 * .pi / 4
-            let purpleEndAngle: CGFloat = .pi / 2
-            
-            let purplePath = UIBezierPath(
+            let purpleArcPath = UIBezierPath(
                 arcCenter: prurpleArcCenter,
                 radius: purpleArcRadius/2 - Constants.arcWidth/2,
                 startAngle: purpleStartAngle,
                 endAngle: purpleEndAngle,
                 clockwise: true)
             
-            purplePath.lineWidth = Constants.arcWidth
+            purpleArcPath.lineWidth = Constants.arcWidth
+            purpleArcPath.lineCapStyle = .round
             counterColor.setStroke()
-            purplePath.fill(with: .difference, alpha: 0.25)
-            purplePath.stroke()            
+            purpleArcPath.fill(with: .difference, alpha: 0.25)
+            purpleArcPath.stroke()            
         }
     }
     
-    @objc func updateArc(_ sender: CADisplayLink) {
+    @objc func updateArc(_ sender: AnyObject) {
+        orangeStartAngle -= 0.03
+        orangeEndAngle -= 0.03
         
-        var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = timezone!
+        redStartAngle += 0.02
+        redEndAngle += 0.02
         
-        print("update")
-        if moved {
-            redStartAngle = 2.7 * .pi  //3.2
-            redEndAngle = 1.7 * .pi
-            moved.toggle()
-      } else {
-          moved.toggle()
-          redStartAngle = 3.2  //3.2
-          redEndAngle = 2.3
-      }
+        purpleStartAngle -= 0.06
+        purpleEndAngle -= 0.06
+        
         setNeedsDisplay()
     }
 }

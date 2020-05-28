@@ -10,21 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    @IBOutlet weak var LogoView: LogoView!
-    
-//    let colors: [UIColor] = [UIColor.black, UIColor.systemBlue, UIColor.systemGreen, UIColor.cyan, UIColor.yellow, UIColor.darkGray, UIColor.magenta, UIColor.orange, UIColor.systemTeal]
+   
+    @IBOutlet weak var logoView: LogoView!
+   
     
     override func viewDidLoad() {
-        
-//        let randomColor = Int.random(in: 0...colors.count-1)
-//        let pickedcolor = colors[randomColor]
-//        super.viewDidLoad()
-//        view.backgroundColor = pickedcolor
+//        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: updateViews(_:))
+//        timer.fire()
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [UIColor.black.cgColor, UIColor.cyan.cgColor, UIColor.red.cgColor, UIColor.black.cgColor]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
+        logoView.updateViews()
     }
-    
 }
