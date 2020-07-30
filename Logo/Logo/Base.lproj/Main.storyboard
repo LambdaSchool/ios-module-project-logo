@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,66 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Logo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXI-8V-kLP" customClass="LogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="69s-U9-dE2"/>
+                                    <constraint firstAttribute="width" constant="250" id="9Sb-g8-4Hd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3I-KN-qjC" customClass="LogoTwoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="KYT-Zb-pZa"/>
+                                    <constraint firstAttribute="height" constant="250" id="T4O-cC-fBQ"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="xOa-E6-drn"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2F-Rh-gs2">
+                                <rect key="frame" x="123" y="202" width="168" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ6-qu-fOZ" customClass="SwitchLogoButton" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="653" width="99" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Switch Logo"/>
+                                <connections>
+                                    <action selector="switchLogoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tQk-Lv-Nn8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86221104452054798" green="0.8632277397260274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iZ6-qu-fOZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0mn-I0-uCB"/>
+                            <constraint firstItem="e2F-Rh-gs2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F58-kF-O7c"/>
+                            <constraint firstItem="zXI-8V-kLP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LLb-Zg-FK1"/>
+                            <constraint firstItem="zXI-8V-kLP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VAr-pG-4pU"/>
+                            <constraint firstItem="zXI-8V-kLP" firstAttribute="top" secondItem="e2F-Rh-gs2" secondAttribute="bottom" constant="80" id="cxw-QA-YGQ"/>
+                            <constraint firstItem="y3I-KN-qjC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="juz-C6-SYQ"/>
+                            <constraint firstItem="iZ6-qu-fOZ" firstAttribute="top" secondItem="zXI-8V-kLP" secondAttribute="bottom" constant="80" id="l4b-U6-yRb"/>
+                            <constraint firstItem="y3I-KN-qjC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGY-uJ-RIt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="logoTwoView" destination="y3I-KN-qjC" id="sKl-WO-aov"/>
+                        <outlet property="logoView" destination="zXI-8V-kLP" id="sHA-xW-7ye"/>
+                        <outlet property="nameLabel" destination="e2F-Rh-gs2" id="oeC-3E-z1A"/>
+                        <outlet property="switchLogoButton" destination="iZ6-qu-fOZ" id="6fW-GJ-NZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="120"/>
         </scene>
     </scenes>
 </document>
